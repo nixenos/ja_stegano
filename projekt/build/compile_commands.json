@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/home/nixen/Projects/JA/ja_steganografia/projekt/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/nixen/Projects/JA/ja_steganografia/projekt/build -I/home/nixen/Projects/JA/ja_steganografia/projekt -I/home/nixen/Projects/JA/ja_steganografia/projekt/build/projekt_autogen/include -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6/QtGui -g -fPIC -pthread -std=gnu++17 -o CMakeFiles/projekt.dir/projekt_autogen/mocs_compilation.cpp.o -c /home/nixen/Projects/JA/ja_steganografia/projekt/build/projekt_autogen/mocs_compilation.cpp",
+  "file": "/home/nixen/Projects/JA/ja_steganografia/projekt/build/projekt_autogen/mocs_compilation.cpp"
+},
+{
+  "directory": "/home/nixen/Projects/JA/ja_steganografia/projekt/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/nixen/Projects/JA/ja_steganografia/projekt/build -I/home/nixen/Projects/JA/ja_steganografia/projekt -I/home/nixen/Projects/JA/ja_steganografia/projekt/build/projekt_autogen/include -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6/QtGui -g -fPIC -pthread -std=gnu++17 -o CMakeFiles/projekt.dir/main.cpp.o -c /home/nixen/Projects/JA/ja_steganografia/projekt/main.cpp",
+  "file": "/home/nixen/Projects/JA/ja_steganografia/projekt/main.cpp"
+},
+{
+  "directory": "/home/nixen/Projects/JA/ja_steganografia/projekt/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/nixen/Projects/JA/ja_steganografia/projekt/build -I/home/nixen/Projects/JA/ja_steganografia/projekt -I/home/nixen/Projects/JA/ja_steganografia/projekt/build/projekt_autogen/include -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6/QtGui -g -fPIC -pthread -std=gnu++17 -o CMakeFiles/projekt.dir/mainwindow.cpp.o -c /home/nixen/Projects/JA/ja_steganografia/projekt/mainwindow.cpp",
+  "file": "/home/nixen/Projects/JA/ja_steganografia/projekt/mainwindow.cpp"
+},
+{
+  "directory": "/home/nixen/Projects/JA/ja_steganografia/projekt/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/nixen/Projects/JA/ja_steganografia/projekt/build -I/home/nixen/Projects/JA/ja_steganografia/projekt -I/home/nixen/Projects/JA/ja_steganografia/projekt/build/projekt_autogen/include -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6/QtGui -g -fPIC -pthread -std=gnu++17 -o CMakeFiles/projekt.dir/src/logic.cpp.o -c /home/nixen/Projects/JA/ja_steganografia/projekt/src/logic.cpp",
+  "file": "/home/nixen/Projects/JA/ja_steganografia/projekt/src/logic.cpp"
+}
+]

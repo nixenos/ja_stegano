@@ -1,0 +1,17 @@
+CMakeFiles/3.22.0/CompilerIdCXX/CMakeCXXCompilerId.cpp
+CMakeFiles/FindThreads/CheckForPthreads.cxx
+CMakeLists.txt
+cmake-build-debug/CMakeFiles/3.21.4/CompilerIdCXX/CMakeCXXCompilerId.cpp
+cmake-build-debug/CMakeFiles/3.22.0/CompilerIdCXX/CMakeCXXCompilerId.cpp
+cmake-build-debug/projekt_autogen/moc_predefs.h
+cmake-build-debug/projekt_autogen/mocs_compilation.cpp
+main.cpp
+mainwindow.cpp
+mainwindow.h
+projekt_autogen/EWIEGA46WW/moc_mainwindow.cpp
+projekt_autogen/include/ui_mainwindow.h
+projekt_autogen/moc_predefs.h
+projekt_autogen/mocs_compilation.cpp
+src/dataStructures.h
+src/logic.cpp
+src/logic.h

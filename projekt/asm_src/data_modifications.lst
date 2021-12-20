@@ -1,0 +1,42 @@
+     1                                  global _apply_data_modifications_asm
+     2                                  
+     3                                  _apply_data_modifications_asm:
+     4 00000000 F7D2                            not     edx
+     5 00000002 660F3A20CA00                    pinsrb  xmm1, edx, 0
+     6 00000008 660F3A20CA08                    pinsrb  xmm1, edx, 8
+     7 0000000E 660F3A20CA10                    pinsrb  xmm1, edx, 16
+     8 00000014 660F3A20CA18                    pinsrb  xmm1, edx, 24
+     9 0000001A 660F3A20CA20                    pinsrb  xmm1, edx, 32
+    10 00000020 660F3A20CA28                    pinsrb  xmm1, edx, 40
+    11 00000026 660F3A20CA30                    pinsrb  xmm1, edx, 48
+    12 0000002C 660F3A20CA38                    pinsrb  xmm1, edx, 56
+    13 00000032 4C63C1                          movsx   r8, ecx
+    14 00000035 4983E807                        sub     r8, 7
+    15 00000039 B800000000                      mov     rax, 0
+    16 0000003E 4883F900                        cmp     rcx, 0
+    17 00000042 7429                            je      EXIT
+    18                                  LOOP_MAIN:
+    19 00000044 0FB60C07                        movzx   ecx, BYTE [rdi+rax]
+    20 00000048 F30F6F0407                      movdqu  xmm0, [rdi+rax]
+    21 0000004D F30F6F1406                      movdqu  xmm2, [rsi+rax]
+    22 00000052 660FDBC1                        pand    xmm0, xmm1
+    23 00000056 660FEBC2                        por     xmm0, xmm2
+    24 0000005A 0F110407                        movups  [rdi+rax], xmm0
+    25 0000005E 4883F801                        cmp     rax, 1
+    26 00000062 740A                            je      FIRST_BYTE_MITIGATION
+    27                                  CONTINUE:
+    28 00000064 4883C008                        add     rax, 8
+    29 00000068 4939C0                          cmp     r8, rax
+    30 0000006B 7FD7                            jg     LOOP_MAIN
+    31                                  EXIT:
+    32 0000006D C3                              ret
+    33                                  
+    34                                  FIRST_BYTE_MITIGATION:
+    35 0000006E 0FB64F01                        movzx   ecx, BYTE [rdi + 1]
+    36 00000072 20D1                            and     cl, dl
+    37 00000074 0A4E01                          or      cl, BYTE [rsi + 1]
+    38 00000077 884F01                          mov     BYTE [rdi + 1], cl
+    39 0000007A EBE8                            jmp     CONTINUE
+    40                                  
+    41                                  
+    42                                  ; test

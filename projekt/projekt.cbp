@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="projekt"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\lib64\;CMake Files\..\..\..\..\..\..\usr\lib64\cmake\;CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6\;CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6Widgets\;CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6WidgetsTools\;CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6CoreTools\;CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6GuiTools\;CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6Core\;CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6Gui\;CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6DBus\;CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6DBusTools\;CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Widgets\;CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\;CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Core\;CMake Files\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\..\..\..\usr\lib\cmake\Qt6\;CMake Files\..\..\..\..\..\..\usr\lib\cmake\Qt6\3rdparty\;CMake Files\..\..\..\..\..\..\usr\lib\cmake\Qt6\3rdparty\kwin\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/nixen/Projects/JA/ja_steganografia/projekt"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/nixen/Projects/JA/ja_steganografia/projekt/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/nixen/Projects/JA/ja_steganografia/projekt/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/nixen/Projects/JA/ja_steganografia/projekt/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/nixen/Projects/JA/ja_steganografia/projekt/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="projekt">
+				<Option output="/home/nixen/Projects/JA/ja_steganografia/projekt/projekt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/nixen/Projects/JA/ja_steganografia/projekt"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add directory="/home/nixen/Projects/JA/ja_steganografia/projekt"/>
+					<Add directory="/home/nixen/Projects/JA/ja_steganografia/projekt/projekt_autogen/include"/>
+					<Add directory="/usr/include/qt6/QtCore"/>
+					<Add directory="/usr/include/qt6"/>
+					<Add directory="/usr/lib/qt6/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/qt6/QtWidgets"/>
+					<Add directory="/usr/include/qt6/QtGui"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/nixen/Projects/JA/ja_steganografia/projekt/Makefile&quot;  VERBOSE=1 projekt"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/nixen/Projects/JA/ja_steganografia/projekt/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/nixen/Projects/JA/ja_steganografia/projekt/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/nixen/Projects/JA/ja_steganografia/projekt/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="projekt/fast">
+				<Option output="/home/nixen/Projects/JA/ja_steganografia/projekt/projekt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/nixen/Projects/JA/ja_steganografia/projekt"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add directory="/home/nixen/Projects/JA/ja_steganografia/projekt"/>
+					<Add directory="/home/nixen/Projects/JA/ja_steganografia/projekt/projekt_autogen/include"/>
+					<Add directory="/usr/include/qt6/QtCore"/>
+					<Add directory="/usr/include/qt6"/>
+					<Add directory="/usr/lib/qt6/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/qt6/QtWidgets"/>
+					<Add directory="/usr/include/qt6/QtGui"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/nixen/Projects/JA/ja_steganografia/projekt/Makefile&quot;  VERBOSE=1 projekt/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/nixen/Projects/JA/ja_steganografia/projekt/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/nixen/Projects/JA/ja_steganografia/projekt/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/nixen/Projects/JA/ja_steganografia/projekt/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/nixen/Projects/JA/ja_steganografia/projekt"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/nixen/Projects/JA/ja_steganografia/projekt/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/nixen/Projects/JA/ja_steganografia/projekt/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/nixen/Projects/JA/ja_steganografia/projekt/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/nixen/Projects/JA/ja_steganografia/projekt/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/nixen/Projects/JA/ja_steganografia/projekt"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/nixen/Projects/JA/ja_steganografia/projekt/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/nixen/Projects/JA/ja_steganografia/projekt/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/nixen/Projects/JA/ja_steganografia/projekt/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/nixen/Projects/JA/ja_steganografia/projekt/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="projekt_autogen">
+				<Option working_dir="/home/nixen/Projects/JA/ja_steganografia/projekt"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/nixen/Projects/JA/ja_steganografia/projekt/Makefile&quot;  VERBOSE=1 projekt_autogen"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/nixen/Projects/JA/ja_steganografia/projekt/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/nixen/Projects/JA/ja_steganografia/projekt/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/nixen/Projects/JA/ja_steganografia/projekt/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/main.cpp">
+			<Option target="projekt"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/mainwindow.cpp">
+			<Option target="projekt"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/mainwindow.h">
+			<Option target="projekt"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/mainwindow.ui">
+			<Option target="projekt"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/projekt_autogen/include/ui_mainwindow.h">
+			<Option target="projekt"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/projekt_autogen/mocs_compilation.cpp">
+			<Option target="projekt"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/src/dataStructures.h">
+			<Option target="projekt"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/src/logic.cpp">
+			<Option target="projekt"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/src/logic.h">
+			<Option target="projekt"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6/Qt6Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6/Qt6ConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6/Qt6ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6/Qt6ConfigVersionImpl.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6/Qt6Dependencies.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6/Qt6Targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6/Qt6VersionlessTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6/QtFeature.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6/QtPublicDependencyHelpers.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6/QtPublicFinalizerHelpers.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6/QtPublicFindPackageHelpers.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6/QtPublicPluginHelpers.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6/QtPublicTargetHelpers.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6/QtPublicWalkLibsHelpers.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6Widgets\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6Widgets\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6Widgets/Qt6WidgetsConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6Widgets\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6Widgets/Qt6WidgetsConfigVersionImpl.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6Widgets\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6Widgets\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6Widgets\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6Widgets/Qt6WidgetsTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6Widgets\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6Widgets\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6Widgets/Qt6WidgetsVersionlessTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6Widgets\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6WidgetsTools/Qt6WidgetsToolsAdditionalTargetInfo.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6WidgetsTools\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6WidgetsTools\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6WidgetsTools\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersionImpl.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6WidgetsTools\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6WidgetsTools/Qt6WidgetsToolsDependencies.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6WidgetsTools\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6WidgetsTools\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6WidgetsTools\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6WidgetsTools\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6CoreTools\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6CoreTools\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6CoreTools\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersionImpl.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6CoreTools\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6CoreTools/Qt6CoreToolsDependencies.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6CoreTools\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6CoreTools/Qt6CoreToolsTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6CoreTools\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6CoreTools/Qt6CoreToolsTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6CoreTools\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6CoreTools\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6GuiTools/Qt6GuiToolsAdditionalTargetInfo.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6GuiTools\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6GuiTools\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6GuiTools\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersionImpl.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6GuiTools\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6GuiTools/Qt6GuiToolsDependencies.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6GuiTools\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6GuiTools/Qt6GuiToolsTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6GuiTools\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6GuiTools\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6GuiTools\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6Core\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6Core/Qt6CoreConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6Core\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6Core/Qt6CoreConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6Core\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6Core/Qt6CoreConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6Core\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6Core\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6Core/Qt6CoreDependencies.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6Core\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6Core/Qt6CoreMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6Core\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6Core/Qt6CoreTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6Core\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6Core/Qt6CoreTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6Core\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6Core/Qt6CoreVersionlessTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6Core\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6Gui/Qt6GuiAdditionalTargetInfo.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6Gui/Qt6GuiConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6Gui/Qt6GuiConfigVersionImpl.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6Gui/Qt6GuiDependencies.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6Gui/Qt6GuiTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6Gui/Qt6GuiTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6Gui/Qt6GuiVersionlessTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6DBus/Qt6DBusAdditionalTargetInfo.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6DBus\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6DBus/Qt6DBusConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6DBus\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6DBus/Qt6DBusConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6DBus\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6DBus/Qt6DBusConfigVersionImpl.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6DBus\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6DBus/Qt6DBusDependencies.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6DBus\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6DBus/Qt6DBusMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6DBus\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6DBus/Qt6DBusTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6DBus\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6DBus/Qt6DBusTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6DBus\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6DBus/Qt6DBusVersionlessTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6DBus\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6DBusTools/Qt6DBusToolsAdditionalTargetInfo.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6DBusTools\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6DBusTools/Qt6DBusToolsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6DBusTools\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6DBusTools\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersionImpl.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6DBusTools\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6DBusTools/Qt6DBusToolsDependencies.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6DBusTools\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6DBusTools/Qt6DBusToolsTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6DBusTools\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6DBusTools/Qt6DBusToolsTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6DBusTools\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt6DBusTools/Qt6DBusToolsVersionlessTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt6DBusTools\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5GuiConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QComposePlatformInputContextPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QEglFSEmulatorIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QEglFSIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QEglFSKmsEglDeviceIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QEglFSKmsGbmIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QEglFSX11IntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QEvdevKeyboardPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QEvdevTabletPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QEvdevTouchScreenPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QGtk3ThemePlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QIbusPlatformInputContextPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QJp2Plugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QLibInputPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QMinimalEglIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QMngPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QPdfPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QSvgPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QTsLibPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QVirtualKeyboardPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QVncIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QWaylandEglPlatformIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QWaylandIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QWaylandXCompositeEglPlatformIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QWaylandXCompositeGlxPlatformIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QWebGLIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QXcbEglIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QXcbGlxIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Core/Qt5CoreConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Core/Qt5CoreConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib64/cmake/Qt5Core/Qt5CoreMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib/cmake/Qt6/FindWrapAtomic.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\Qt6\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib/cmake/Qt6/FindWrapOpenGL.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\Qt6\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib/cmake/Qt6/FindWrapVulkanHeaders.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\Qt6\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib/cmake/Qt6/QtFeatureCommon.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\Qt6\"/>
+		</Unit>
+		<Unit filename="/home/nixen/Projects/JA/ja_steganografia/projekt/../../../../../../usr/lib/cmake/Qt6/3rdparty/kwin/FindXKB.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\Qt6\3rdparty\kwin\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
