@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nixen/Projects/JA/ja_steganografia/projekt
+CMAKE_SOURCE_DIR = /home/nixen/Projects/JA/ja_stegano/projekt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nixen/Projects/JA/ja_steganografia/projekt
+CMAKE_BINARY_DIR = /home/nixen/Projects/JA/ja_stegano/projekt
 
 # Utility rule file for projekt_autogen.
 
@@ -67,8 +67,8 @@ include CMakeFiles/projekt_autogen.dir/compiler_depend.make
 include CMakeFiles/projekt_autogen.dir/progress.make
 
 CMakeFiles/projekt_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nixen/Projects/JA/ja_steganografia/projekt/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target projekt"
-	/usr/bin/cmake -E cmake_autogen /home/nixen/Projects/JA/ja_steganografia/projekt/CMakeFiles/projekt_autogen.dir/AutogenInfo.json Debug
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nixen/Projects/JA/ja_stegano/projekt/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target projekt"
+	/usr/bin/cmake -E cmake_autogen /home/nixen/Projects/JA/ja_stegano/projekt/CMakeFiles/projekt_autogen.dir/AutogenInfo.json ""
 
 projekt_autogen: CMakeFiles/projekt_autogen
 projekt_autogen: CMakeFiles/projekt_autogen.dir/build.make
@@ -83,6 +83,6 @@ CMakeFiles/projekt_autogen.dir/clean:
 .PHONY : CMakeFiles/projekt_autogen.dir/clean
 
 CMakeFiles/projekt_autogen.dir/depend:
-	cd /home/nixen/Projects/JA/ja_steganografia/projekt && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nixen/Projects/JA/ja_steganografia/projekt /home/nixen/Projects/JA/ja_steganografia/projekt /home/nixen/Projects/JA/ja_steganografia/projekt /home/nixen/Projects/JA/ja_steganografia/projekt /home/nixen/Projects/JA/ja_steganografia/projekt/CMakeFiles/projekt_autogen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nixen/Projects/JA/ja_stegano/projekt && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nixen/Projects/JA/ja_stegano/projekt /home/nixen/Projects/JA/ja_stegano/projekt /home/nixen/Projects/JA/ja_stegano/projekt /home/nixen/Projects/JA/ja_stegano/projekt /home/nixen/Projects/JA/ja_stegano/projekt/CMakeFiles/projekt_autogen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/projekt_autogen.dir/depend
 

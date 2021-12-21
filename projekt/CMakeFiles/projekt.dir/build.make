@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nixen/Projects/JA/ja_steganografia/projekt
+CMAKE_SOURCE_DIR = /home/nixen/Projects/JA/ja_stegano/projekt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nixen/Projects/JA/ja_steganografia/projekt
+CMAKE_BINARY_DIR = /home/nixen/Projects/JA/ja_stegano/projekt
 
 # Include any dependencies generated for this target.
 include CMakeFiles/projekt.dir/depend.make
@@ -72,58 +72,58 @@ include CMakeFiles/projekt.dir/flags.make
 CMakeFiles/projekt.dir/projekt_autogen/mocs_compilation.cpp.o: CMakeFiles/projekt.dir/flags.make
 CMakeFiles/projekt.dir/projekt_autogen/mocs_compilation.cpp.o: projekt_autogen/mocs_compilation.cpp
 CMakeFiles/projekt.dir/projekt_autogen/mocs_compilation.cpp.o: CMakeFiles/projekt.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nixen/Projects/JA/ja_steganografia/projekt/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/projekt.dir/projekt_autogen/mocs_compilation.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/projekt.dir/projekt_autogen/mocs_compilation.cpp.o -MF CMakeFiles/projekt.dir/projekt_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/projekt.dir/projekt_autogen/mocs_compilation.cpp.o -c /home/nixen/Projects/JA/ja_steganografia/projekt/projekt_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nixen/Projects/JA/ja_stegano/projekt/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/projekt.dir/projekt_autogen/mocs_compilation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/projekt.dir/projekt_autogen/mocs_compilation.cpp.o -MF CMakeFiles/projekt.dir/projekt_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/projekt.dir/projekt_autogen/mocs_compilation.cpp.o -c /home/nixen/Projects/JA/ja_stegano/projekt/projekt_autogen/mocs_compilation.cpp
 
 CMakeFiles/projekt.dir/projekt_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projekt.dir/projekt_autogen/mocs_compilation.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nixen/Projects/JA/ja_steganografia/projekt/projekt_autogen/mocs_compilation.cpp > CMakeFiles/projekt.dir/projekt_autogen/mocs_compilation.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nixen/Projects/JA/ja_stegano/projekt/projekt_autogen/mocs_compilation.cpp > CMakeFiles/projekt.dir/projekt_autogen/mocs_compilation.cpp.i
 
 CMakeFiles/projekt.dir/projekt_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projekt.dir/projekt_autogen/mocs_compilation.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nixen/Projects/JA/ja_steganografia/projekt/projekt_autogen/mocs_compilation.cpp -o CMakeFiles/projekt.dir/projekt_autogen/mocs_compilation.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nixen/Projects/JA/ja_stegano/projekt/projekt_autogen/mocs_compilation.cpp -o CMakeFiles/projekt.dir/projekt_autogen/mocs_compilation.cpp.s
 
 CMakeFiles/projekt.dir/main.cpp.o: CMakeFiles/projekt.dir/flags.make
 CMakeFiles/projekt.dir/main.cpp.o: main.cpp
 CMakeFiles/projekt.dir/main.cpp.o: CMakeFiles/projekt.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nixen/Projects/JA/ja_steganografia/projekt/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/projekt.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/projekt.dir/main.cpp.o -MF CMakeFiles/projekt.dir/main.cpp.o.d -o CMakeFiles/projekt.dir/main.cpp.o -c /home/nixen/Projects/JA/ja_steganografia/projekt/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nixen/Projects/JA/ja_stegano/projekt/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/projekt.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/projekt.dir/main.cpp.o -MF CMakeFiles/projekt.dir/main.cpp.o.d -o CMakeFiles/projekt.dir/main.cpp.o -c /home/nixen/Projects/JA/ja_stegano/projekt/main.cpp
 
 CMakeFiles/projekt.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projekt.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nixen/Projects/JA/ja_steganografia/projekt/main.cpp > CMakeFiles/projekt.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nixen/Projects/JA/ja_stegano/projekt/main.cpp > CMakeFiles/projekt.dir/main.cpp.i
 
 CMakeFiles/projekt.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projekt.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nixen/Projects/JA/ja_steganografia/projekt/main.cpp -o CMakeFiles/projekt.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nixen/Projects/JA/ja_stegano/projekt/main.cpp -o CMakeFiles/projekt.dir/main.cpp.s
 
 CMakeFiles/projekt.dir/mainwindow.cpp.o: CMakeFiles/projekt.dir/flags.make
 CMakeFiles/projekt.dir/mainwindow.cpp.o: mainwindow.cpp
 CMakeFiles/projekt.dir/mainwindow.cpp.o: CMakeFiles/projekt.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nixen/Projects/JA/ja_steganografia/projekt/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/projekt.dir/mainwindow.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/projekt.dir/mainwindow.cpp.o -MF CMakeFiles/projekt.dir/mainwindow.cpp.o.d -o CMakeFiles/projekt.dir/mainwindow.cpp.o -c /home/nixen/Projects/JA/ja_steganografia/projekt/mainwindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nixen/Projects/JA/ja_stegano/projekt/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/projekt.dir/mainwindow.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/projekt.dir/mainwindow.cpp.o -MF CMakeFiles/projekt.dir/mainwindow.cpp.o.d -o CMakeFiles/projekt.dir/mainwindow.cpp.o -c /home/nixen/Projects/JA/ja_stegano/projekt/mainwindow.cpp
 
 CMakeFiles/projekt.dir/mainwindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projekt.dir/mainwindow.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nixen/Projects/JA/ja_steganografia/projekt/mainwindow.cpp > CMakeFiles/projekt.dir/mainwindow.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nixen/Projects/JA/ja_stegano/projekt/mainwindow.cpp > CMakeFiles/projekt.dir/mainwindow.cpp.i
 
 CMakeFiles/projekt.dir/mainwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projekt.dir/mainwindow.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nixen/Projects/JA/ja_steganografia/projekt/mainwindow.cpp -o CMakeFiles/projekt.dir/mainwindow.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nixen/Projects/JA/ja_stegano/projekt/mainwindow.cpp -o CMakeFiles/projekt.dir/mainwindow.cpp.s
 
 CMakeFiles/projekt.dir/src/logic.cpp.o: CMakeFiles/projekt.dir/flags.make
 CMakeFiles/projekt.dir/src/logic.cpp.o: src/logic.cpp
 CMakeFiles/projekt.dir/src/logic.cpp.o: CMakeFiles/projekt.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nixen/Projects/JA/ja_steganografia/projekt/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/projekt.dir/src/logic.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/projekt.dir/src/logic.cpp.o -MF CMakeFiles/projekt.dir/src/logic.cpp.o.d -o CMakeFiles/projekt.dir/src/logic.cpp.o -c /home/nixen/Projects/JA/ja_steganografia/projekt/src/logic.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nixen/Projects/JA/ja_stegano/projekt/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/projekt.dir/src/logic.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/projekt.dir/src/logic.cpp.o -MF CMakeFiles/projekt.dir/src/logic.cpp.o.d -o CMakeFiles/projekt.dir/src/logic.cpp.o -c /home/nixen/Projects/JA/ja_stegano/projekt/src/logic.cpp
 
 CMakeFiles/projekt.dir/src/logic.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projekt.dir/src/logic.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nixen/Projects/JA/ja_steganografia/projekt/src/logic.cpp > CMakeFiles/projekt.dir/src/logic.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nixen/Projects/JA/ja_stegano/projekt/src/logic.cpp > CMakeFiles/projekt.dir/src/logic.cpp.i
 
 CMakeFiles/projekt.dir/src/logic.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projekt.dir/src/logic.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nixen/Projects/JA/ja_steganografia/projekt/src/logic.cpp -o CMakeFiles/projekt.dir/src/logic.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nixen/Projects/JA/ja_stegano/projekt/src/logic.cpp -o CMakeFiles/projekt.dir/src/logic.cpp.s
 
 # Object files for target projekt
 projekt_OBJECTS = \
@@ -148,7 +148,7 @@ projekt: /usr/lib/libQt6Core.so.6.2.2
 projekt: /usr/lib/libGLX.so
 projekt: /usr/lib/libOpenGL.so
 projekt: CMakeFiles/projekt.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nixen/Projects/JA/ja_steganografia/projekt/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable projekt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nixen/Projects/JA/ja_stegano/projekt/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable projekt"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/projekt.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -160,6 +160,6 @@ CMakeFiles/projekt.dir/clean:
 .PHONY : CMakeFiles/projekt.dir/clean
 
 CMakeFiles/projekt.dir/depend:
-	cd /home/nixen/Projects/JA/ja_steganografia/projekt && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nixen/Projects/JA/ja_steganografia/projekt /home/nixen/Projects/JA/ja_steganografia/projekt /home/nixen/Projects/JA/ja_steganografia/projekt /home/nixen/Projects/JA/ja_steganografia/projekt /home/nixen/Projects/JA/ja_steganografia/projekt/CMakeFiles/projekt.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nixen/Projects/JA/ja_stegano/projekt && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nixen/Projects/JA/ja_stegano/projekt /home/nixen/Projects/JA/ja_stegano/projekt /home/nixen/Projects/JA/ja_stegano/projekt /home/nixen/Projects/JA/ja_stegano/projekt /home/nixen/Projects/JA/ja_stegano/projekt/CMakeFiles/projekt.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/projekt.dir/depend
 

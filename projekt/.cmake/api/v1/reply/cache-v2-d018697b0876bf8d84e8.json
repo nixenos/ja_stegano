@@ -43,7 +43,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "Debug"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_CACHEFILE_DIR",
@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/nixen/Projects/JA/ja_steganografia/projekt"
+			"value" : "/home/nixen/Projects/JA/ja_stegano/projekt"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -158,7 +158,7 @@
 					"value" : "CXX compiler"
 				}
 			],
-			"type" : "STRING",
+			"type" : "FILEPATH",
 			"value" : "/usr/bin/c++"
 		},
 		{
@@ -503,7 +503,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/nixen/Projects/JA/ja_steganografia/projekt"
+			"value" : "/home/nixen/Projects/JA/ja_stegano/projekt"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1251,7 +1251,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/libGLU.so"
+			"value" : "OPENGL_glu_LIBRARY-NOTFOUND"
 		},
 		{
 			"name" : "OPENGL_glx_LIBRARY",
@@ -1331,7 +1331,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/pkgconf"
+			"value" : "/usr/bin/pkg-config"
 		},
 		{
 			"name" : "PKG_XKB_CFLAGS",
@@ -6235,7 +6235,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/nixen/Projects/JA/ja_steganografia/projekt"
+			"value" : "/home/nixen/Projects/JA/ja_stegano/projekt"
 		},
 		{
 			"name" : "projekt_IS_TOP_LEVEL",
@@ -6259,7 +6259,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/nixen/Projects/JA/ja_steganografia/projekt"
+			"value" : "/home/nixen/Projects/JA/ja_stegano/projekt"
 		}
 	],
 	"kind" : "cache",

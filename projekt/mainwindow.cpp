@@ -159,7 +159,8 @@ void MainWindow::on_saveFileButton_clicked() {
         }
     }
         if (ui->readFromBMPRadioButton->isChecked()) {
-            if (ui->cAPICheckBox->isChecked()) {
+            //if (ui->cAPICheckBox->isChecked()) {
+            if (true) {
                 if (sourceImageFile) {
                     uint32_t pixelCount = this->sourceImageDIBHeader.WIDTH * this->sourceImageDIBHeader.HEIGHT;
                     switch (this->sourceImageDIBHeader.BITSPERPIXEL) {

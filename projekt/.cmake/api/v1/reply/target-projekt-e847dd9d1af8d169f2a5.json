@@ -76,9 +76,6 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g"
-				},
-				{
 					"backtrace" : 7,
 					"fragment" : "-fPIC"
 				},
@@ -101,6 +98,10 @@
 					"define" : "QT_GUI_LIB"
 				},
 				{
+					"backtrace" : 7,
+					"define" : "QT_NO_DEBUG"
+				},
+				{
 					"backtrace" : 5,
 					"define" : "QT_WIDGETS_LIB"
 				}
@@ -108,11 +109,11 @@
 			"includes" : 
 			[
 				{
-					"path" : "/home/nixen/Projects/JA/ja_steganografia/projekt"
+					"path" : "/home/nixen/Projects/JA/ja_stegano/projekt"
 				},
 				{
 					"backtrace" : 0,
-					"path" : "/home/nixen/Projects/JA/ja_steganografia/projekt/projekt_autogen/include"
+					"path" : "/home/nixen/Projects/JA/ja_stegano/projekt/projekt_autogen/include"
 				},
 				{
 					"backtrace" : 7,
@@ -171,23 +172,19 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-g",
-				"role" : "flags"
-			},
-			{
 				"fragment" : "",
 				"role" : "flags"
 			},
 			{
-				"fragment" : "-L/home/nixen/Projects/JA/ja_steganografia/projekt/asm_src",
+				"fragment" : "-L/home/nixen/Projects/JA/ja_stegano/projekt/asm_src",
 				"role" : "libraryPath"
 			},
 			{
-				"fragment" : "-L/home/nixen/Projects/JA/ja_steganografia/projekt/c_src",
+				"fragment" : "-L/home/nixen/Projects/JA/ja_stegano/projekt/c_src",
 				"role" : "libraryPath"
 			},
 			{
-				"fragment" : "-Wl,-rpath,/home/nixen/Projects/JA/ja_steganografia/projekt/asm_src:/home/nixen/Projects/JA/ja_steganografia/projekt/c_src",
+				"fragment" : "-Wl,-rpath,/home/nixen/Projects/JA/ja_stegano/projekt/asm_src:/home/nixen/Projects/JA/ja_stegano/projekt/c_src",
 				"role" : "libraries"
 			},
 			{
