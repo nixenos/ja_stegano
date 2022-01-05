@@ -159,8 +159,8 @@ void MainWindow::on_saveFileButton_clicked() {
         }
     }
         if (ui->readFromBMPRadioButton->isChecked()) {
-            //if (ui->cAPICheckBox->isChecked()) {
-            if (true) {
+            if (ui->cAPICheckBox->isChecked()) {
+            //if (true) {
                 if (sourceImageFile) {
                     uint32_t pixelCount = this->sourceImageDIBHeader.WIDTH * this->sourceImageDIBHeader.HEIGHT;
                     switch (this->sourceImageDIBHeader.BITSPERPIXEL) {
@@ -180,7 +180,50 @@ void MainWindow::on_saveFileButton_clicked() {
                     if (this->pixelArray) {
                         if (check_for_stegano(sourceImageBMPHeader)) {
                             int result = write_data_from_image(sourceImageBMPHeader, pixelArray, destinationImageFile,
-                                                               sourceImageDIBHeader, 2);
+                                                               sourceImageDIBHeader, 2, 1, threadsCount);
+                            if (result) {
+                                std::cout << "Success\n";
+                                QMessageBox msgBox;
+                                msgBox.setText("Data file has been sucessfully saved!");
+                                msgBox.exec();
+                            } else {
+                                QMessageBox msgBox;
+                                msgBox.setText("Error calculating new data file!");
+                                msgBox.exec();
+                                std::cout << "Fails\n";
+                            }
+                        } else {
+                            std::cout << "No stegano header\n";
+                        }
+                    } else {
+                        std::cout << "No pixel array\n";
+                    }
+                } else {
+                    std::cout << "No source image pointer\n";
+                }
+            }
+
+            if (ui->ASMAPICheckBox->isChecked()){
+                if (sourceImageFile) {
+                    uint32_t pixelCount = this->sourceImageDIBHeader.WIDTH * this->sourceImageDIBHeader.HEIGHT;
+                    switch (this->sourceImageDIBHeader.BITSPERPIXEL) {
+                        case 16:
+                            this->pixelArray = pixelArray_read_16bit(sourceImageFile, pixelCount);
+                            break;
+                        case 24:
+                            this->pixelArray = pixelArray_read_24bit(sourceImageFile, pixelCount);
+                            break;
+                        case 32:
+                            this->pixelArray = pixelArray_read_32bit(sourceImageFile, pixelCount);
+                            break;
+                        default:
+                            this->pixelArray = 0;
+                            break;
+                    }
+                    if (this->pixelArray) {
+                        if (check_for_stegano(sourceImageBMPHeader)) {
+                            int result = write_data_from_image(sourceImageBMPHeader, pixelArray, destinationImageFile,
+                                                               sourceImageDIBHeader, 2, 0, threadsCount);
                             if (result) {
                                 std::cout << "Success\n";
                                 QMessageBox msgBox;
@@ -286,8 +329,8 @@ void MainWindow::on_readFromBMPRadioButton_clicked(){
         ui->newFileNameLabel->setText("New file name: ");
     }
     ui->loadDataFileButton->setEnabled(false);
-    ui->ASMAPICheckBox->setEnabled(false);
-    ui->cAPICheckBox->setEnabled(false);
+    //ui->ASMAPICheckBox->setEnabled(false);
+    //ui->cAPICheckBox->setEnabled(false);
 }
 
 
@@ -318,7 +361,7 @@ void MainWindow::on_writeDataToBMPRadioButton_clicked(){
         ui->newFileNameLabel->setText("New file name: ");
     }
     ui->loadDataFileButton->setEnabled(true);
-    ui->ASMAPICheckBox->setEnabled(true);
-    ui->cAPICheckBox->setEnabled(true);
+    //ui->ASMAPICheckBox->setEnabled(true);
+    //ui->cAPICheckBox->setEnabled(true);
 }
 

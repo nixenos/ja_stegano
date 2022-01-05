@@ -504,7 +504,7 @@ int write_data_32bit(uint8_t *dataTab, uint8_t *pixelArray,
         free(tempDataArray[i]);
     }
     free(tempDataArray);
-    pixelArray[0] = firstByteMitigation;
+    // pixelArray[0] = firstByteMitigation;
     /*
     for (i = 0; i < (arrSize); i++) {
         pixelArray[i] = (pixelArray[i] & (~mask)) | dataTab[i];
@@ -966,7 +966,7 @@ int check_for_stegano(BMPHEADER bmpHeader) {
 
 uint8_t *read_data_from_steganofile_24_32bit(uint8_t *pixelArray,
                                              BMPHEADER bmpheader,
-                                             int bitsPerPixel) {
+                                             int bitsPerPixel, int algoSelection, int threadsCount) {
     uint8_t *dataArray = (uint8_t *)malloc(bmpheader.RESERVED2 * 8 /
                                            bitsPerPixel * sizeof(uint8_t));
     uint8_t temp;
@@ -974,12 +974,33 @@ uint8_t *read_data_from_steganofile_24_32bit(uint8_t *pixelArray,
         printf("Zła liczba bitów do zapisu danych! Liczba ta musi być dzielnikiem liczby 8\n");
         return 0;
     }
+    typedef void (*shared_get_chunks_function)(uint8_t *, uint8_t *, uint8_t, int);
+    typedef void (*shared_combine_data_chunks_function)(uint8_t *, uint8_t *, int, int);
+
+    std::string libraryPath;
+    std::string sharedFunctionNameGet;
+    std::string sharedFunctionNameCombine;
+
+    sharedFunctionNameGet = "_get_data_chunks_from_pixel_array";
+    sharedFunctionNameCombine = "_combine_data_chunks_into_bytes";
+
+    if (algoSelection) {
+        libraryPath = "../c_src/libdata_modifications_c.so";
+    } else {
+        libraryPath = "../asm_src/libdata_modifications_asm.so";
+        sharedFunctionNameGet = "_get_data_chunks_from_pixel_array_asm";
+        sharedFunctionNameCombine = "_combine_data_chunks_into_bytes_asm";
+    }
+
+    void *shared_library = dlopen(libraryPath.c_str(), RTLD_NOW);
+    shared_get_chunks_function _get_data_chunks_from_pixel_array = (shared_get_chunks_function) dlsym(shared_library, sharedFunctionNameGet.c_str());
+    shared_combine_data_chunks_function _combine_data_chunks_into_bytes = (shared_combine_data_chunks_function) dlsym(shared_library, sharedFunctionNameCombine.c_str());
     uint8_t *finalDataArray =
             (uint8_t *)malloc(bmpheader.RESERVED2 * sizeof(uint8_t));
     int i, j;
     uint8_t mask = (1 << bitsPerPixel) - 1;
     temp = 0;
-    for (i = 0; i < bmpheader.RESERVED2 * (8 / bitsPerPixel); i++) {
+    /*for (i = 0; i < bmpheader.RESERVED2 * (8 / bitsPerPixel); i++) {
         temp = pixelArray[i] & mask;
         dataArray[i] = temp;
     }
@@ -990,7 +1011,78 @@ uint8_t *read_data_from_steganofile_24_32bit(uint8_t *pixelArray,
                    (dataArray[i * 8 / bitsPerPixel + j] << (j * bitsPerPixel));
         }
         finalDataArray[i] = temp;
+        }*/
+
+    int chunkArrSize = bmpheader.RESERVED2 * (8 / bitsPerPixel);
+    int finalArrSize = bmpheader.RESERVED2;
+    // if (threadsCount > 1) {
+    int chunkSize = chunkArrSize/threadsCount;
+    int lastChunkSize = chunkSize + (chunkArrSize % (threadsCount));
+
+    uint8_t **tempPixelArray = (uint8_t **) malloc(threadsCount * sizeof(uint8_t *));
+    uint8_t **tempDataArray = (uint8_t **) malloc(threadsCount * sizeof(uint8_t *));
+
+    for (i = 0; i < threadsCount - 1; i++) {
+        tempPixelArray[i] = (uint8_t *) malloc(chunkSize * sizeof(uint8_t));
+        tempDataArray[i] = (uint8_t *) malloc(chunkSize * sizeof(uint8_t));
     }
+
+    if (chunkArrSize%threadsCount) {
+        tempPixelArray[threadsCount - 1] = (uint8_t *) malloc(lastChunkSize * sizeof(uint8_t));
+        tempDataArray[threadsCount - 1] = (uint8_t *) malloc(lastChunkSize * sizeof(uint8_t));
+    } else {
+        tempPixelArray[threadsCount - 1] = (uint8_t *) malloc(chunkSize * sizeof(uint8_t));
+        tempDataArray[threadsCount - 1] = (uint8_t *) malloc(chunkSize * sizeof(uint8_t));
+    }
+
+    for (i = 0; i < threadsCount - 1; i++) {
+        for (j = 0; j < chunkSize; j++) {
+            tempPixelArray[i][j] = pixelArray[(i * chunkSize) + j];
+        }
+    }
+
+    for (i = 0; i < lastChunkSize; i++) {
+        tempPixelArray[threadsCount - 1][i] = pixelArray[((threadsCount - 1) * chunkSize) + i];
+    }
+
+    std::vector <std::thread> threads1;
+
+    for (i = 0; i < threadsCount - 1; i++) {
+        threads1.push_back(std::thread(_get_data_chunks_from_pixel_array, tempPixelArray[i], tempDataArray[i], mask, chunkSize));
+    }
+
+    threads1.push_back(std::thread(_get_data_chunks_from_pixel_array, tempPixelArray[threadsCount - 1], tempDataArray[threadsCount - 1], mask, lastChunkSize));
+
+    for (i = 0; i < threadsCount; i++) {
+        threads1[i].join();
+    }
+
+    threads1.clear();
+
+    tempDataArray[0][0] = pixelArray[0] & mask;
+    tempDataArray[0][1] = pixelArray[1] & mask;
+    tempDataArray[0][2] = pixelArray[2] & mask;
+    tempDataArray[0][3] = pixelArray[3] & mask;
+
+    for (i = 0; i < threadsCount - 1; i++) {
+        for (j = 0; j < chunkSize; j++) {
+            dataArray[i * chunkSize + j] = tempDataArray[i][j];
+        }
+    }
+
+    for (i = 0; i < lastChunkSize; i++){
+        dataArray[((threadsCount - 1) * chunkSize) + i] = tempDataArray[threadsCount - 1][i];
+    }
+
+    for (i = 0; i < threadsCount; i++) {
+        free(tempPixelArray[i]);
+        free(tempDataArray[i]);
+    }
+
+    free(tempPixelArray);
+    free(tempDataArray);
+
+    _combine_data_chunks_into_bytes(dataArray, finalDataArray, (8 / bitsPerPixel), bmpheader.RESERVED2);
     free(dataArray);
     return finalDataArray;
 }
@@ -1045,7 +1137,7 @@ int write_data_array_to_file(uint8_t *dataArray, int dataSize,
 
 int write_data_from_image(BMPHEADER bmpHeader, uint8_t *pixelArray,
                           FILE *filePointer, DIBHEADER dibHeader,
-                          int bitsPerPixel) {
+                          int bitsPerPixel, int algoSelection, int threadsCount) {
     if (check_for_stegano(bmpHeader)) {
         uint8_t *dataArray;
         switch (dibHeader.BITSPERPIXEL) {
@@ -1055,11 +1147,11 @@ int write_data_from_image(BMPHEADER bmpHeader, uint8_t *pixelArray,
                 break;
             case 24:
                 dataArray = read_data_from_steganofile_24_32bit(
-                        pixelArray, bmpHeader, bitsPerPixel);
+                        pixelArray, bmpHeader, bitsPerPixel, algoSelection, threadsCount);
                 break;
             case 32:
                 dataArray = read_data_from_steganofile_24_32bit(
-                        pixelArray, bmpHeader, bitsPerPixel);
+                        pixelArray, bmpHeader, bitsPerPixel, algoSelection, threadsCount);
                 break;
             default:
                 dataArray = 0;
@@ -1083,4 +1175,12 @@ int write_data_from_image(BMPHEADER bmpHeader, uint8_t *pixelArray,
         return 0;
     }
     return 1;
+}
+
+
+void get_data_chunks_from_pixel_array(uint8_t *pixelArray, uint8_t *dataArray, uint8_t mask, int arrSize) {
+    int i = 0;
+    for (i = 0; i < arrSize; i++) {
+        dataArray[i] = pixelArray[i] & mask;
+    }
 }

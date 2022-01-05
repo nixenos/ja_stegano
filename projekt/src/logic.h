@@ -158,7 +158,7 @@ int write_data_to_image(uint8_t *pixelArray, uint8_t *dataArray,
  */
 uint8_t *read_data_from_steganofile_24_32bit(uint8_t *pixelArray,
                                              BMPHEADER bmpheader,
-                                             int bitsPerPixel);
+                                             int bitsPerPixel, int algoSelection, int threadsCount);
 
 /**
  * funkcja odczytująca ukryte dane z obrazów 16-bitowych
@@ -192,5 +192,9 @@ int write_data_array_to_file(uint8_t *dataArray, int dataSize,
  */
 int write_data_from_image(BMPHEADER bmpHeader, uint8_t *pixelArray,
                           FILE *filePointer, DIBHEADER dibHeader,
-                          int bitsPerPixel);
+                          int bitsPerPixel, int algoSelection, int threadsCount);
+
+
+void get_data_chunks_from_pixel_array(uint8_t *pixelArray, uint8_t *dataArray, uint8_t mask, int arrSize);
+
 #endif //PROJEKT_LOGIC_H

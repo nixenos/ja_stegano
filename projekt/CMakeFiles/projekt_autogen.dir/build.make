@@ -68,7 +68,7 @@ include CMakeFiles/projekt_autogen.dir/progress.make
 
 CMakeFiles/projekt_autogen:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nixen/Projects/JA/ja_stegano/projekt/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target projekt"
-	/usr/bin/cmake -E cmake_autogen /home/nixen/Projects/JA/ja_stegano/projekt/CMakeFiles/projekt_autogen.dir/AutogenInfo.json ""
+	/usr/bin/cmake -E cmake_autogen /home/nixen/Projects/JA/ja_stegano/projekt/CMakeFiles/projekt_autogen.dir/AutogenInfo.json Debug
 
 projekt_autogen: CMakeFiles/projekt_autogen
 projekt_autogen: CMakeFiles/projekt_autogen.dir/build.make

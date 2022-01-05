@@ -1,42 +1,105 @@
-     1                                  global _apply_data_modifications_asm
-     2                                  
-     3                                  _apply_data_modifications_asm:
-     4 00000000 F7D2                            not     edx
-     5 00000002 660F3A20CA00                    pinsrb  xmm1, edx, 0
-     6 00000008 660F3A20CA08                    pinsrb  xmm1, edx, 8
-     7 0000000E 660F3A20CA10                    pinsrb  xmm1, edx, 16
-     8 00000014 660F3A20CA18                    pinsrb  xmm1, edx, 24
-     9 0000001A 660F3A20CA20                    pinsrb  xmm1, edx, 32
-    10 00000020 660F3A20CA28                    pinsrb  xmm1, edx, 40
-    11 00000026 660F3A20CA30                    pinsrb  xmm1, edx, 48
-    12 0000002C 660F3A20CA38                    pinsrb  xmm1, edx, 56
-    13 00000032 4C63C1                          movsx   r8, ecx
-    14 00000035 4983E807                        sub     r8, 7
-    15 00000039 B800000000                      mov     rax, 0
-    16 0000003E 4883F900                        cmp     rcx, 0
-    17 00000042 7429                            je      EXIT
-    18                                  LOOP_MAIN:
-    19 00000044 0FB60C07                        movzx   ecx, BYTE [rdi+rax]
-    20 00000048 F30F6F0407                      movdqu  xmm0, [rdi+rax]
-    21 0000004D F30F6F1406                      movdqu  xmm2, [rsi+rax]
-    22 00000052 660FDBC1                        pand    xmm0, xmm1
-    23 00000056 660FEBC2                        por     xmm0, xmm2
-    24 0000005A 0F110407                        movups  [rdi+rax], xmm0
-    25 0000005E 4883F801                        cmp     rax, 1
-    26 00000062 740A                            je      FIRST_BYTE_MITIGATION
-    27                                  CONTINUE:
-    28 00000064 4883C008                        add     rax, 8
-    29 00000068 4939C0                          cmp     r8, rax
-    30 0000006B 7FD7                            jg     LOOP_MAIN
-    31                                  EXIT:
-    32 0000006D C3                              ret
-    33                                  
-    34                                  FIRST_BYTE_MITIGATION:
-    35 0000006E 0FB64F01                        movzx   ecx, BYTE [rdi + 1]
-    36 00000072 20D1                            and     cl, dl
-    37 00000074 0A4E01                          or      cl, BYTE [rsi + 1]
-    38 00000077 884F01                          mov     BYTE [rdi + 1], cl
-    39 0000007A EBE8                            jmp     CONTINUE
-    40                                  
-    41                                  
-    42                                  ; test
+     1                                  
+     2                                  ;; Eksport symboli, tak aby linker i C++ mógł zaimportować je do programu
+     3                                  global _apply_data_modifications_asm
+     4                                  global _get_data_chunks_from_pixel_array_asm
+     5                                  global _combine_data_chunks_into_bytes_asm
+     6                                  
+     7                                  ;; funkcja aplikująca zmiany do tablicy pixeli,
+     8                                  _apply_data_modifications_asm:
+     9 00000000 F7D2                            not     edx
+    10 00000002 660F3A20CA00                    pinsrb  xmm1, edx, 0
+    11 00000008 660F3A20CA08                    pinsrb  xmm1, edx, 8
+    12 0000000E 660F3A20CA10                    pinsrb  xmm1, edx, 16
+    13 00000014 660F3A20CA18                    pinsrb  xmm1, edx, 24
+    14 0000001A 660F3A20CA20                    pinsrb  xmm1, edx, 32
+    15 00000020 660F3A20CA28                    pinsrb  xmm1, edx, 40
+    16 00000026 660F3A20CA30                    pinsrb  xmm1, edx, 48
+    17 0000002C 660F3A20CA38                    pinsrb  xmm1, edx, 56
+    18 00000032 4C63C1                          movsx   r8, ecx
+    19 00000035 4983E807                        sub     r8, 7
+    20 00000039 B800000000                      mov     rax, 0
+    21 0000003E 4883F900                        cmp     rcx, 0
+    22 00000042 7429                            je      EXIT
+    23                                  LOOP_MAIN:
+    24 00000044 0FB60C07                        movzx   ecx, BYTE [rdi+rax]
+    25 00000048 F30F6F0407                      movdqu  xmm0, [rdi+rax]
+    26 0000004D F30F6F1406                      movdqu  xmm2, [rsi+rax]
+    27 00000052 660FDBC1                        pand    xmm0, xmm1
+    28 00000056 660FEBC2                        por     xmm0, xmm2
+    29 0000005A 0F110407                        movups  [rdi+rax], xmm0
+    30 0000005E 4883F801                        cmp     rax, 1
+    31 00000062 740A                            je      FIRST_BYTE_MITIGATION
+    32                                  CONTINUE:
+    33 00000064 4883C008                        add     rax, 8
+    34 00000068 4939C0                          cmp     r8, rax
+    35 0000006B 7FD7                            jg     LOOP_MAIN
+    36                                  EXIT:
+    37 0000006D C3                              ret
+    38                                  
+    39                                  FIRST_BYTE_MITIGATION:
+    40 0000006E 0FB64F01                        movzx   ecx, BYTE [rdi + 1]
+    41 00000072 20D1                            and     cl, dl
+    42 00000074 0A4E01                          or      cl, BYTE [rsi + 1]
+    43 00000077 884F01                          mov     BYTE [rdi + 1], cl
+    44 0000007A EBE8                            jmp     CONTINUE
+    45                                  
+    46                                  
+    47                                  _get_data_chunks_from_pixel_array_asm:
+    48 0000007C 85C9                            test    ecx, ecx
+    49 0000007E 7E52                            jle     SECOND_EXIT
+    50 00000080 660F3A20CA00                    pinsrb  xmm1, edx, 0
+    51 00000086 660F3A20CA08                    pinsrb  xmm1, edx, 8
+    52 0000008C 660F3A20CA10                    pinsrb  xmm1, edx, 16
+    53 00000092 660F3A20CA18                    pinsrb  xmm1, edx, 24
+    54 00000098 660F3A20CA20                    pinsrb  xmm1, edx, 32
+    55 0000009E 660F3A20CA28                    pinsrb  xmm1, edx, 40
+    56 000000A4 660F3A20CA30                    pinsrb  xmm1, edx, 48
+    57 000000AA 660F3A20CA38                    pinsrb  xmm1, edx, 56
+    58 000000B0 4189C8                          mov     r8d, ecx
+    59 000000B3 4183E808                        sub     r8d, 8
+    60 000000B7 B800000000                      mov     rax, 0
+    61                                  SECOND_MAIN_LOOP:
+    62 000000BC F30F6F0407                      movdqu  xmm0, [rdi+rax]
+    63 000000C1 660FDBC8                        pand    xmm1, xmm0
+    64 000000C5 0F110406                        movups  [rsi+rax], xmm0
+    65 000000C9 4883C008                        add     rax, 8
+    66 000000CD 4C39C0                          cmp     rax, r8
+    67 000000D0 7CEA                            jl      SECOND_MAIN_LOOP
+    68                                  SECOND_EXIT:
+    69 000000D2 C3                              ret
+    70                                  
+    71                                  _combine_data_chunks_into_bytes_asm:
+    72 000000D3 85C9                            test    ecx, ecx
+    73 000000D5 7E4A                            jle     EXIT_3
+    74 000000D7 8D41FF                          lea     eax, [rcx-1]
+    75 000000DA 53                              push    rbx
+    76 000000DB 4989F2                          mov     r10, rsi
+    77 000000DE 448D0C12                        lea     r9d, [rdx+rdx]
+    78 000000E2 488D5C0601                      lea     rbx, [rsi+1+rax]
+    79 000000E7 4531DB                          xor     r11d, r11d
+    80                                  FIRST_LOOP_3:
+    81 000000EA 4531C0                          xor     r8d, r8d
+    82 000000ED 85D2                            test    edx, edx
+    83 000000EF 7E1F                            jle     FINAL_COMPUTE_3
+    84 000000F1 4963F3                          movsx   rsi, r11d
+    85 000000F4 31C9                            xor     ecx, ecx
+    86 000000F6 4531C0                          xor     r8d, r8d
+    87 000000F9 4801FE                          add     rsi, rdi
+    88                                  SECOND_LOOP_3:
+    89 000000FC 0FB606                          movzx   eax, BYTE [rsi]
+    90 000000FF 4883C601                        add     rsi, 1
+    91 00000103 D3E0                            sal     eax, cl
+    92 00000105 83C102                          add     ecx, 2
+    93 00000108 4101C0                          add     r8d, eax
+    94 0000010B 4139C9                          cmp     r9d, ecx
+    95 0000010E 75EC                            jne     SECOND_LOOP_3
+    96                                  FINAL_COMPUTE_3:
+    97 00000110 458802                          mov     BYTE [r10], r8b
+    98 00000113 4983C201                        add     r10, 1
+    99 00000117 4101D3                          add     r11d, edx
+   100 0000011A 4939DA                          cmp     r10, rbx
+   101 0000011D 75CB                            jne     FIRST_LOOP_3
+   102 0000011F 5B                              pop     rbx
+   103 00000120 C3                              ret
+   104                                  EXIT_3:
+   105 00000121 C3                              ret
