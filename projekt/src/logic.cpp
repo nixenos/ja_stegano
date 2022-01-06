@@ -396,6 +396,9 @@ int write_data_32bit(uint8_t *dataTab, uint8_t *pixelArray,
     int bytesPerLine = dibHeader.WIDTH * 4; /* (for 32 bit images) */
     int i = 0;
     uint8_t mask = (1 << bitsPerPixel) - 1;
+    /*
+    ** podział tablic na paczki, które zostaną przekazane do poszczególnych wątków
+         */
     int blockSize = 0;
     int lastDataBlockSize = 0;
     int pixelArrayBlockCount = 0;
@@ -411,6 +414,7 @@ int write_data_32bit(uint8_t *dataTab, uint8_t *pixelArray,
         pixelArrayBlockCount++;
         lastPixelArrayBlockSize = (4*pixels) % blockSize;
     }
+    /* alokacja pamięci na tablice pomocnicze */
     uint8_t **tempPixelArray;
     uint8_t **tempDataArray;
     tempPixelArray = (uint8_t **) malloc(pixelArrayBlockCount * sizeof(uint8_t *));
@@ -431,6 +435,7 @@ int write_data_32bit(uint8_t *dataTab, uint8_t *pixelArray,
     } else {
         tempDataArray[threadsCount-1] = (uint8_t *) malloc(blockSize * sizeof(uint8_t));
     }
+    /* przepisanie potrzebnych danych do tablic pomocniczych */
     for (i=0; i< pixelArrayBlockCount - 1; i++) {
         for (int j = 0; j < blockSize; j++) {
             tempPixelArray[i][j] = pixelArray[i*blockSize + j];
@@ -459,21 +464,16 @@ int write_data_32bit(uint8_t *dataTab, uint8_t *pixelArray,
             tempDataArray[threadsCount - 1][j] = dataTab[(threadsCount - 1) * blockSize + j];
         }
     }
+    /* podział obsługi danych na wątki */
     std::vector <std::thread> threads;
     for (i = 0; i < threadsCount - 1; i++) {
         threads.push_back(std::thread(_apply_data_modifications, tempPixelArray[i], tempDataArray[i], mask, blockSize));
-        // apply_data_modifications(tempPixelArray[i], tempDataArray[i], mask, blockSize);
-        // _apply_data_modifications(tempPixelArray[i], tempDataArray[i], mask, blockSize);
-    } 
+    }
     if (lastDataBlockSize){
         threads.push_back(std::thread(_apply_data_modifications, tempPixelArray[threadsCount - 1], tempDataArray[threadsCount - 1], mask, lastDataBlockSize));
-        // apply_data_modifications(tempPixelArray[threadsCount - 1], tempDataArray[threadsCount - 1], mask, lastDataBlockSize);
-        // _apply_data_modifications(tempPixelArray[threadsCount - 1], tempDataArray[threadsCount - 1], mask, lastDataBlockSize);
     }
     else {
         threads.push_back(std::thread(_apply_data_modifications, tempPixelArray[threadsCount - 1], tempDataArray[threadsCount - 1], mask, blockSize));
-        // apply_data_modifications(tempPixelArray[threadsCount - 1], tempDataArray[threadsCount - 1], mask, blockSize);
-        // _apply_data_modifications(tempPixelArray[threadsCount - 1], tempDataArray[threadsCount - 1], mask, blockSize);
 
     }
 
@@ -481,7 +481,6 @@ int write_data_32bit(uint8_t *dataTab, uint8_t *pixelArray,
         threads[i].join();
     }
 
-    uint8_t firstByteMitigation = (pixelArray[0] & (~mask)) | dataTab[0];
     for (i = 0; i < threadsCount - 1; i++) {
         for (int j = 0; j < blockSize; j++) {
             pixelArray[i*blockSize + j] = tempPixelArray[i][j];
@@ -504,11 +503,8 @@ int write_data_32bit(uint8_t *dataTab, uint8_t *pixelArray,
         free(tempDataArray[i]);
     }
     free(tempDataArray);
-    // pixelArray[0] = firstByteMitigation;
-    /*
-    for (i = 0; i < (arrSize); i++) {
-        pixelArray[i] = (pixelArray[i] & (~mask)) | dataTab[i];
-    }*/
+
+    /* zapisywanie nagłówków do pliku */
     if(write_headers(header, dibHeader, filePointer, bitFields)){
         printf("Zapisywanie nagłówków do pliku...\n");
     }
@@ -516,6 +512,7 @@ int write_data_32bit(uint8_t *dataTab, uint8_t *pixelArray,
         printf("Błąd zapisu nagłówków do pliku!\n");
         return 0;
     }
+    /* zapisywanie tablicy pixeli, korzystając z bufora */
     uint8_t *linebuf;
     linebuf = (uint8_t *)malloc(bytesPerLine * sizeof(uint8_t));
     if (linebuf == NULL) {
@@ -525,6 +522,7 @@ int write_data_32bit(uint8_t *dataTab, uint8_t *pixelArray,
     unsigned int line = 0;
     /*
      * zapis linia po linii, aby zachować poprawną liczbę bajtów w linii
+     * każda linia musi mieć padding z zer tak, aby liczba bajtów w linii była podzielna przez 4
      */
     for (line = 0; line < dibHeader.HEIGHT; line++) {
         for (i = 0; i < bytesPerLine; i++) {
@@ -569,6 +567,7 @@ int write_data_24bit(uint8_t *dataTab, uint8_t *pixelArray,
 
     uint8_t mask = (1 << bitsPerPixel) - 1;
     int i = 0;
+    /* alokacja pamięci i obliczenie wielkości segmentów dla podziału obliczeń na wątki */
     int blockSize = 0;
     int lastDataBlockSize = 0;
     int pixelArrayBlockCount = 0;
@@ -604,6 +603,7 @@ int write_data_24bit(uint8_t *dataTab, uint8_t *pixelArray,
     } else {
         tempDataArray[threadsCount-1] = (uint8_t *) malloc(blockSize * sizeof(uint8_t));
     }
+    /* przepisanie potrzebnych danych do tablic tymczasowych */
     for (i=0; i< pixelArrayBlockCount - 1; i++) {
         for (int j = 0; j < blockSize; j++) {
             tempPixelArray[i][j] = pixelArray[i*blockSize + j];
@@ -632,25 +632,22 @@ int write_data_24bit(uint8_t *dataTab, uint8_t *pixelArray,
             tempDataArray[threadsCount - 1][j] = dataTab[(threadsCount - 1) * blockSize + j];
         }
     }
+    /* podział na wątki i przetworzenie danych */
     std::vector <std::thread> threads;
     for (i = 0; i < threadsCount - 1; i++) {
         threads.push_back(std::thread(_apply_data_modifications, tempPixelArray[i], tempDataArray[i], mask, blockSize));
-        // apply_data_modifications(tempPixelArray[i], tempDataArray[i], mask, blockSize);
-    } 
+    }
     if (lastDataBlockSize){
         threads.push_back(std::thread(_apply_data_modifications, tempPixelArray[threadsCount - 1], tempDataArray[threadsCount - 1], mask, lastDataBlockSize));
-        // apply_data_modifications(tempPixelArray[threadsCount - 1], tempDataArray[threadsCount - 1], mask, lastDataBlockSize);
     }
     else {
         threads.push_back(std::thread(_apply_data_modifications, tempPixelArray[threadsCount - 1], tempDataArray[threadsCount - 1], mask, blockSize));
-        // apply_data_modifications(tempPixelArray[threadsCount - 1], tempDataArray[threadsCount - 1], mask, blockSize);
     }
 
     for (i = 0; i < threads.size(); i++) {
         threads[i].join();
     }
 
-    uint8_t firstByteMitigation = (pixelArray[0] & (~mask)) | dataTab[0];
     for (i = 0; i < threadsCount - 1; i++) {
         for (int j = 0; j < blockSize; j++) {
             pixelArray[i*blockSize + j] = tempPixelArray[i][j];
@@ -665,11 +662,6 @@ int write_data_24bit(uint8_t *dataTab, uint8_t *pixelArray,
             pixelArray[(threadsCount - 1) * blockSize + j] = tempPixelArray[threadsCount - 1][j];
         }
     }
-    pixelArray[0] = firstByteMitigation;
-    /*
-    for (i = 0; i < (arrSize); i++) {
-        pixelArray[i] = (pixelArray[i] & (~mask)) | dataTab[i];
-    }*/
     if(write_headers(header, dibHeader, filePointer, bitFields)){
         printf("Zapisywanie nagłówków do pliku...\n");
     }
@@ -823,15 +815,12 @@ int write_data_16bit(uint8_t *dataTab, uint8_t *pixelArray,
     std::vector <std::thread> threads;
     for (i = 0; i < threadsCount - 1; i++) {
         threads.push_back(std::thread(apply_data_modifications_16bit, tempPixelArray[i], tempDataArray[i], mask, blockSize));
-        // apply_data_modifications(tempPixelArray[i], tempDataArray[i], mask, blockSize);
-    } 
+    }
     if (lastDataBlockSize){
         threads.push_back(std::thread(apply_data_modifications_16bit, tempPixelArray[threadsCount - 1], tempDataArray[threadsCount - 1], mask, lastDataBlockSize));
-        // apply_data_modifications(tempPixelArray[threadsCount - 1], tempDataArray[threadsCount - 1], mask, lastDataBlockSize);
     }
     else {
         threads.push_back(std::thread(apply_data_modifications_16bit, tempPixelArray[threadsCount - 1], tempDataArray[threadsCount - 1], mask, blockSize));
-        // apply_data_modifications(tempPixelArray[threadsCount - 1], tempDataArray[threadsCount - 1], mask, blockSize);
     }
 
     for (i = 0; i < threads.size(); i++) {
@@ -866,17 +855,6 @@ int write_data_16bit(uint8_t *dataTab, uint8_t *pixelArray,
 
     // fixes ASM bug where first byte gets corrupted for no reason
     pixelArray[0] = firstByteMitigation;
-
-/*
-    for (i = 0; i < arrSize; i++) {
-        if (i % 2 == 0) {
-            pixelArray[i] = (pixelArray[i] & (~1)) | dataTab[i];
-        } else {
-            uint8_t temp = dataTab[i] << 2;
-            pixelArray[i] = (pixelArray[i] & (~4)) | temp;
-        }
-    }
-    */
     /*
      * zapis linia po linii, aby zachować poprawną liczbę bajtów w linii
      */
@@ -900,6 +878,9 @@ int write_data_to_image(uint8_t *pixelArray, uint8_t *dataArray,
     if(LCM(bitsPerPixelStegano, 8)!=8){
         printf("Błąd: ilość bitów do zapisania w pliku nie może być inna niż dzielnik 8\n");
         return 0;
+    }
+    if (bitsPerPixel == 16) {
+        bitsPerPixelStegano = 1;
     }
     SGHEADER sgHeader =
             header_generate(dataFileSize);
@@ -1013,6 +994,8 @@ uint8_t *read_data_from_steganofile_24_32bit(uint8_t *pixelArray,
         finalDataArray[i] = temp;
         }*/
 
+
+    /* obliczenie wielkości paczek oraz alokacja i przepisanie danych dla paczek (do przetworzenia przy pomocy wątków) */
     int chunkArrSize = bmpheader.RESERVED2 * (8 / bitsPerPixel);
     int finalArrSize = bmpheader.RESERVED2;
     // if (threadsCount > 1) {
@@ -1048,6 +1031,7 @@ uint8_t *read_data_from_steganofile_24_32bit(uint8_t *pixelArray,
     std::vector <std::thread> threads1;
 
     for (i = 0; i < threadsCount - 1; i++) {
+        /* wyłuskanie danych z ostatnich 2 bitów */
         threads1.push_back(std::thread(_get_data_chunks_from_pixel_array, tempPixelArray[i], tempDataArray[i], mask, chunkSize));
     }
 
@@ -1082,6 +1066,7 @@ uint8_t *read_data_from_steganofile_24_32bit(uint8_t *pixelArray,
     free(tempPixelArray);
     free(tempDataArray);
 
+    /* sklejenie danych do pełnych bajtów */
     _combine_data_chunks_into_bytes(dataArray, finalDataArray, (8 / bitsPerPixel), bmpheader.RESERVED2);
     free(dataArray);
     return finalDataArray;
@@ -1093,6 +1078,7 @@ uint8_t *read_data_from_steganofile_16bit(uint8_t *pixelArray,
     uint8_t *dataArray =
             (uint8_t *)malloc(bmpheader.RESERVED2 * 8 * sizeof(uint8_t));
     uint8_t temp;
+    bitsPerPixel = 1;
     if (bitsPerPixel != 1) {
         printf("Zła liczba bitów do zapisu danych! Liczba ta musi wynosić 1\n");
         return 0;
@@ -1175,12 +1161,4 @@ int write_data_from_image(BMPHEADER bmpHeader, uint8_t *pixelArray,
         return 0;
     }
     return 1;
-}
-
-
-void get_data_chunks_from_pixel_array(uint8_t *pixelArray, uint8_t *dataArray, uint8_t mask, int arrSize) {
-    int i = 0;
-    for (i = 0; i < arrSize; i++) {
-        dataArray[i] = pixelArray[i] & mask;
-    }
 }

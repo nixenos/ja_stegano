@@ -76,6 +76,8 @@ int write_headers(BMPHEADER bmpHeader, DIBHEADER dibHeader, FILE *filePointer, B
  * @param filePointer wskaźnik na plik wynikowy
  * @param pixels liczba pixeli w obrazie
  * @param arrSize wielkość tablicy danych
+ * @param threadsCount liczba wątków na których jest uruchamiany algorytm
+ * @param algoSelection wybór biblioteki (C lub ASM), 1 to C, 0 to ASM
  * @return 1 jeżeli funkcja wykonała się poprawnie, 0 w przeciwnym wypadku
  */
 int write_data_16bit(uint8_t *dataTab, uint8_t *pixelArray, BMPHEADER header,
@@ -92,6 +94,8 @@ int write_data_16bit(uint8_t *dataTab, uint8_t *pixelArray, BMPHEADER header,
  * @param filePointer wskaźnik na plik wynikowy
  * @param pixels liczba pixeli w obrazie
  * @param arrSize wielkość tablicy danych
+ * @param threadsCount liczba wątków na których jest uruchamiany algorytm
+ * @param algoSelection wybór biblioteki (C lub ASM), 1 to C, 0 to ASM
  * @return 1 jeżeli funkcja wykonała się poprawnie, 0 w przeciwnym wypadku
  */
 int write_data_24bit(uint8_t *dataTab, uint8_t *pixelArray, BMPHEADER header,
@@ -108,6 +112,8 @@ int write_data_24bit(uint8_t *dataTab, uint8_t *pixelArray, BMPHEADER header,
  * @param filePointer wskaźnik na plik wynikowy
  * @param pixels liczba pixeli w obrazie
  * @param arrSize wielkość tablicy danych
+ * @param threadsCount liczba wątków na których jest uruchamiany algorytm
+ * @param algoSelection wybór biblioteki (C lub ASM), 1 to C, 0 to ASM
  * @return 1 jeżeli funkcja wykonała się poprawnie, 0 w przeciwnym wypadku
  */
 int write_data_32bit(uint8_t *dataTab, uint8_t *pixelArray, BMPHEADER header,
@@ -142,6 +148,8 @@ uint8_t *read_file_to_memory(FILE *filePointer, int *filesize, int *arrSize);
  * @param bitsPerPixel głębia kolorów obrazu
  * @param pixels liczba pixeli
  * @param arrSize wielkośc tablicy bajtów pliku wejściowego
+ * @param threadsCount liczba wątków na których jest uruchamiany algorytm
+ * @param algoSelection wybór biblioteki (C lub ASM), 1 to C, 0 to ASM
  */
 int write_data_to_image(uint8_t *pixelArray, uint8_t *dataArray,
                          BMPHEADER bmpHeader, DIBHEADER dibHeader,
@@ -188,6 +196,8 @@ int write_data_array_to_file(uint8_t *dataArray, int dataSize,
  * @param filePointer wskaźnik na plik wynikowy
  * @param dibHeader nagłówek DIBHEADER
  * @param bitsPerPixel liczba bitów na których zostały zapisane dane
+ * @param threadsCount liczba wątków na których jest uruchamiany algorytm
+ * @param algoSelection wybór biblioteki (C lub ASM), 1 to C, 0 to ASM
  * @return
  */
 int write_data_from_image(BMPHEADER bmpHeader, uint8_t *pixelArray,
@@ -195,6 +205,5 @@ int write_data_from_image(BMPHEADER bmpHeader, uint8_t *pixelArray,
                           int bitsPerPixel, int algoSelection, int threadsCount);
 
 
-void get_data_chunks_from_pixel_array(uint8_t *pixelArray, uint8_t *dataArray, uint8_t mask, int arrSize);
 
 #endif //PROJEKT_LOGIC_H

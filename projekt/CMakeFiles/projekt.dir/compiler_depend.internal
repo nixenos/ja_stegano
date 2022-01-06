@@ -895,6 +895,9 @@ CMakeFiles/projekt.dir/mainwindow.cpp.o
  /usr/include/qt6/QtCore/qdir.h
  /home/nixen/Projects/JA/ja_stegano/projekt/src/dataStructures.h
  /home/nixen/Projects/JA/ja_stegano/projekt/src/logic.h
+ /usr/include/c++/11.1.0/thread
+ /usr/include/c++/11.1.0/bits/std_thread.h
+ /usr/include/c++/11.1.0/bits/this_thread_sleep.h
 
 CMakeFiles/projekt.dir/projekt_autogen/mocs_compilation.cpp.o
  /home/nixen/Projects/JA/ja_stegano/projekt/projekt_autogen/mocs_compilation.cpp

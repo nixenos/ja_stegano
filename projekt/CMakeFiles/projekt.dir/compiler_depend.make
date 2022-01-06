@@ -892,7 +892,10 @@ CMakeFiles/projekt.dir/mainwindow.cpp.o: mainwindow.cpp \
   /usr/include/qt6/QtCore/QDir \
   /usr/include/qt6/QtCore/qdir.h \
   src/dataStructures.h \
-  src/logic.h
+  src/logic.h \
+  /usr/include/c++/11.1.0/thread \
+  /usr/include/c++/11.1.0/bits/std_thread.h \
+  /usr/include/c++/11.1.0/bits/this_thread_sleep.h
 
 CMakeFiles/projekt.dir/projekt_autogen/mocs_compilation.cpp.o: projekt_autogen/mocs_compilation.cpp \
   /usr/include/stdc-predef.h \
@@ -1535,15 +1538,15 @@ CMakeFiles/projekt.dir/src/logic.cpp.o: src/logic.cpp \
   /usr/include/bits/dlfcn.h
 
 
-/usr/include/c++/11.1.0/bits/this_thread_sleep.h:
-
-/usr/include/c++/11.1.0/bits/std_thread.h:
-
 /usr/include/c++/11.1.0/math.h:
 
 src/logic.cpp:
 
 projekt_autogen/mocs_compilation.cpp:
+
+/usr/include/c++/11.1.0/bits/this_thread_sleep.h:
+
+/usr/include/c++/11.1.0/bits/std_thread.h:
 
 /usr/include/qt6/QtCore/QDir:
 

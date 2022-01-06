@@ -6,48 +6,48 @@
      6                                  
      7                                  ;; funkcja aplikująca zmiany do tablicy pixeli,
      8                                  _apply_data_modifications_asm:
-     9 00000000 F7D2                            not     edx
-    10 00000002 660F3A20CA00                    pinsrb  xmm1, edx, 0
-    11 00000008 660F3A20CA08                    pinsrb  xmm1, edx, 8
+     9 00000000 F7D2                            not     edx             ; negacja maski
+    10 00000002 660F3A20CA00                    pinsrb  xmm1, edx, 0    ; przepisanie maski do rejestru xmm
+    11 00000008 660F3A20CA08                    pinsrb  xmm1, edx, 8    ; potrzebne do wykonania obliczeń wektorowo
     12 0000000E 660F3A20CA10                    pinsrb  xmm1, edx, 16
     13 00000014 660F3A20CA18                    pinsrb  xmm1, edx, 24
     14 0000001A 660F3A20CA20                    pinsrb  xmm1, edx, 32
     15 00000020 660F3A20CA28                    pinsrb  xmm1, edx, 40
     16 00000026 660F3A20CA30                    pinsrb  xmm1, edx, 48
     17 0000002C 660F3A20CA38                    pinsrb  xmm1, edx, 56
-    18 00000032 4C63C1                          movsx   r8, ecx
-    19 00000035 4983E807                        sub     r8, 7
-    20 00000039 B800000000                      mov     rax, 0
-    21 0000003E 4883F900                        cmp     rcx, 0
+    18 00000032 4C63C1                          movsx   r8, ecx         ; załadowanie wielkości tablicy do rejestru r8
+    19 00000035 4983E807                        sub     r8, 7           ; odjęcie od wielkości tablicy 7, by nie wyjść poza przydzieloną pamięć
+    20 00000039 B800000000                      mov     rax, 0          ; wyzerowanie akumulatora
+    21 0000003E 4883F900                        cmp     rcx, 0          ; jeżeli długość tablicy to 0, nie wykonuj nic
     22 00000042 7429                            je      EXIT
-    23                                  LOOP_MAIN:
+    23                                  LOOP_MAIN:                      ; główna pętla funkcji
     24 00000044 0FB60C07                        movzx   ecx, BYTE [rdi+rax]
-    25 00000048 F30F6F0407                      movdqu  xmm0, [rdi+rax]
-    26 0000004D F30F6F1406                      movdqu  xmm2, [rsi+rax]
-    27 00000052 660FDBC1                        pand    xmm0, xmm1
-    28 00000056 660FEBC2                        por     xmm0, xmm2
-    29 0000005A 0F110407                        movups  [rdi+rax], xmm0
-    30 0000005E 4883F801                        cmp     rax, 1
+    25 00000048 F30F6F0407                      movdqu  xmm0, [rdi+rax]     ; załadowanie do rejestru xmm0 8 bajtów z tablicy pixeli
+    26 0000004D F30F6F1406                      movdqu  xmm2, [rsi+rax]     ; załadowanie do rejestru xmm2 8 bajtów z tablicy danych do ukrycia
+    27 00000052 660FDBC1                        pand    xmm0, xmm1          ; aplikacja maski
+    28 00000056 660FEBC2                        por     xmm0, xmm2          ; podmiana ostatnich bitów na poprawne wartości
+    29 0000005A 0F110407                        movups  [rdi+rax], xmm0     ; zapis zmodyfikowanych pixeli do tablicy
+    30 0000005E 4883F801                        cmp     rax, 1              ; test czy to pierwsza iteracja, gdzie pojawiał się błąd
     31 00000062 740A                            je      FIRST_BYTE_MITIGATION
     32                                  CONTINUE:
-    33 00000064 4883C008                        add     rax, 8
-    34 00000068 4939C0                          cmp     r8, rax
-    35 0000006B 7FD7                            jg     LOOP_MAIN
+    33 00000064 4883C008                        add     rax, 8          ; inkrementacja licznika pętli, o 8 wartości bo tyle jest ładowanych do xmm0
+    34 00000068 4939C0                          cmp     r8, rax         ; test czy większe od wielkości tablicy
+    35 0000006B 7FD7                            jg     LOOP_MAIN        ; skok jeżeli nie
     36                                  EXIT:
     37 0000006D C3                              ret
     38                                  
-    39                                  FIRST_BYTE_MITIGATION:
+    39                                  FIRST_BYTE_MITIGATION:          ; analogicznie do powyższych instrukcji, tylko dla drugiego bajtu, który się uszkadzał
     40 0000006E 0FB64F01                        movzx   ecx, BYTE [rdi + 1]
     41 00000072 20D1                            and     cl, dl
     42 00000074 0A4E01                          or      cl, BYTE [rsi + 1]
     43 00000077 884F01                          mov     BYTE [rdi + 1], cl
     44 0000007A EBE8                            jmp     CONTINUE
     45                                  
-    46                                  
+    46                                  ;;; funkcja wyciągająca podzielone paczki bitów z pixeli
     47                                  _get_data_chunks_from_pixel_array_asm:
-    48 0000007C 85C9                            test    ecx, ecx
-    49 0000007E 7E52                            jle     SECOND_EXIT
-    50 00000080 660F3A20CA00                    pinsrb  xmm1, edx, 0
+    48 0000007C 85C9                            test    ecx, ecx        ; sprawdzenie, czy długość tablicy to nie 0
+    49 0000007E 7E52                            jle     SECOND_EXIT     ; jeżeli 0 zakończ funkcję
+    50 00000080 660F3A20CA00                    pinsrb  xmm1, edx, 0    ; załadowanie maski do rejestru xmm1
     51 00000086 660F3A20CA08                    pinsrb  xmm1, edx, 8
     52 0000008C 660F3A20CA10                    pinsrb  xmm1, edx, 16
     53 00000092 660F3A20CA18                    pinsrb  xmm1, edx, 24
@@ -55,51 +55,88 @@
     55 0000009E 660F3A20CA28                    pinsrb  xmm1, edx, 40
     56 000000A4 660F3A20CA30                    pinsrb  xmm1, edx, 48
     57 000000AA 660F3A20CA38                    pinsrb  xmm1, edx, 56
-    58 000000B0 4189C8                          mov     r8d, ecx
-    59 000000B3 4183E808                        sub     r8d, 8
-    60 000000B7 B800000000                      mov     rax, 0
-    61                                  SECOND_MAIN_LOOP:
-    62 000000BC F30F6F0407                      movdqu  xmm0, [rdi+rax]
-    63 000000C1 660FDBC8                        pand    xmm1, xmm0
-    64 000000C5 0F110406                        movups  [rsi+rax], xmm0
-    65 000000C9 4883C008                        add     rax, 8
-    66 000000CD 4C39C0                          cmp     rax, r8
+    58 000000B0 4189C8                          mov     r8d, ecx        ; załadowanie wielkości tablicy do rejestru r9
+    59 000000B3 4183E808                        sub     r8d, 8          ; odjęcie 8 od wielkości tablicy, aby nie wyjść poza przydzieloną pamięć
+    60 000000B7 B800000000                      mov     rax, 0          ; wyzerowanie akumulatora
+    61                                  SECOND_MAIN_LOOP:               ; główna pętla
+    62 000000BC F30F6F0407                      movdqu  xmm0, [rdi+rax] ; załadowanie 8 bajtów z tablicy pixeli do rejestru xmm0
+    63 000000C1 660FDBC8                        pand    xmm1, xmm0      ; aplikacja maski
+    64 000000C5 0F110406                        movups  [rsi+rax], xmm0 ; zapis 8 paczek bitów do tablicy wynikowej (przejściowej)
+    65 000000C9 4883C008                        add     rax, 8          ; inkrementacja licznika o 8 pozycji
+    66 000000CD 4C39C0                          cmp     rax, r8         ; sprawdzenie czy nie przekroczono wielkości tablicy
     67 000000D0 7CEA                            jl      SECOND_MAIN_LOOP
     68                                  SECOND_EXIT:
     69 000000D2 C3                              ret
     70                                  
-    71                                  _combine_data_chunks_into_bytes_asm:
-    72 000000D3 85C9                            test    ecx, ecx
-    73 000000D5 7E4A                            jle     EXIT_3
-    74 000000D7 8D41FF                          lea     eax, [rcx-1]
-    75 000000DA 53                              push    rbx
-    76 000000DB 4989F2                          mov     r10, rsi
-    77 000000DE 448D0C12                        lea     r9d, [rdx+rdx]
-    78 000000E2 488D5C0601                      lea     rbx, [rsi+1+rax]
-    79 000000E7 4531DB                          xor     r11d, r11d
-    80                                  FIRST_LOOP_3:
-    81 000000EA 4531C0                          xor     r8d, r8d
-    82 000000ED 85D2                            test    edx, edx
-    83 000000EF 7E1F                            jle     FINAL_COMPUTE_3
-    84 000000F1 4963F3                          movsx   rsi, r11d
-    85 000000F4 31C9                            xor     ecx, ecx
-    86 000000F6 4531C0                          xor     r8d, r8d
-    87 000000F9 4801FE                          add     rsi, rdi
-    88                                  SECOND_LOOP_3:
-    89 000000FC 0FB606                          movzx   eax, BYTE [rsi]
-    90 000000FF 4883C601                        add     rsi, 1
-    91 00000103 D3E0                            sal     eax, cl
-    92 00000105 83C102                          add     ecx, 2
-    93 00000108 4101C0                          add     r8d, eax
-    94 0000010B 4139C9                          cmp     r9d, ecx
-    95 0000010E 75EC                            jne     SECOND_LOOP_3
-    96                                  FINAL_COMPUTE_3:
-    97 00000110 458802                          mov     BYTE [r10], r8b
-    98 00000113 4983C201                        add     r10, 1
-    99 00000117 4101D3                          add     r11d, edx
-   100 0000011A 4939DA                          cmp     r10, rbx
-   101 0000011D 75CB                            jne     FIRST_LOOP_3
-   102 0000011F 5B                              pop     rbx
-   103 00000120 C3                              ret
-   104                                  EXIT_3:
-   105 00000121 C3                              ret
+    71                                  ;;; funkcja sklejająca paczki bitów w gotowe bajty danych
+    72                                  ;; _combine_data_chunks_into_bytes_asm:
+    73                                  ;;         test    ecx, ecx        ; sprawdzenie czy wielkość tablicy nie jest równa 0
+    74                                  ;;         jle     EXIT_3          ; jeżeli równa 0, zakończ
+    75                                  ;;         lea     eax, [rcx-1]    ; załaduj maskę do akumulatora
+    76                                  ;;         push    rbx             ; chyba niepotrzebne TODO: usuń mnie
+    77                                  ;;         mov     r10, rsi        ; załaduj wielkość tablicy
+    78                                  ;;         lea     r9d, [rdx+rdx]  ; załaduj wielkość segmentu
+    79                                  ;;         lea     rbx, [rsi+1+rax] ;
+    80                                  ;;         xor     r11d, r11d
+    81                                  ;; FIRST_LOOP_3:
+    82                                  ;;         xor     r8d, r8d
+    83                                  ;;         test    edx, edx
+    84                                  ;;         jle     FINAL_COMPUTE_3
+    85                                  ;;         movsx   rsi, r11d
+    86                                  ;;         xor     ecx, ecx
+    87                                  ;;         xor     r8d, r8d
+    88                                  ;;         add     rsi, rdi
+    89                                  ;; SECOND_LOOP_3:
+    90                                  ;;         movzx   eax, BYTE [rsi]
+    91                                  ;;         add     rsi, 1
+    92                                  ;;         sal     eax, cl
+    93                                  ;;         add     ecx, 2
+    94                                  ;;         add     r8d, eax
+    95                                  ;;         cmp     r9d, ecx
+    96                                  ;;         jne     SECOND_LOOP_3
+    97                                  ;; FINAL_COMPUTE_3:
+    98                                  ;;         mov     BYTE [r10], r8b
+    99                                  ;;         add     r10, 1
+   100                                  ;;         add     r11d, edx
+   101                                  ;;         cmp     r10, rbx
+   102                                  ;;         jne     FIRST_LOOP_3
+   103                                  ;;         pop     rbx
+   104                                  ;; EXIT_3:
+   105                                  ;;         ret
+   106                                  
+   107                                  
+   108                                  
+   109                                  _combine_data_chunks_into_bytes_asm:
+   110 000000D3 83F900                          cmp     ecx, 0
+   111 000000D6 7E4A                            jle     EXIT_3
+   112 000000D8 4989C8                          mov     r8, rcx         ; arrSize
+   113 000000DB 4989D1                          mov     r9, rdx         ; chunkSize
+   114 000000DE 4D31D2                          xor     r10, r10        ; i
+   115 000000E1 4D31DB                          xor     r11, r11        ; j
+   116                                          ;; rdi -> dataArray
+   117                                          ;; rsi -> finalDataArray
+   118 000000E4 4883FA00                        cmp     rdx, 0
+   119 000000E8 7E38                            jle     EXIT_3
+   120                                  OUTER_LOOP:
+   121 000000EA 4530E4                          xor     r12b, r12b        ; zmienna temp
+   122 000000ED 4D31DB                          xor     r11, r11        ; wyzerowanie j
+   123                                  INNER_LOOP:
+   124 000000F0 4831C0                          xor     rax, rax
+   125 000000F3 4C89C8                          mov     rax, r9
+   126 000000F6 49F7E2                          mul     r10
+   127 000000F9 4C01D8                          add     rax, r11
+   128 000000FC 448A2C07                        mov     r13b, BYTE [rdi + rax]
+   129 00000100 4C89D8                          mov     rax, r11
+   130 00000103 48D1E0                          sal     rax, 1
+   131 00000106 89C1                            mov     ecx, eax
+   132 00000108 41D2E5                          sal     r13b, cl
+   133 0000010B 4500EC                          add     r12b, r13b
+   134 0000010E 49FFC3                          inc     r11
+   135 00000111 4D39CB                          cmp     r11, r9
+   136 00000114 7CDA                            jl      INNER_LOOP
+   137 00000116 46882416                        mov     BYTE [rsi + r10], r12b
+   138 0000011A 49FFC2                          inc     r10
+   139 0000011D 4D39C2                          cmp     r10, r8
+   140 00000120 7CC8                            jl      OUTER_LOOP
+   141                                  EXIT_3:
+   142 00000122 C3                              ret

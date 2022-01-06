@@ -68,38 +68,39 @@ SECOND_MAIN_LOOP:               ; główna pętla
 SECOND_EXIT:
         ret
 
+
 ;;; funkcja sklejająca paczki bitów w gotowe bajty danych
 _combine_data_chunks_into_bytes_asm:
-        test    ecx, ecx        ; sprawdzenie czy wielkość tablicy nie jest równa 0
-        jle     EXIT_3          ; jeżeli równa 0, zakończ
-        lea     eax, [rcx-1]    ; załaduj maskę do akumulatora
-        push    rbx             ; chyba niepotrzebne TODO: usuń mnie
-        mov     r10, rsi        ; załaduj wielkość
-        lea     r9d, [rdx+rdx]  ; załaduj wielkość
-        lea     rbx, [rsi+1+rax]
-        xor     r11d, r11d
-FIRST_LOOP_3:
-        xor     r8d, r8d
-        test    edx, edx
-        jle     FINAL_COMPUTE_3
-        movsx   rsi, r11d
-        xor     ecx, ecx
-        xor     r8d, r8d
-        add     rsi, rdi
-SECOND_LOOP_3:
-        movzx   eax, BYTE [rsi]
-        add     rsi, 1
-        sal     eax, cl
-        add     ecx, 2
-        add     r8d, eax
-        cmp     r9d, ecx
-        jne     SECOND_LOOP_3
-FINAL_COMPUTE_3:
-        mov     BYTE [r10], r8b
-        add     r10, 1
-        add     r11d, edx
-        cmp     r10, rbx
-        jne     FIRST_LOOP_3
-        pop     rbx
+        cmp     ecx, 0          ; sprawdzenie, czy wielkość tablicy > 0
+        jle     EXIT_3
+        mov     r8, rcx         ; arrSize
+        mov     r9, rdx         ; chunkSize
+        xor     r10, r10        ; i
+        xor     r11, r11        ; j
+        ;; rdi -> dataArray
+        ;; rsi -> finalDataArray
+        cmp     rdx, 0          ; sprawdzenie, czy wielkość segmentu większa od 0
+        jle     EXIT_3
+OUTER_LOOP:
+        xor     r12b, r12b        ; wyzerowanie zmiennej temp
+        xor     r11, r11        ; wyzerowanie j
+INNER_LOOP:
+        xor     rax, rax        ; wyzerowanie akumulatora
+        mov     rax, r9         ; AK <- chunkSize
+        mul     r10             ; chunkSize*i
+        add     rax, r11        ; chunkSize*i + j
+        mov     r13b, BYTE [rdi + rax] ; dataArray[i*chunkSize+j]
+        mov     rax, r11               ; AK <- j
+        sal     rax, 1                 ; j*2
+        mov     ecx, eax               ; przesuń obliczony offset dla przesunięcia
+        sal     r13b, cl               ; wykonaj przesunięcie bitowe
+        add     r12b, r13b             ; dodaj do zmiennej temp
+        inc     r11                    ; zwiększ licznik pętli j
+        cmp     r11, r9                ; sprawdź, czy j < chunkSize
+        jl      INNER_LOOP
+        mov     BYTE [rsi + r10], r12b ; finalDataArray[i] = temp
+        inc     r10                    ; zwiększ licznik pętli i
+        cmp     r10, r8                ; sprawdź, czy i < arrSize
+        jl      OUTER_LOOP
 EXIT_3:
         ret

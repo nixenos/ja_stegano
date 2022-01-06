@@ -7,12 +7,22 @@
 #include "src/dataStructures.h"
 #include "src/logic.h"
 #include <chrono>
+#include <thread>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    const auto processor_count = std::thread::hardware_concurrency();
+    if (processor_count != 0) {
+        ui->threadsSlider->setValue(processor_count);
+        ui->threadsSlider->setMaximum(processor_count*processor_count);
+        this->threadsCount = processor_count;
+        std::string temp = "Threads: " + std::to_string(this->threadsCount);
+        ui->threadsLabel->setText(temp.c_str());
+    }
 }
 
 MainWindow::~MainWindow()
@@ -179,6 +189,7 @@ void MainWindow::on_saveFileButton_clicked() {
                     }
                     if (this->pixelArray) {
                         if (check_for_stegano(sourceImageBMPHeader)) {
+                            auto t1 = std::chrono::high_resolution_clock::now();
                             int result = write_data_from_image(sourceImageBMPHeader, pixelArray, destinationImageFile,
                                                                sourceImageDIBHeader, 2, 1, threadsCount);
                             if (result) {
@@ -186,6 +197,11 @@ void MainWindow::on_saveFileButton_clicked() {
                                 QMessageBox msgBox;
                                 msgBox.setText("Data file has been sucessfully saved!");
                                 msgBox.exec();
+                                auto t2 = std::chrono::high_resolution_clock::now();
+                                auto ms_count = std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1);
+                                std::string tempString;
+                                tempString = "Time with C++: " + std::to_string(ms_count.count()) + " ms";
+                                ui->label->setText(tempString.c_str());
                             } else {
                                 QMessageBox msgBox;
                                 msgBox.setText("Error calculating new data file!");
@@ -222,6 +238,7 @@ void MainWindow::on_saveFileButton_clicked() {
                     }
                     if (this->pixelArray) {
                         if (check_for_stegano(sourceImageBMPHeader)) {
+                            auto t1 = std::chrono::high_resolution_clock::now();
                             int result = write_data_from_image(sourceImageBMPHeader, pixelArray, destinationImageFile,
                                                                sourceImageDIBHeader, 2, 0, threadsCount);
                             if (result) {
@@ -229,6 +246,11 @@ void MainWindow::on_saveFileButton_clicked() {
                                 QMessageBox msgBox;
                                 msgBox.setText("Data file has been sucessfully saved!");
                                 msgBox.exec();
+                                auto t2 = std::chrono::high_resolution_clock::now();
+                                auto ms_count = std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1);
+                                std::string tempString;
+                                tempString = "Time with ASM: " + std::to_string(ms_count.count()) + " ms";
+                                ui->label_2->setText(tempString.c_str());
                             } else {
                                 QMessageBox msgBox;
                                 msgBox.setText("Error calculating new data file!");
