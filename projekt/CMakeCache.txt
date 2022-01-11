@@ -232,7 +232,7 @@ PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 QT_ADDITIONAL_PACKAGES_PREFIX_PATH:STRING=
 
 //The directory containing a CMake configuration file for QT.
-QT_DIR:PATH=/usr/lib64/cmake/Qt6
+QT_DIR:PATH=/usr/lib64/cmake/Qt5
 
 //The directory containing a CMake configuration file for Qt5Core.
 Qt5Core_DIR:PATH=/usr/lib64/cmake/Qt5Core
@@ -242,6 +242,9 @@ Qt5Gui_DIR:PATH=/usr/lib64/cmake/Qt5Gui
 
 //The directory containing a CMake configuration file for Qt5Widgets.
 Qt5Widgets_DIR:PATH=/usr/lib64/cmake/Qt5Widgets
+
+//The directory containing a CMake configuration file for Qt5.
+Qt5_DIR:PATH=/usr/lib64/cmake/Qt5
 
 //The directory containing a CMake configuration file for Qt6CoreTools.
 Qt6CoreTools_DIR:PATH=/usr/lib64/cmake/Qt6CoreTools
@@ -407,7 +410,7 @@ CMAKE_RANLIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_READELF
 CMAKE_READELF-ADVANCED:INTERNAL=1
 //Path to CMake installation.
-CMAKE_ROOT:INTERNAL=/usr/share/cmake-3.22
+CMAKE_ROOT:INTERNAL=/usr/share/cmake
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS
 CMAKE_SHARED_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_DEBUG

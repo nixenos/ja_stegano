@@ -68,75 +68,39 @@
     68                                  SECOND_EXIT:
     69 000000D2 C3                              ret
     70                                  
-    71                                  ;;; funkcja sklejająca paczki bitów w gotowe bajty danych
-    72                                  ;; _combine_data_chunks_into_bytes_asm:
-    73                                  ;;         test    ecx, ecx        ; sprawdzenie czy wielkość tablicy nie jest równa 0
-    74                                  ;;         jle     EXIT_3          ; jeżeli równa 0, zakończ
-    75                                  ;;         lea     eax, [rcx-1]    ; załaduj maskę do akumulatora
-    76                                  ;;         push    rbx             ; chyba niepotrzebne TODO: usuń mnie
-    77                                  ;;         mov     r10, rsi        ; załaduj wielkość tablicy
-    78                                  ;;         lea     r9d, [rdx+rdx]  ; załaduj wielkość segmentu
-    79                                  ;;         lea     rbx, [rsi+1+rax] ;
-    80                                  ;;         xor     r11d, r11d
-    81                                  ;; FIRST_LOOP_3:
-    82                                  ;;         xor     r8d, r8d
-    83                                  ;;         test    edx, edx
-    84                                  ;;         jle     FINAL_COMPUTE_3
-    85                                  ;;         movsx   rsi, r11d
-    86                                  ;;         xor     ecx, ecx
-    87                                  ;;         xor     r8d, r8d
-    88                                  ;;         add     rsi, rdi
-    89                                  ;; SECOND_LOOP_3:
-    90                                  ;;         movzx   eax, BYTE [rsi]
-    91                                  ;;         add     rsi, 1
-    92                                  ;;         sal     eax, cl
-    93                                  ;;         add     ecx, 2
-    94                                  ;;         add     r8d, eax
-    95                                  ;;         cmp     r9d, ecx
-    96                                  ;;         jne     SECOND_LOOP_3
-    97                                  ;; FINAL_COMPUTE_3:
-    98                                  ;;         mov     BYTE [r10], r8b
-    99                                  ;;         add     r10, 1
-   100                                  ;;         add     r11d, edx
-   101                                  ;;         cmp     r10, rbx
-   102                                  ;;         jne     FIRST_LOOP_3
-   103                                  ;;         pop     rbx
-   104                                  ;; EXIT_3:
-   105                                  ;;         ret
-   106                                  
-   107                                  
-   108                                  
-   109                                  _combine_data_chunks_into_bytes_asm:
-   110 000000D3 83F900                          cmp     ecx, 0
-   111 000000D6 7E4A                            jle     EXIT_3
-   112 000000D8 4989C8                          mov     r8, rcx         ; arrSize
-   113 000000DB 4989D1                          mov     r9, rdx         ; chunkSize
-   114 000000DE 4D31D2                          xor     r10, r10        ; i
-   115 000000E1 4D31DB                          xor     r11, r11        ; j
-   116                                          ;; rdi -> dataArray
-   117                                          ;; rsi -> finalDataArray
-   118 000000E4 4883FA00                        cmp     rdx, 0
-   119 000000E8 7E38                            jle     EXIT_3
-   120                                  OUTER_LOOP:
-   121 000000EA 4530E4                          xor     r12b, r12b        ; zmienna temp
-   122 000000ED 4D31DB                          xor     r11, r11        ; wyzerowanie j
-   123                                  INNER_LOOP:
-   124 000000F0 4831C0                          xor     rax, rax
-   125 000000F3 4C89C8                          mov     rax, r9
-   126 000000F6 49F7E2                          mul     r10
-   127 000000F9 4C01D8                          add     rax, r11
-   128 000000FC 448A2C07                        mov     r13b, BYTE [rdi + rax]
-   129 00000100 4C89D8                          mov     rax, r11
-   130 00000103 48D1E0                          sal     rax, 1
-   131 00000106 89C1                            mov     ecx, eax
-   132 00000108 41D2E5                          sal     r13b, cl
-   133 0000010B 4500EC                          add     r12b, r13b
-   134 0000010E 49FFC3                          inc     r11
-   135 00000111 4D39CB                          cmp     r11, r9
-   136 00000114 7CDA                            jl      INNER_LOOP
-   137 00000116 46882416                        mov     BYTE [rsi + r10], r12b
-   138 0000011A 49FFC2                          inc     r10
-   139 0000011D 4D39C2                          cmp     r10, r8
-   140 00000120 7CC8                            jl      OUTER_LOOP
-   141                                  EXIT_3:
-   142 00000122 C3                              ret
+    71                                  
+    72                                  ;;; funkcja sklejająca paczki bitów w gotowe bajty danych
+    73                                  _combine_data_chunks_into_bytes_asm:
+    74 000000D3 83F900                          cmp     ecx, 0          ; sprawdzenie, czy wielkość tablicy > 0
+    75 000000D6 7E4A                            jle     EXIT_3
+    76 000000D8 4989C8                          mov     r8, rcx         ; arrSize
+    77 000000DB 4989D1                          mov     r9, rdx         ; chunkSize
+    78 000000DE 4D31D2                          xor     r10, r10        ; i
+    79 000000E1 4D31DB                          xor     r11, r11        ; j
+    80                                          ;; rdi -> dataArray
+    81                                          ;; rsi -> finalDataArray
+    82 000000E4 4883FA00                        cmp     rdx, 0          ; sprawdzenie, czy wielkość segmentu większa od 0
+    83 000000E8 7E38                            jle     EXIT_3
+    84                                  OUTER_LOOP:
+    85 000000EA 4530E4                          xor     r12b, r12b        ; wyzerowanie zmiennej temp
+    86 000000ED 4D31DB                          xor     r11, r11        ; wyzerowanie j
+    87                                  INNER_LOOP:
+    88 000000F0 4831C0                          xor     rax, rax        ; wyzerowanie akumulatora
+    89 000000F3 4C89C8                          mov     rax, r9         ; AK <- chunkSize
+    90 000000F6 49F7E2                          mul     r10             ; chunkSize*i
+    91 000000F9 4C01D8                          add     rax, r11        ; chunkSize*i + j
+    92 000000FC 448A2C07                        mov     r13b, BYTE [rdi + rax] ; dataArray[i*chunkSize+j]
+    93 00000100 4C89D8                          mov     rax, r11               ; AK <- j
+    94 00000103 48D1E0                          sal     rax, 1                 ; j*2
+    95 00000106 89C1                            mov     ecx, eax               ; przesuń obliczony offset dla przesunięcia
+    96 00000108 41D2E5                          sal     r13b, cl               ; wykonaj przesunięcie bitowe
+    97 0000010B 4500EC                          add     r12b, r13b             ; dodaj do zmiennej temp
+    98 0000010E 49FFC3                          inc     r11                    ; zwiększ licznik pętli j
+    99 00000111 4D39CB                          cmp     r11, r9                ; sprawdź, czy j < chunkSize
+   100 00000114 7CDA                            jl      INNER_LOOP
+   101 00000116 46882416                        mov     BYTE [rsi + r10], r12b ; finalDataArray[i] = temp
+   102 0000011A 49FFC2                          inc     r10                    ; zwiększ licznik pętli i
+   103 0000011D 4D39C2                          cmp     r10, r8                ; sprawdź, czy i < arrSize
+   104 00000120 7CC8                            jl      OUTER_LOOP
+   105                                  EXIT_3:
+   106 00000122 C3                              ret

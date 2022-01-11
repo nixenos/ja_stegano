@@ -140,13 +140,11 @@ projekt: CMakeFiles/projekt.dir/main.cpp.o
 projekt: CMakeFiles/projekt.dir/mainwindow.cpp.o
 projekt: CMakeFiles/projekt.dir/src/logic.cpp.o
 projekt: CMakeFiles/projekt.dir/build.make
-projekt: /usr/lib/libQt6Widgets.so.6.2.2
+projekt: /usr/lib/libQt5Widgets.so.5.15.2
 projekt: asm_src/libdata_modifications_asm.so
 projekt: c_src/libdata_modifications_c.so
-projekt: /usr/lib/libQt6Gui.so.6.2.2
-projekt: /usr/lib/libQt6Core.so.6.2.2
-projekt: /usr/lib/libGLX.so
-projekt: /usr/lib/libOpenGL.so
+projekt: /usr/lib/libQt5Gui.so.5.15.2
+projekt: /usr/lib/libQt5Core.so.5.15.2
 projekt: CMakeFiles/projekt.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nixen/Projects/JA/ja_stegano/projekt/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable projekt"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/projekt.dir/link.txt --verbose=$(VERBOSE)
