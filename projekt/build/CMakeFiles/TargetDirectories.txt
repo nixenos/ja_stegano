@@ -1,4 +1,0 @@
-/home/nixen/Projects/JA/ja_steganografia/projekt/build/CMakeFiles/projekt.dir
-/home/nixen/Projects/JA/ja_steganografia/projekt/build/CMakeFiles/edit_cache.dir
-/home/nixen/Projects/JA/ja_steganografia/projekt/build/CMakeFiles/rebuild_cache.dir
-/home/nixen/Projects/JA/ja_steganografia/projekt/build/CMakeFiles/projekt_autogen.dir

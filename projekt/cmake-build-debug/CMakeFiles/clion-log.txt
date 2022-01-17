@@ -1,4 +1,0 @@
-/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/nixen/Projects/JA/ja_steganografia/projekt
--- Configuring done
--- Generating done
--- Build files have been written to: /home/nixen/Projects/JA/ja_steganografia/projekt

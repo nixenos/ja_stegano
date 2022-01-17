@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/projekt.dir/projekt_autogen/mocs_compilation.cpp.o CMakeFiles/projekt.dir/main.cpp.o CMakeFiles/projekt.dir/mainwindow.cpp.o CMakeFiles/projekt.dir/src/logic.cpp.o -o projekt  /usr/lib/libQt5Widgets.so.5.15.2 /usr/lib/libQt5Gui.so.5.15.2 /usr/lib/libQt5Core.so.5.15.2 
