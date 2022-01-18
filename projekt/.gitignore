@@ -24,6 +24,7 @@ tags
 .directory
 *.debug
 *.o
+*.lst
 # Makefile*
 *.prl
 *.app
@@ -33,6 +34,7 @@ qrc_*.cpp
 Thumbs.db
 *.res
 *.rc
+*.cmake
 /.qmake.cache
 /.qmake.stash
 
