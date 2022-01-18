@@ -23,6 +23,7 @@ tags
 .DS_Store
 .directory
 *.debug
+*.o
 # Makefile*
 *.prl
 *.app
