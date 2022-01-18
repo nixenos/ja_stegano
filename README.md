@@ -9,8 +9,8 @@ Sposób budowania aplikacji:
  - zainstalować build-essentails (make, cmake)
  - zainstalować conan dependency manager: https://conan.io/
  - `conan install . --build=missing`
- - cmake .
- - make
+ - `cmake .`
+ - `make`
 
 Uruchamianie aplikacji:
 
