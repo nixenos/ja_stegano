@@ -82,3 +82,5 @@ CMakeCache.txt
 .vscode/*
 CMakeFiles/**
 CMakeFiles/*
+.cmake/**
+.cmake/*
