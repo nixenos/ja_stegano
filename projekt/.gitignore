@@ -84,3 +84,6 @@ CMakeFiles/**
 CMakeFiles/*
 .cmake/**
 .cmake/*
+
+projekt_autogen/**
+projekt_autogen/*
