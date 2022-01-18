@@ -44,6 +44,8 @@ Thumbs.db
 # Vim temporary files
 .*.swp
 
+CMakeCache.txt
+
 # Visual Studio generated files
 *.ib_pdb_index
 *.idb
