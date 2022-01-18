@@ -74,3 +74,11 @@ CMakeCache.txt
 *.exe
 
 vgcore.*
+
+CMakeCache.txt
+.idea/**
+.idea/*
+.vscode/**
+.vscode/*
+CMakeFiles/**
+CMakeFiles/*

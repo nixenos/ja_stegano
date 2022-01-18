@@ -1,4 +1,0 @@
-/home/nixen/Projects/JA/ja_stegano/projekt/CMakeFiles/projekt.dir
-/home/nixen/Projects/JA/ja_stegano/projekt/CMakeFiles/edit_cache.dir
-/home/nixen/Projects/JA/ja_stegano/projekt/CMakeFiles/rebuild_cache.dir
-/home/nixen/Projects/JA/ja_stegano/projekt/CMakeFiles/projekt_autogen.dir
