@@ -10,7 +10,7 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake"
+			"path" : "/usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake"
 		},
 		{
 			"path" : "CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
@@ -18,67 +18,67 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake"
+			"path" : "/usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake"
+			"path" : "/usr/share/cmake/Modules/CMakeGenericSystem.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake"
+			"path" : "/usr/share/cmake/Modules/CMakeInitializeConfigs.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/share/cmake-3.22/Modules/Platform/Linux.cmake"
+			"path" : "/usr/share/cmake/Modules/Platform/Linux.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake"
+			"path" : "/usr/share/cmake/Modules/Platform/UnixPaths.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake"
+			"path" : "/usr/share/cmake/Modules/CMakeCXXInformation.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake"
+			"path" : "/usr/share/cmake/Modules/CMakeLanguageInformation.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake"
+			"path" : "/usr/share/cmake/Modules/Compiler/GNU-CXX.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/share/cmake-3.22/Modules/Compiler/GNU.cmake"
+			"path" : "/usr/share/cmake/Modules/Compiler/GNU.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+			"path" : "/usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake"
+			"path" : "/usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake"
+			"path" : "/usr/share/cmake/Modules/Platform/Linux-GNU.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake"
+			"path" : "/usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -139,7 +139,7 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/share/cmake-3.22/Modules/CMakeParseArguments.cmake"
+			"path" : "/usr/share/cmake/Modules/CMakeParseArguments.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -328,7 +328,7 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/share/cmake-3.22/Modules/CMakeParseArguments.cmake"
+			"path" : "/usr/share/cmake/Modules/CMakeParseArguments.cmake"
 		},
 		{
 			"isExternal" : true,

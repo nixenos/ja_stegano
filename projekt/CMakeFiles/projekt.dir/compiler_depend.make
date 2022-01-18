@@ -4,11 +4,11 @@
 CMakeFiles/projekt.dir/main.cpp.o: main.cpp \
   /usr/include/stdc-predef.h \
   mainwindow.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/QMainWindow \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qmainwindow.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qtwidgetsglobal.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qtguiglobal.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qglobal.h \
+  /usr/include/qt/QtWidgets/QMainWindow \
+  /usr/include/qt/QtWidgets/qmainwindow.h \
+  /usr/include/qt/QtWidgets/qtwidgetsglobal.h \
+  /usr/include/qt/QtGui/qtguiglobal.h \
+  /usr/include/qt/QtCore/qglobal.h \
   /usr/include/c++/11.1.0/type_traits \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/c++config.h \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -19,7 +19,6 @@ CMakeFiles/projekt.dir/main.cpp.o: main.cpp \
   /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-64.h \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/cpu_defines.h \
-  /usr/include/c++/11.1.0/pstl/pstl_config.h \
   /usr/include/c++/11.1.0/cstddef \
   /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include/stddef.h \
   /usr/include/c++/11.1.0/utility \
@@ -27,23 +26,12 @@ CMakeFiles/projekt.dir/main.cpp.o: main.cpp \
   /usr/include/c++/11.1.0/bits/stl_pair.h \
   /usr/include/c++/11.1.0/bits/move.h \
   /usr/include/c++/11.1.0/initializer_list \
-  /usr/include/c++/11.1.0/cstdint \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/bits/libc-header-start.h \
-  /usr/include/bits/types.h \
-  /usr/include/bits/timesize.h \
-  /usr/include/bits/typesizes.h \
-  /usr/include/bits/time64.h \
-  /usr/include/bits/wchar.h \
-  /usr/include/bits/stdint-intn.h \
-  /usr/include/bits/stdint-uintn.h \
   /usr/include/assert.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qconfig.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qtcore-config.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qsystemdetection.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qprocessordetection.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcompilerdetection.h \
+  /usr/include/qt/QtCore/qconfig.h \
+  /usr/include/qt/QtCore/qtcore-config.h \
+  /usr/include/qt/QtCore/qsystemdetection.h \
+  /usr/include/qt/QtCore/qprocessordetection.h \
+  /usr/include/qt/QtCore/qcompilerdetection.h \
   /usr/include/c++/11.1.0/algorithm \
   /usr/include/c++/11.1.0/bits/stl_algobase.h \
   /usr/include/c++/11.1.0/bits/functexcept.h \
@@ -62,6 +50,7 @@ CMakeFiles/projekt.dir/main.cpp.o: main.cpp \
   /usr/include/c++/11.1.0/bits/stl_algo.h \
   /usr/include/c++/11.1.0/cstdlib \
   /usr/include/stdlib.h \
+  /usr/include/bits/libc-header-start.h \
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
   /usr/include/bits/floatn.h \
@@ -69,10 +58,15 @@ CMakeFiles/projekt.dir/main.cpp.o: main.cpp \
   /usr/include/bits/types/locale_t.h \
   /usr/include/bits/types/__locale_t.h \
   /usr/include/sys/types.h \
+  /usr/include/bits/types.h \
+  /usr/include/bits/timesize.h \
+  /usr/include/bits/typesizes.h \
+  /usr/include/bits/time64.h \
   /usr/include/bits/types/clock_t.h \
   /usr/include/bits/types/clockid_t.h \
   /usr/include/bits/types/time_t.h \
   /usr/include/bits/types/timer_t.h \
+  /usr/include/bits/stdint-intn.h \
   /usr/include/endian.h \
   /usr/include/bits/endian.h \
   /usr/include/bits/endianness.h \
@@ -99,132 +93,71 @@ CMakeFiles/projekt.dir/main.cpp.o: main.cpp \
   /usr/include/c++/11.1.0/new \
   /usr/include/c++/11.1.0/bits/exception.h \
   /usr/include/c++/11.1.0/bits/uniform_int_dist.h \
-  /usr/include/c++/11.1.0/pstl/glue_algorithm_defs.h \
-  /usr/include/c++/11.1.0/functional \
-  /usr/include/c++/11.1.0/bits/stl_function.h \
-  /usr/include/c++/11.1.0/backward/binders.h \
-  /usr/include/c++/11.1.0/tuple \
-  /usr/include/c++/11.1.0/array \
-  /usr/include/c++/11.1.0/bits/range_access.h \
-  /usr/include/c++/11.1.0/bits/uses_allocator.h \
-  /usr/include/c++/11.1.0/bits/invoke.h \
-  /usr/include/c++/11.1.0/bits/functional_hash.h \
-  /usr/include/c++/11.1.0/bits/hash_bytes.h \
-  /usr/include/c++/11.1.0/bits/refwrap.h \
-  /usr/include/c++/11.1.0/bits/std_function.h \
-  /usr/include/c++/11.1.0/typeinfo \
-  /usr/include/c++/11.1.0/unordered_map \
-  /usr/include/c++/11.1.0/bits/allocator.h \
-  /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/c++allocator.h \
-  /usr/include/c++/11.1.0/ext/new_allocator.h \
-  /usr/include/c++/11.1.0/bits/memoryfwd.h \
-  /usr/include/c++/11.1.0/ext/alloc_traits.h \
-  /usr/include/c++/11.1.0/bits/alloc_traits.h \
-  /usr/include/c++/11.1.0/ext/aligned_buffer.h \
-  /usr/include/c++/11.1.0/bits/hashtable.h \
-  /usr/include/c++/11.1.0/bits/hashtable_policy.h \
-  /usr/include/c++/11.1.0/bits/node_handle.h \
-  /usr/include/c++/11.1.0/bits/unordered_map.h \
-  /usr/include/c++/11.1.0/bits/erase_if.h \
-  /usr/include/c++/11.1.0/vector \
-  /usr/include/c++/11.1.0/bits/stl_uninitialized.h \
-  /usr/include/c++/11.1.0/bits/stl_vector.h \
-  /usr/include/c++/11.1.0/bits/stl_bvector.h \
-  /usr/include/c++/11.1.0/bits/vector.tcc \
-  /usr/include/c++/11.1.0/pstl/execution_defs.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qtypeinfo.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcontainerfwd.h \
-  /usr/include/c++/11.1.0/variant \
-  /usr/include/c++/11.1.0/bits/enable_special_members.h \
-  /usr/include/c++/11.1.0/bits/parse_numbers.h \
-  /usr/include/c++/11.1.0/optional \
-  /usr/include/c++/11.1.0/exception \
-  /usr/include/c++/11.1.0/bits/exception_ptr.h \
-  /usr/include/c++/11.1.0/bits/cxxabi_init_exception.h \
-  /usr/include/c++/11.1.0/bits/nested_exception.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qsysinfo.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qlogging.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qflags.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qatomic.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qbasicatomic.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qatomic_cxx11.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qgenericatomic.h \
+  /usr/include/qt/QtCore/qtypeinfo.h \
+  /usr/include/qt/QtCore/qsysinfo.h \
+  /usr/include/qt/QtCore/qlogging.h \
+  /usr/include/qt/QtCore/qflags.h \
+  /usr/include/qt/QtCore/qatomic.h \
+  /usr/include/qt/QtCore/qbasicatomic.h \
+  /usr/include/qt/QtCore/qatomic_cxx11.h \
+  /usr/include/qt/QtCore/qgenericatomic.h \
   /usr/include/c++/11.1.0/atomic \
   /usr/include/c++/11.1.0/bits/atomic_base.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/bits/wchar.h \
+  /usr/include/bits/stdint-uintn.h \
   /usr/include/c++/11.1.0/bits/atomic_lockfree_defines.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qglobalstatic.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qnumeric.h \
-  /usr/include/c++/11.1.0/cmath \
-  /usr/include/math.h \
-  /usr/include/bits/math-vector.h \
-  /usr/include/bits/libm-simd-decl-stubs.h \
-  /usr/include/bits/flt-eval-method.h \
-  /usr/include/bits/fp-logb.h \
-  /usr/include/bits/fp-fast.h \
-  /usr/include/bits/mathcalls-helper-functions.h \
-  /usr/include/bits/mathcalls.h \
-  /usr/include/bits/mathcalls-narrow.h \
-  /usr/include/bits/iscanonical.h \
-  /usr/include/c++/11.1.0/bits/specfun.h \
-  /usr/include/c++/11.1.0/limits \
-  /usr/include/c++/11.1.0/tr1/gamma.tcc \
-  /usr/include/c++/11.1.0/tr1/special_function_util.h \
-  /usr/include/c++/11.1.0/tr1/bessel_function.tcc \
-  /usr/include/c++/11.1.0/tr1/beta_function.tcc \
-  /usr/include/c++/11.1.0/tr1/ell_integral.tcc \
-  /usr/include/c++/11.1.0/tr1/exp_integral.tcc \
-  /usr/include/c++/11.1.0/tr1/hypergeometric.tcc \
-  /usr/include/c++/11.1.0/tr1/legendre_function.tcc \
-  /usr/include/c++/11.1.0/tr1/modified_bessel_func.tcc \
-  /usr/include/c++/11.1.0/tr1/poly_hermite.tcc \
-  /usr/include/c++/11.1.0/tr1/poly_laguerre.tcc \
-  /usr/include/c++/11.1.0/tr1/riemann_zeta.tcc \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qversiontagging.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qtgui-config.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qtwidgets-config.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qwidget.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qwindowdefs.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qobjectdefs.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qnamespace.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qtmetamacros.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qobjectdefs_impl.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qobject.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qstring.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qchar.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qstringview.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qbytearray.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qrefcount.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qarraydata.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qpair.h \
+  /usr/include/qt/QtCore/qglobalstatic.h \
+  /usr/include/qt/QtCore/qnumeric.h \
+  /usr/include/qt/QtCore/qversiontagging.h \
+  /usr/include/qt/QtGui/qtgui-config.h \
+  /usr/include/qt/QtWidgets/qtwidgets-config.h \
+  /usr/include/qt/QtWidgets/qwidget.h \
+  /usr/include/qt/QtGui/qwindowdefs.h \
+  /usr/include/qt/QtCore/qobjectdefs.h \
+  /usr/include/qt/QtCore/qnamespace.h \
+  /usr/include/qt/QtCore/qobjectdefs_impl.h \
+  /usr/include/qt/QtCore/qobject.h \
+  /usr/include/qt/QtCore/qstring.h \
+  /usr/include/qt/QtCore/qchar.h \
+  /usr/include/qt/QtCore/qbytearray.h \
+  /usr/include/qt/QtCore/qrefcount.h \
+  /usr/include/qt/QtCore/qarraydata.h \
   /usr/include/string.h \
   /usr/include/strings.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qarraydatapointer.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qarraydataops.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcontainertools_impl.h \
-  /usr/include/c++/11.1.0/cstring \
-  /usr/include/c++/11.1.0/iterator \
-  /usr/include/c++/11.1.0/iosfwd \
+  /usr/include/c++/11.1.0/stdlib.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include/stdarg.h \
+  /usr/include/c++/11.1.0/string \
   /usr/include/c++/11.1.0/bits/stringfwd.h \
+  /usr/include/c++/11.1.0/bits/memoryfwd.h \
+  /usr/include/c++/11.1.0/bits/char_traits.h \
   /usr/include/c++/11.1.0/bits/postypes.h \
   /usr/include/c++/11.1.0/cwchar \
   /usr/include/wchar.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include/stdarg.h \
   /usr/include/bits/types/wint_t.h \
   /usr/include/bits/types/mbstate_t.h \
   /usr/include/bits/types/__mbstate_t.h \
   /usr/include/bits/types/__FILE.h \
   /usr/include/bits/types/FILE.h \
-  /usr/include/c++/11.1.0/bits/stream_iterator.h \
-  /usr/include/c++/11.1.0/bits/streambuf_iterator.h \
-  /usr/include/c++/11.1.0/streambuf \
+  /usr/include/c++/11.1.0/cstdint \
+  /usr/include/c++/11.1.0/bits/allocator.h \
+  /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/c++allocator.h \
+  /usr/include/c++/11.1.0/ext/new_allocator.h \
   /usr/include/c++/11.1.0/bits/localefwd.h \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/c++locale.h \
   /usr/include/c++/11.1.0/clocale \
   /usr/include/locale.h \
   /usr/include/bits/locale.h \
+  /usr/include/c++/11.1.0/iosfwd \
   /usr/include/c++/11.1.0/cctype \
   /usr/include/ctype.h \
-  /usr/include/c++/11.1.0/bits/ios_base.h \
+  /usr/include/c++/11.1.0/bits/ostream_insert.h \
+  /usr/include/c++/11.1.0/bits/cxxabi_forced.h \
+  /usr/include/c++/11.1.0/bits/stl_function.h \
+  /usr/include/c++/11.1.0/backward/binders.h \
+  /usr/include/c++/11.1.0/bits/range_access.h \
+  /usr/include/c++/11.1.0/bits/basic_string.h \
   /usr/include/c++/11.1.0/ext/atomicity.h \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/gthr.h \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/gthr-default.h \
@@ -242,15 +175,8 @@ CMakeFiles/projekt.dir/main.cpp.o: main.cpp \
   /usr/include/bits/types/struct___jmp_buf_tag.h \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/atomic_word.h \
   /usr/include/sys/single_threaded.h \
-  /usr/include/c++/11.1.0/bits/locale_classes.h \
-  /usr/include/c++/11.1.0/string \
-  /usr/include/c++/11.1.0/bits/char_traits.h \
-  /usr/include/c++/11.1.0/bits/ostream_insert.h \
-  /usr/include/c++/11.1.0/bits/cxxabi_forced.h \
-  /usr/include/c++/11.1.0/bits/basic_string.h \
-  /usr/include/c++/11.1.0/string_view \
-  /usr/include/c++/11.1.0/bits/ranges_base.h \
-  /usr/include/c++/11.1.0/bits/string_view.tcc \
+  /usr/include/c++/11.1.0/ext/alloc_traits.h \
+  /usr/include/c++/11.1.0/bits/alloc_traits.h \
   /usr/include/c++/11.1.0/ext/string_conversions.h \
   /usr/include/c++/11.1.0/cstdio \
   /usr/include/stdio.h \
@@ -268,79 +194,54 @@ CMakeFiles/projekt.dir/main.cpp.o: main.cpp \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/bits/types/error_t.h \
   /usr/include/c++/11.1.0/bits/charconv.h \
+  /usr/include/c++/11.1.0/bits/functional_hash.h \
+  /usr/include/c++/11.1.0/bits/hash_bytes.h \
   /usr/include/c++/11.1.0/bits/basic_string.tcc \
+  /usr/include/c++/11.1.0/iterator \
+  /usr/include/c++/11.1.0/bits/stream_iterator.h \
+  /usr/include/c++/11.1.0/bits/streambuf_iterator.h \
+  /usr/include/c++/11.1.0/streambuf \
+  /usr/include/c++/11.1.0/bits/ios_base.h \
+  /usr/include/c++/11.1.0/bits/locale_classes.h \
   /usr/include/c++/11.1.0/bits/locale_classes.tcc \
   /usr/include/c++/11.1.0/system_error \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/error_constants.h \
   /usr/include/c++/11.1.0/stdexcept \
+  /usr/include/c++/11.1.0/exception \
+  /usr/include/c++/11.1.0/bits/exception_ptr.h \
+  /usr/include/c++/11.1.0/bits/cxxabi_init_exception.h \
+  /usr/include/c++/11.1.0/typeinfo \
+  /usr/include/c++/11.1.0/bits/nested_exception.h \
   /usr/include/c++/11.1.0/bits/streambuf.tcc \
-  /usr/include/c++/11.1.0/memory \
-  /usr/include/c++/11.1.0/bits/stl_raw_storage_iter.h \
-  /usr/include/c++/11.1.0/bits/align.h \
-  /usr/include/c++/11.1.0/bit \
-  /usr/include/c++/11.1.0/bits/unique_ptr.h \
-  /usr/include/c++/11.1.0/bits/shared_ptr.h \
-  /usr/include/c++/11.1.0/bits/shared_ptr_base.h \
-  /usr/include/c++/11.1.0/bits/allocated_ptr.h \
-  /usr/include/c++/11.1.0/ext/concurrence.h \
-  /usr/include/c++/11.1.0/bits/shared_ptr_atomic.h \
-  /usr/include/c++/11.1.0/backward/auto_ptr.h \
-  /usr/include/c++/11.1.0/pstl/glue_memory_defs.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qbytearrayalgorithms.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qbytearrayview.h \
-  /usr/include/c++/11.1.0/stdlib.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qstringliteral.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qstringalgorithms.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qanystringview.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qutf8stringview.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qstringtokenizer.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qlist.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qhashfunctions.h \
+  /usr/include/qt/QtCore/qstringliteral.h \
+  /usr/include/qt/QtCore/qstringalgorithms.h \
+  /usr/include/qt/QtCore/qstringview.h \
+  /usr/include/qt/QtCore/qlist.h \
+  /usr/include/qt/QtCore/qalgorithms.h \
+  /usr/include/qt/QtCore/qiterator.h \
+  /usr/include/qt/QtCore/qhashfunctions.h \
+  /usr/include/qt/QtCore/qpair.h \
   /usr/include/c++/11.1.0/numeric \
   /usr/include/c++/11.1.0/bits/stl_numeric.h \
-  /usr/include/c++/11.1.0/pstl/glue_numeric_defs.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qiterator.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qbytearraylist.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qstringlist.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qalgorithms.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qstringmatcher.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qscopedpointer.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qmetatype.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcompare.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qvarlengtharray.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qscopeguard.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qdatastream.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qiodevicebase.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qiterable.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qmetacontainer.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcontainerinfo.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qtaggedpointer.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qmath.h \
+  /usr/include/c++/11.1.0/functional \
+  /usr/include/c++/11.1.0/tuple \
+  /usr/include/c++/11.1.0/array \
+  /usr/include/c++/11.1.0/bits/uses_allocator.h \
+  /usr/include/c++/11.1.0/bits/invoke.h \
+  /usr/include/c++/11.1.0/bits/refwrap.h \
+  /usr/include/c++/11.1.0/bits/std_function.h \
+  /usr/include/qt/QtCore/qvector.h \
+  /usr/include/qt/QtCore/qcontainertools_impl.h \
+  /usr/include/c++/11.1.0/vector \
+  /usr/include/c++/11.1.0/bits/stl_uninitialized.h \
+  /usr/include/c++/11.1.0/bits/stl_vector.h \
+  /usr/include/c++/11.1.0/bits/stl_bvector.h \
+  /usr/include/c++/11.1.0/bits/vector.tcc \
   /usr/include/c++/11.1.0/list \
   /usr/include/c++/11.1.0/bits/stl_list.h \
+  /usr/include/c++/11.1.0/bits/allocated_ptr.h \
+  /usr/include/c++/11.1.0/ext/aligned_buffer.h \
   /usr/include/c++/11.1.0/bits/list.tcc \
-  /usr/include/c++/11.1.0/map \
-  /usr/include/c++/11.1.0/bits/stl_tree.h \
-  /usr/include/c++/11.1.0/bits/stl_map.h \
-  /usr/include/c++/11.1.0/bits/stl_multimap.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qobject_impl.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qproperty.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qshareddata.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qbindingstorage.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qpropertyprivate.h \
-  /usr/include/c++/11.1.0/experimental/source_location \
-  /usr/include/c++/11.1.0/chrono \
-  /usr/include/c++/11.1.0/ratio \
-  /usr/include/c++/11.1.0/ctime \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qmargins.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qpaintdevice.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qrect.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qsize.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qpoint.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qpalette.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qcolor.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qrgb.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qrgba64.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include-fixed/limits.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include-fixed/syslimits.h \
   /usr/include/limits.h \
@@ -350,25 +251,67 @@ CMakeFiles/projekt.dir/main.cpp.o: main.cpp \
   /usr/include/bits/posix2_lim.h \
   /usr/include/bits/xopen_lim.h \
   /usr/include/bits/uio_lim.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qbrush.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qimage.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qpixelformat.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qtransform.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qpolygon.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qregion.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qline.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qpixmap.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qsharedpointer.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qsharedpointer_impl.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qfont.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qfontmetrics.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qfontinfo.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qsizepolicy.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qcursor.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qbitmap.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qkeysequence.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qtabwidget.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qicon.h \
+  /usr/include/qt/QtCore/qbytearraylist.h \
+  /usr/include/qt/QtCore/qstringlist.h \
+  /usr/include/qt/QtCore/qregexp.h \
+  /usr/include/qt/QtCore/qstringmatcher.h \
+  /usr/include/qt/QtCore/qscopedpointer.h \
+  /usr/include/qt/QtCore/qmetatype.h \
+  /usr/include/qt/QtCore/qvarlengtharray.h \
+  /usr/include/qt/QtCore/qcontainerfwd.h \
+  /usr/include/c++/11.1.0/map \
+  /usr/include/c++/11.1.0/bits/stl_tree.h \
+  /usr/include/c++/11.1.0/bits/stl_map.h \
+  /usr/include/c++/11.1.0/bits/stl_multimap.h \
+  /usr/include/c++/11.1.0/bits/erase_if.h \
+  /usr/include/qt/QtCore/qobject_impl.h \
+  /usr/include/c++/11.1.0/chrono \
+  /usr/include/c++/11.1.0/ratio \
+  /usr/include/c++/11.1.0/limits \
+  /usr/include/c++/11.1.0/ctime \
+  /usr/include/c++/11.1.0/bits/parse_numbers.h \
+  /usr/include/qt/QtCore/qmargins.h \
+  /usr/include/qt/QtGui/qpaintdevice.h \
+  /usr/include/qt/QtCore/qrect.h \
+  /usr/include/qt/QtCore/qsize.h \
+  /usr/include/qt/QtCore/qpoint.h \
+  /usr/include/qt/QtGui/qpalette.h \
+  /usr/include/qt/QtGui/qcolor.h \
+  /usr/include/qt/QtGui/qrgb.h \
+  /usr/include/qt/QtGui/qrgba64.h \
+  /usr/include/qt/QtGui/qbrush.h \
+  /usr/include/qt/QtGui/qmatrix.h \
+  /usr/include/qt/QtGui/qpolygon.h \
+  /usr/include/qt/QtGui/qregion.h \
+  /usr/include/qt/QtCore/qdatastream.h \
+  /usr/include/qt/QtCore/qiodevice.h \
+  /usr/include/qt/QtCore/qline.h \
+  /usr/include/qt/QtGui/qtransform.h \
+  /usr/include/qt/QtGui/qimage.h \
+  /usr/include/qt/QtGui/qpixelformat.h \
+  /usr/include/qt/QtGui/qpixmap.h \
+  /usr/include/qt/QtCore/qsharedpointer.h \
+  /usr/include/qt/QtCore/qshareddata.h \
+  /usr/include/qt/QtCore/qhash.h \
+  /usr/include/qt/QtCore/qsharedpointer_impl.h \
+  /usr/include/c++/11.1.0/memory \
+  /usr/include/c++/11.1.0/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/11.1.0/bits/align.h \
+  /usr/include/c++/11.1.0/bit \
+  /usr/include/c++/11.1.0/bits/unique_ptr.h \
+  /usr/include/c++/11.1.0/bits/shared_ptr.h \
+  /usr/include/c++/11.1.0/bits/shared_ptr_base.h \
+  /usr/include/c++/11.1.0/ext/concurrence.h \
+  /usr/include/c++/11.1.0/bits/shared_ptr_atomic.h \
+  /usr/include/c++/11.1.0/backward/auto_ptr.h \
+  /usr/include/qt/QtGui/qfont.h \
+  /usr/include/qt/QtGui/qfontmetrics.h \
+  /usr/include/qt/QtGui/qfontinfo.h \
+  /usr/include/qt/QtWidgets/qsizepolicy.h \
+  /usr/include/qt/QtGui/qcursor.h \
+  /usr/include/qt/QtGui/qkeysequence.h \
+  /usr/include/qt/QtWidgets/qtabwidget.h \
+  /usr/include/qt/QtGui/qicon.h \
   src/logic.h \
   src/dataStructures.h \
   /usr/include/c++/11.1.0/iostream \
@@ -386,44 +329,29 @@ CMakeFiles/projekt.dir/main.cpp.o: main.cpp \
   /usr/include/c++/11.1.0/bits/ostream.tcc \
   /usr/include/c++/11.1.0/istream \
   /usr/include/c++/11.1.0/bits/istream.tcc \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/QLabel \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qlabel.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qframe.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qpicture.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qiodevice.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qtextdocument.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qvariant.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qmap.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qshareddata_impl.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qhash.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qdebug.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qtextstream.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qstringconverter.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qset.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcontiguouscache.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qurl.h \
+  /usr/include/qt/QtWidgets/QLabel \
+  /usr/include/qt/QtWidgets/qlabel.h \
+  /usr/include/qt/QtWidgets/qframe.h \
   src/dataStructures.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/QApplication \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qapplication.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcoreapplication.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcoreevent.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qeventloop.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qnativeinterface.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qloggingcategory.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcoreapplication_platform.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qguiapplication.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qinputmethod.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qlocale.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qguiapplication_platform.h
+  /usr/include/qt/QtWidgets/QApplication \
+  /usr/include/qt/QtWidgets/qapplication.h \
+  /usr/include/qt/QtCore/qcoreapplication.h \
+  /usr/include/qt/QtCore/qcoreevent.h \
+  /usr/include/qt/QtCore/qeventloop.h \
+  /usr/include/qt/QtGui/qguiapplication.h \
+  /usr/include/qt/QtGui/qinputmethod.h \
+  /usr/include/qt/QtCore/qlocale.h \
+  /usr/include/qt/QtCore/qvariant.h \
+  /usr/include/qt/QtCore/qmap.h
 
 CMakeFiles/projekt.dir/mainwindow.cpp.o: mainwindow.cpp \
   /usr/include/stdc-predef.h \
   mainwindow.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/QMainWindow \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qmainwindow.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qtwidgetsglobal.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qtguiglobal.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qglobal.h \
+  /usr/include/qt/QtWidgets/QMainWindow \
+  /usr/include/qt/QtWidgets/qmainwindow.h \
+  /usr/include/qt/QtWidgets/qtwidgetsglobal.h \
+  /usr/include/qt/QtGui/qtguiglobal.h \
+  /usr/include/qt/QtCore/qglobal.h \
   /usr/include/c++/11.1.0/type_traits \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/c++config.h \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -434,7 +362,6 @@ CMakeFiles/projekt.dir/mainwindow.cpp.o: mainwindow.cpp \
   /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-64.h \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/cpu_defines.h \
-  /usr/include/c++/11.1.0/pstl/pstl_config.h \
   /usr/include/c++/11.1.0/cstddef \
   /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include/stddef.h \
   /usr/include/c++/11.1.0/utility \
@@ -442,23 +369,12 @@ CMakeFiles/projekt.dir/mainwindow.cpp.o: mainwindow.cpp \
   /usr/include/c++/11.1.0/bits/stl_pair.h \
   /usr/include/c++/11.1.0/bits/move.h \
   /usr/include/c++/11.1.0/initializer_list \
-  /usr/include/c++/11.1.0/cstdint \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/bits/libc-header-start.h \
-  /usr/include/bits/types.h \
-  /usr/include/bits/timesize.h \
-  /usr/include/bits/typesizes.h \
-  /usr/include/bits/time64.h \
-  /usr/include/bits/wchar.h \
-  /usr/include/bits/stdint-intn.h \
-  /usr/include/bits/stdint-uintn.h \
   /usr/include/assert.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qconfig.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qtcore-config.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qsystemdetection.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qprocessordetection.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcompilerdetection.h \
+  /usr/include/qt/QtCore/qconfig.h \
+  /usr/include/qt/QtCore/qtcore-config.h \
+  /usr/include/qt/QtCore/qsystemdetection.h \
+  /usr/include/qt/QtCore/qprocessordetection.h \
+  /usr/include/qt/QtCore/qcompilerdetection.h \
   /usr/include/c++/11.1.0/algorithm \
   /usr/include/c++/11.1.0/bits/stl_algobase.h \
   /usr/include/c++/11.1.0/bits/functexcept.h \
@@ -477,6 +393,7 @@ CMakeFiles/projekt.dir/mainwindow.cpp.o: mainwindow.cpp \
   /usr/include/c++/11.1.0/bits/stl_algo.h \
   /usr/include/c++/11.1.0/cstdlib \
   /usr/include/stdlib.h \
+  /usr/include/bits/libc-header-start.h \
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
   /usr/include/bits/floatn.h \
@@ -484,10 +401,15 @@ CMakeFiles/projekt.dir/mainwindow.cpp.o: mainwindow.cpp \
   /usr/include/bits/types/locale_t.h \
   /usr/include/bits/types/__locale_t.h \
   /usr/include/sys/types.h \
+  /usr/include/bits/types.h \
+  /usr/include/bits/timesize.h \
+  /usr/include/bits/typesizes.h \
+  /usr/include/bits/time64.h \
   /usr/include/bits/types/clock_t.h \
   /usr/include/bits/types/clockid_t.h \
   /usr/include/bits/types/time_t.h \
   /usr/include/bits/types/timer_t.h \
+  /usr/include/bits/stdint-intn.h \
   /usr/include/endian.h \
   /usr/include/bits/endian.h \
   /usr/include/bits/endianness.h \
@@ -514,132 +436,71 @@ CMakeFiles/projekt.dir/mainwindow.cpp.o: mainwindow.cpp \
   /usr/include/c++/11.1.0/new \
   /usr/include/c++/11.1.0/bits/exception.h \
   /usr/include/c++/11.1.0/bits/uniform_int_dist.h \
-  /usr/include/c++/11.1.0/pstl/glue_algorithm_defs.h \
-  /usr/include/c++/11.1.0/functional \
-  /usr/include/c++/11.1.0/bits/stl_function.h \
-  /usr/include/c++/11.1.0/backward/binders.h \
-  /usr/include/c++/11.1.0/tuple \
-  /usr/include/c++/11.1.0/array \
-  /usr/include/c++/11.1.0/bits/range_access.h \
-  /usr/include/c++/11.1.0/bits/uses_allocator.h \
-  /usr/include/c++/11.1.0/bits/invoke.h \
-  /usr/include/c++/11.1.0/bits/functional_hash.h \
-  /usr/include/c++/11.1.0/bits/hash_bytes.h \
-  /usr/include/c++/11.1.0/bits/refwrap.h \
-  /usr/include/c++/11.1.0/bits/std_function.h \
-  /usr/include/c++/11.1.0/typeinfo \
-  /usr/include/c++/11.1.0/unordered_map \
-  /usr/include/c++/11.1.0/bits/allocator.h \
-  /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/c++allocator.h \
-  /usr/include/c++/11.1.0/ext/new_allocator.h \
-  /usr/include/c++/11.1.0/bits/memoryfwd.h \
-  /usr/include/c++/11.1.0/ext/alloc_traits.h \
-  /usr/include/c++/11.1.0/bits/alloc_traits.h \
-  /usr/include/c++/11.1.0/ext/aligned_buffer.h \
-  /usr/include/c++/11.1.0/bits/hashtable.h \
-  /usr/include/c++/11.1.0/bits/hashtable_policy.h \
-  /usr/include/c++/11.1.0/bits/node_handle.h \
-  /usr/include/c++/11.1.0/bits/unordered_map.h \
-  /usr/include/c++/11.1.0/bits/erase_if.h \
-  /usr/include/c++/11.1.0/vector \
-  /usr/include/c++/11.1.0/bits/stl_uninitialized.h \
-  /usr/include/c++/11.1.0/bits/stl_vector.h \
-  /usr/include/c++/11.1.0/bits/stl_bvector.h \
-  /usr/include/c++/11.1.0/bits/vector.tcc \
-  /usr/include/c++/11.1.0/pstl/execution_defs.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qtypeinfo.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcontainerfwd.h \
-  /usr/include/c++/11.1.0/variant \
-  /usr/include/c++/11.1.0/bits/enable_special_members.h \
-  /usr/include/c++/11.1.0/bits/parse_numbers.h \
-  /usr/include/c++/11.1.0/optional \
-  /usr/include/c++/11.1.0/exception \
-  /usr/include/c++/11.1.0/bits/exception_ptr.h \
-  /usr/include/c++/11.1.0/bits/cxxabi_init_exception.h \
-  /usr/include/c++/11.1.0/bits/nested_exception.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qsysinfo.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qlogging.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qflags.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qatomic.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qbasicatomic.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qatomic_cxx11.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qgenericatomic.h \
+  /usr/include/qt/QtCore/qtypeinfo.h \
+  /usr/include/qt/QtCore/qsysinfo.h \
+  /usr/include/qt/QtCore/qlogging.h \
+  /usr/include/qt/QtCore/qflags.h \
+  /usr/include/qt/QtCore/qatomic.h \
+  /usr/include/qt/QtCore/qbasicatomic.h \
+  /usr/include/qt/QtCore/qatomic_cxx11.h \
+  /usr/include/qt/QtCore/qgenericatomic.h \
   /usr/include/c++/11.1.0/atomic \
   /usr/include/c++/11.1.0/bits/atomic_base.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/bits/wchar.h \
+  /usr/include/bits/stdint-uintn.h \
   /usr/include/c++/11.1.0/bits/atomic_lockfree_defines.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qglobalstatic.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qnumeric.h \
-  /usr/include/c++/11.1.0/cmath \
-  /usr/include/math.h \
-  /usr/include/bits/math-vector.h \
-  /usr/include/bits/libm-simd-decl-stubs.h \
-  /usr/include/bits/flt-eval-method.h \
-  /usr/include/bits/fp-logb.h \
-  /usr/include/bits/fp-fast.h \
-  /usr/include/bits/mathcalls-helper-functions.h \
-  /usr/include/bits/mathcalls.h \
-  /usr/include/bits/mathcalls-narrow.h \
-  /usr/include/bits/iscanonical.h \
-  /usr/include/c++/11.1.0/bits/specfun.h \
-  /usr/include/c++/11.1.0/limits \
-  /usr/include/c++/11.1.0/tr1/gamma.tcc \
-  /usr/include/c++/11.1.0/tr1/special_function_util.h \
-  /usr/include/c++/11.1.0/tr1/bessel_function.tcc \
-  /usr/include/c++/11.1.0/tr1/beta_function.tcc \
-  /usr/include/c++/11.1.0/tr1/ell_integral.tcc \
-  /usr/include/c++/11.1.0/tr1/exp_integral.tcc \
-  /usr/include/c++/11.1.0/tr1/hypergeometric.tcc \
-  /usr/include/c++/11.1.0/tr1/legendre_function.tcc \
-  /usr/include/c++/11.1.0/tr1/modified_bessel_func.tcc \
-  /usr/include/c++/11.1.0/tr1/poly_hermite.tcc \
-  /usr/include/c++/11.1.0/tr1/poly_laguerre.tcc \
-  /usr/include/c++/11.1.0/tr1/riemann_zeta.tcc \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qversiontagging.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qtgui-config.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qtwidgets-config.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qwidget.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qwindowdefs.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qobjectdefs.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qnamespace.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qtmetamacros.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qobjectdefs_impl.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qobject.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qstring.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qchar.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qstringview.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qbytearray.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qrefcount.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qarraydata.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qpair.h \
+  /usr/include/qt/QtCore/qglobalstatic.h \
+  /usr/include/qt/QtCore/qnumeric.h \
+  /usr/include/qt/QtCore/qversiontagging.h \
+  /usr/include/qt/QtGui/qtgui-config.h \
+  /usr/include/qt/QtWidgets/qtwidgets-config.h \
+  /usr/include/qt/QtWidgets/qwidget.h \
+  /usr/include/qt/QtGui/qwindowdefs.h \
+  /usr/include/qt/QtCore/qobjectdefs.h \
+  /usr/include/qt/QtCore/qnamespace.h \
+  /usr/include/qt/QtCore/qobjectdefs_impl.h \
+  /usr/include/qt/QtCore/qobject.h \
+  /usr/include/qt/QtCore/qstring.h \
+  /usr/include/qt/QtCore/qchar.h \
+  /usr/include/qt/QtCore/qbytearray.h \
+  /usr/include/qt/QtCore/qrefcount.h \
+  /usr/include/qt/QtCore/qarraydata.h \
   /usr/include/string.h \
   /usr/include/strings.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qarraydatapointer.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qarraydataops.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcontainertools_impl.h \
-  /usr/include/c++/11.1.0/cstring \
-  /usr/include/c++/11.1.0/iterator \
-  /usr/include/c++/11.1.0/iosfwd \
+  /usr/include/c++/11.1.0/stdlib.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include/stdarg.h \
+  /usr/include/c++/11.1.0/string \
   /usr/include/c++/11.1.0/bits/stringfwd.h \
+  /usr/include/c++/11.1.0/bits/memoryfwd.h \
+  /usr/include/c++/11.1.0/bits/char_traits.h \
   /usr/include/c++/11.1.0/bits/postypes.h \
   /usr/include/c++/11.1.0/cwchar \
   /usr/include/wchar.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include/stdarg.h \
   /usr/include/bits/types/wint_t.h \
   /usr/include/bits/types/mbstate_t.h \
   /usr/include/bits/types/__mbstate_t.h \
   /usr/include/bits/types/__FILE.h \
   /usr/include/bits/types/FILE.h \
-  /usr/include/c++/11.1.0/bits/stream_iterator.h \
-  /usr/include/c++/11.1.0/bits/streambuf_iterator.h \
-  /usr/include/c++/11.1.0/streambuf \
+  /usr/include/c++/11.1.0/cstdint \
+  /usr/include/c++/11.1.0/bits/allocator.h \
+  /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/c++allocator.h \
+  /usr/include/c++/11.1.0/ext/new_allocator.h \
   /usr/include/c++/11.1.0/bits/localefwd.h \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/c++locale.h \
   /usr/include/c++/11.1.0/clocale \
   /usr/include/locale.h \
   /usr/include/bits/locale.h \
+  /usr/include/c++/11.1.0/iosfwd \
   /usr/include/c++/11.1.0/cctype \
   /usr/include/ctype.h \
-  /usr/include/c++/11.1.0/bits/ios_base.h \
+  /usr/include/c++/11.1.0/bits/ostream_insert.h \
+  /usr/include/c++/11.1.0/bits/cxxabi_forced.h \
+  /usr/include/c++/11.1.0/bits/stl_function.h \
+  /usr/include/c++/11.1.0/backward/binders.h \
+  /usr/include/c++/11.1.0/bits/range_access.h \
+  /usr/include/c++/11.1.0/bits/basic_string.h \
   /usr/include/c++/11.1.0/ext/atomicity.h \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/gthr.h \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/gthr-default.h \
@@ -657,15 +518,8 @@ CMakeFiles/projekt.dir/mainwindow.cpp.o: mainwindow.cpp \
   /usr/include/bits/types/struct___jmp_buf_tag.h \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/atomic_word.h \
   /usr/include/sys/single_threaded.h \
-  /usr/include/c++/11.1.0/bits/locale_classes.h \
-  /usr/include/c++/11.1.0/string \
-  /usr/include/c++/11.1.0/bits/char_traits.h \
-  /usr/include/c++/11.1.0/bits/ostream_insert.h \
-  /usr/include/c++/11.1.0/bits/cxxabi_forced.h \
-  /usr/include/c++/11.1.0/bits/basic_string.h \
-  /usr/include/c++/11.1.0/string_view \
-  /usr/include/c++/11.1.0/bits/ranges_base.h \
-  /usr/include/c++/11.1.0/bits/string_view.tcc \
+  /usr/include/c++/11.1.0/ext/alloc_traits.h \
+  /usr/include/c++/11.1.0/bits/alloc_traits.h \
   /usr/include/c++/11.1.0/ext/string_conversions.h \
   /usr/include/c++/11.1.0/cstdio \
   /usr/include/stdio.h \
@@ -683,79 +537,54 @@ CMakeFiles/projekt.dir/mainwindow.cpp.o: mainwindow.cpp \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/bits/types/error_t.h \
   /usr/include/c++/11.1.0/bits/charconv.h \
+  /usr/include/c++/11.1.0/bits/functional_hash.h \
+  /usr/include/c++/11.1.0/bits/hash_bytes.h \
   /usr/include/c++/11.1.0/bits/basic_string.tcc \
+  /usr/include/c++/11.1.0/iterator \
+  /usr/include/c++/11.1.0/bits/stream_iterator.h \
+  /usr/include/c++/11.1.0/bits/streambuf_iterator.h \
+  /usr/include/c++/11.1.0/streambuf \
+  /usr/include/c++/11.1.0/bits/ios_base.h \
+  /usr/include/c++/11.1.0/bits/locale_classes.h \
   /usr/include/c++/11.1.0/bits/locale_classes.tcc \
   /usr/include/c++/11.1.0/system_error \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/error_constants.h \
   /usr/include/c++/11.1.0/stdexcept \
+  /usr/include/c++/11.1.0/exception \
+  /usr/include/c++/11.1.0/bits/exception_ptr.h \
+  /usr/include/c++/11.1.0/bits/cxxabi_init_exception.h \
+  /usr/include/c++/11.1.0/typeinfo \
+  /usr/include/c++/11.1.0/bits/nested_exception.h \
   /usr/include/c++/11.1.0/bits/streambuf.tcc \
-  /usr/include/c++/11.1.0/memory \
-  /usr/include/c++/11.1.0/bits/stl_raw_storage_iter.h \
-  /usr/include/c++/11.1.0/bits/align.h \
-  /usr/include/c++/11.1.0/bit \
-  /usr/include/c++/11.1.0/bits/unique_ptr.h \
-  /usr/include/c++/11.1.0/bits/shared_ptr.h \
-  /usr/include/c++/11.1.0/bits/shared_ptr_base.h \
-  /usr/include/c++/11.1.0/bits/allocated_ptr.h \
-  /usr/include/c++/11.1.0/ext/concurrence.h \
-  /usr/include/c++/11.1.0/bits/shared_ptr_atomic.h \
-  /usr/include/c++/11.1.0/backward/auto_ptr.h \
-  /usr/include/c++/11.1.0/pstl/glue_memory_defs.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qbytearrayalgorithms.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qbytearrayview.h \
-  /usr/include/c++/11.1.0/stdlib.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qstringliteral.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qstringalgorithms.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qanystringview.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qutf8stringview.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qstringtokenizer.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qlist.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qhashfunctions.h \
+  /usr/include/qt/QtCore/qstringliteral.h \
+  /usr/include/qt/QtCore/qstringalgorithms.h \
+  /usr/include/qt/QtCore/qstringview.h \
+  /usr/include/qt/QtCore/qlist.h \
+  /usr/include/qt/QtCore/qalgorithms.h \
+  /usr/include/qt/QtCore/qiterator.h \
+  /usr/include/qt/QtCore/qhashfunctions.h \
+  /usr/include/qt/QtCore/qpair.h \
   /usr/include/c++/11.1.0/numeric \
   /usr/include/c++/11.1.0/bits/stl_numeric.h \
-  /usr/include/c++/11.1.0/pstl/glue_numeric_defs.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qiterator.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qbytearraylist.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qstringlist.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qalgorithms.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qstringmatcher.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qscopedpointer.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qmetatype.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcompare.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qvarlengtharray.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qscopeguard.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qdatastream.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qiodevicebase.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qiterable.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qmetacontainer.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcontainerinfo.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qtaggedpointer.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qmath.h \
+  /usr/include/c++/11.1.0/functional \
+  /usr/include/c++/11.1.0/tuple \
+  /usr/include/c++/11.1.0/array \
+  /usr/include/c++/11.1.0/bits/uses_allocator.h \
+  /usr/include/c++/11.1.0/bits/invoke.h \
+  /usr/include/c++/11.1.0/bits/refwrap.h \
+  /usr/include/c++/11.1.0/bits/std_function.h \
+  /usr/include/qt/QtCore/qvector.h \
+  /usr/include/qt/QtCore/qcontainertools_impl.h \
+  /usr/include/c++/11.1.0/vector \
+  /usr/include/c++/11.1.0/bits/stl_uninitialized.h \
+  /usr/include/c++/11.1.0/bits/stl_vector.h \
+  /usr/include/c++/11.1.0/bits/stl_bvector.h \
+  /usr/include/c++/11.1.0/bits/vector.tcc \
   /usr/include/c++/11.1.0/list \
   /usr/include/c++/11.1.0/bits/stl_list.h \
+  /usr/include/c++/11.1.0/bits/allocated_ptr.h \
+  /usr/include/c++/11.1.0/ext/aligned_buffer.h \
   /usr/include/c++/11.1.0/bits/list.tcc \
-  /usr/include/c++/11.1.0/map \
-  /usr/include/c++/11.1.0/bits/stl_tree.h \
-  /usr/include/c++/11.1.0/bits/stl_map.h \
-  /usr/include/c++/11.1.0/bits/stl_multimap.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qobject_impl.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qproperty.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qshareddata.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qbindingstorage.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qpropertyprivate.h \
-  /usr/include/c++/11.1.0/experimental/source_location \
-  /usr/include/c++/11.1.0/chrono \
-  /usr/include/c++/11.1.0/ratio \
-  /usr/include/c++/11.1.0/ctime \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qmargins.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qpaintdevice.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qrect.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qsize.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qpoint.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qpalette.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qcolor.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qrgb.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qrgba64.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include-fixed/limits.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include-fixed/syslimits.h \
   /usr/include/limits.h \
@@ -765,25 +594,67 @@ CMakeFiles/projekt.dir/mainwindow.cpp.o: mainwindow.cpp \
   /usr/include/bits/posix2_lim.h \
   /usr/include/bits/xopen_lim.h \
   /usr/include/bits/uio_lim.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qbrush.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qimage.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qpixelformat.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qtransform.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qpolygon.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qregion.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qline.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qpixmap.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qsharedpointer.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qsharedpointer_impl.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qfont.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qfontmetrics.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qfontinfo.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qsizepolicy.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qcursor.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qbitmap.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qkeysequence.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qtabwidget.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qicon.h \
+  /usr/include/qt/QtCore/qbytearraylist.h \
+  /usr/include/qt/QtCore/qstringlist.h \
+  /usr/include/qt/QtCore/qregexp.h \
+  /usr/include/qt/QtCore/qstringmatcher.h \
+  /usr/include/qt/QtCore/qscopedpointer.h \
+  /usr/include/qt/QtCore/qmetatype.h \
+  /usr/include/qt/QtCore/qvarlengtharray.h \
+  /usr/include/qt/QtCore/qcontainerfwd.h \
+  /usr/include/c++/11.1.0/map \
+  /usr/include/c++/11.1.0/bits/stl_tree.h \
+  /usr/include/c++/11.1.0/bits/stl_map.h \
+  /usr/include/c++/11.1.0/bits/stl_multimap.h \
+  /usr/include/c++/11.1.0/bits/erase_if.h \
+  /usr/include/qt/QtCore/qobject_impl.h \
+  /usr/include/c++/11.1.0/chrono \
+  /usr/include/c++/11.1.0/ratio \
+  /usr/include/c++/11.1.0/limits \
+  /usr/include/c++/11.1.0/ctime \
+  /usr/include/c++/11.1.0/bits/parse_numbers.h \
+  /usr/include/qt/QtCore/qmargins.h \
+  /usr/include/qt/QtGui/qpaintdevice.h \
+  /usr/include/qt/QtCore/qrect.h \
+  /usr/include/qt/QtCore/qsize.h \
+  /usr/include/qt/QtCore/qpoint.h \
+  /usr/include/qt/QtGui/qpalette.h \
+  /usr/include/qt/QtGui/qcolor.h \
+  /usr/include/qt/QtGui/qrgb.h \
+  /usr/include/qt/QtGui/qrgba64.h \
+  /usr/include/qt/QtGui/qbrush.h \
+  /usr/include/qt/QtGui/qmatrix.h \
+  /usr/include/qt/QtGui/qpolygon.h \
+  /usr/include/qt/QtGui/qregion.h \
+  /usr/include/qt/QtCore/qdatastream.h \
+  /usr/include/qt/QtCore/qiodevice.h \
+  /usr/include/qt/QtCore/qline.h \
+  /usr/include/qt/QtGui/qtransform.h \
+  /usr/include/qt/QtGui/qimage.h \
+  /usr/include/qt/QtGui/qpixelformat.h \
+  /usr/include/qt/QtGui/qpixmap.h \
+  /usr/include/qt/QtCore/qsharedpointer.h \
+  /usr/include/qt/QtCore/qshareddata.h \
+  /usr/include/qt/QtCore/qhash.h \
+  /usr/include/qt/QtCore/qsharedpointer_impl.h \
+  /usr/include/c++/11.1.0/memory \
+  /usr/include/c++/11.1.0/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/11.1.0/bits/align.h \
+  /usr/include/c++/11.1.0/bit \
+  /usr/include/c++/11.1.0/bits/unique_ptr.h \
+  /usr/include/c++/11.1.0/bits/shared_ptr.h \
+  /usr/include/c++/11.1.0/bits/shared_ptr_base.h \
+  /usr/include/c++/11.1.0/ext/concurrence.h \
+  /usr/include/c++/11.1.0/bits/shared_ptr_atomic.h \
+  /usr/include/c++/11.1.0/backward/auto_ptr.h \
+  /usr/include/qt/QtGui/qfont.h \
+  /usr/include/qt/QtGui/qfontmetrics.h \
+  /usr/include/qt/QtGui/qfontinfo.h \
+  /usr/include/qt/QtWidgets/qsizepolicy.h \
+  /usr/include/qt/QtGui/qcursor.h \
+  /usr/include/qt/QtGui/qkeysequence.h \
+  /usr/include/qt/QtWidgets/qtabwidget.h \
+  /usr/include/qt/QtGui/qicon.h \
   src/logic.h \
   src/dataStructures.h \
   /usr/include/c++/11.1.0/iostream \
@@ -801,96 +672,63 @@ CMakeFiles/projekt.dir/mainwindow.cpp.o: mainwindow.cpp \
   /usr/include/c++/11.1.0/bits/ostream.tcc \
   /usr/include/c++/11.1.0/istream \
   /usr/include/c++/11.1.0/bits/istream.tcc \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/QLabel \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qlabel.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qframe.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qpicture.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qiodevice.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qtextdocument.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qvariant.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qmap.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qshareddata_impl.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qhash.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qdebug.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qtextstream.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qstringconverter.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qset.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcontiguouscache.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qurl.h \
+  /usr/include/qt/QtWidgets/QLabel \
+  /usr/include/qt/QtWidgets/qlabel.h \
+  /usr/include/qt/QtWidgets/qframe.h \
   src/dataStructures.h \
   projekt_autogen/include/ui_mainwindow.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/QVariant \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qvariant.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/QApplication \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qapplication.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcoreapplication.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcoreevent.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qeventloop.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qnativeinterface.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qloggingcategory.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcoreapplication_platform.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qguiapplication.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qinputmethod.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qlocale.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qguiapplication_platform.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/QCheckBox \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qcheckbox.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qabstractbutton.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/QLabel \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/QMainWindow \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/QMenuBar \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qmenubar.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qmenu.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qaction.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/QPushButton \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qpushbutton.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/QRadioButton \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qradiobutton.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/QSlider \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qslider.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qabstractslider.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/QStatusBar \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qstatusbar.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/QWidget \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qwidget.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/QInputDialog \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qinputdialog.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qlineedit.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qtextcursor.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qtextformat.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qpen.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qtextoption.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qdialog.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/QFileDialog \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qfiledialog.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qdir.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qfile.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qfiledevice.h \
-  /usr/include/c++/11.1.0/filesystem \
-  /usr/include/c++/11.1.0/bits/fs_fwd.h \
-  /usr/include/c++/11.1.0/bits/fs_path.h \
-  /usr/include/c++/11.1.0/locale \
-  /usr/include/c++/11.1.0/bits/locale_facets_nonio.h \
-  /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/time_members.h \
-  /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/messages_members.h \
-  /usr/include/libintl.h \
-  /usr/include/c++/11.1.0/bits/codecvt.h \
-  /usr/include/c++/11.1.0/bits/locale_facets_nonio.tcc \
-  /usr/include/c++/11.1.0/bits/locale_conv.h \
-  /usr/include/c++/11.1.0/iomanip \
-  /usr/include/c++/11.1.0/bits/quoted_string.h \
-  /usr/include/c++/11.1.0/sstream \
-  /usr/include/c++/11.1.0/bits/sstream.tcc \
-  /usr/include/c++/11.1.0/codecvt \
-  /usr/include/c++/11.1.0/bits/fs_dir.h \
-  /usr/include/c++/11.1.0/bits/fs_ops.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qfileinfo.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qdatetime.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcalendar.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/QMessageBox \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qmessagebox.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/QDir \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qdir.h \
+  /usr/include/qt/QtCore/QVariant \
+  /usr/include/qt/QtCore/qvariant.h \
+  /usr/include/qt/QtCore/qmap.h \
+  /usr/include/qt/QtWidgets/QApplication \
+  /usr/include/qt/QtWidgets/qapplication.h \
+  /usr/include/qt/QtCore/qcoreapplication.h \
+  /usr/include/qt/QtCore/qcoreevent.h \
+  /usr/include/qt/QtCore/qeventloop.h \
+  /usr/include/qt/QtGui/qguiapplication.h \
+  /usr/include/qt/QtGui/qinputmethod.h \
+  /usr/include/qt/QtCore/qlocale.h \
+  /usr/include/qt/QtCore/qvariant.h \
+  /usr/include/qt/QtWidgets/QCheckBox \
+  /usr/include/qt/QtWidgets/qcheckbox.h \
+  /usr/include/qt/QtWidgets/qabstractbutton.h \
+  /usr/include/qt/QtWidgets/QLabel \
+  /usr/include/qt/QtWidgets/QMainWindow \
+  /usr/include/qt/QtWidgets/QMenuBar \
+  /usr/include/qt/QtWidgets/qmenubar.h \
+  /usr/include/qt/QtWidgets/qmenu.h \
+  /usr/include/qt/QtWidgets/qaction.h \
+  /usr/include/qt/QtWidgets/qactiongroup.h \
+  /usr/include/qt/QtWidgets/QPushButton \
+  /usr/include/qt/QtWidgets/qpushbutton.h \
+  /usr/include/qt/QtWidgets/QRadioButton \
+  /usr/include/qt/QtWidgets/qradiobutton.h \
+  /usr/include/qt/QtWidgets/QSlider \
+  /usr/include/qt/QtWidgets/qslider.h \
+  /usr/include/qt/QtWidgets/qabstractslider.h \
+  /usr/include/qt/QtWidgets/QStatusBar \
+  /usr/include/qt/QtWidgets/qstatusbar.h \
+  /usr/include/qt/QtWidgets/QWidget \
+  /usr/include/qt/QtWidgets/qwidget.h \
+  /usr/include/qt/QtWidgets/QInputDialog \
+  /usr/include/qt/QtWidgets/qinputdialog.h \
+  /usr/include/qt/QtWidgets/qlineedit.h \
+  /usr/include/qt/QtGui/qtextcursor.h \
+  /usr/include/qt/QtGui/qtextformat.h \
+  /usr/include/qt/QtGui/qpen.h \
+  /usr/include/qt/QtGui/qtextoption.h \
+  /usr/include/qt/QtWidgets/qdialog.h \
+  /usr/include/qt/QtWidgets/QFileDialog \
+  /usr/include/qt/QtWidgets/qfiledialog.h \
+  /usr/include/qt/QtCore/qdir.h \
+  /usr/include/qt/QtCore/qfileinfo.h \
+  /usr/include/qt/QtCore/qfile.h \
+  /usr/include/qt/QtCore/qfiledevice.h \
+  /usr/include/qt/QtCore/qurl.h \
+  /usr/include/qt/QtWidgets/QMessageBox \
+  /usr/include/qt/QtWidgets/qmessagebox.h \
+  /usr/include/qt/QtCore/QDir \
+  /usr/include/qt/QtCore/qdir.h \
   src/dataStructures.h \
   src/logic.h \
   /usr/include/c++/11.1.0/thread \
@@ -911,7 +749,6 @@ CMakeFiles/projekt.dir/projekt_autogen/mocs_compilation.cpp.o: projekt_autogen/m
   /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-64.h \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/cpu_defines.h \
-  /usr/include/c++/11.1.0/pstl/pstl_config.h \
   /usr/include/c++/11.1.0/bits/functexcept.h \
   /usr/include/c++/11.1.0/bits/exception_defines.h \
   /usr/include/c++/11.1.0/bits/cpp_type_traits.h \
@@ -1027,22 +864,19 @@ CMakeFiles/projekt.dir/projekt_autogen/mocs_compilation.cpp.o: projekt_autogen/m
   /usr/include/c++/11.1.0/bits/atomic_base.h \
   /usr/include/c++/11.1.0/bits/atomic_lockfree_defines.h \
   /usr/include/c++/11.1.0/backward/auto_ptr.h \
-  /usr/include/c++/11.1.0/pstl/glue_memory_defs.h \
-  /usr/include/c++/11.1.0/pstl/execution_defs.h \
   mainwindow.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/QMainWindow \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qmainwindow.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qtwidgetsglobal.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qtguiglobal.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qglobal.h \
+  /usr/include/qt/QtWidgets/QMainWindow \
+  /usr/include/qt/QtWidgets/qmainwindow.h \
+  /usr/include/qt/QtWidgets/qtwidgetsglobal.h \
+  /usr/include/qt/QtGui/qtguiglobal.h \
+  /usr/include/qt/QtCore/qglobal.h \
   /usr/include/c++/11.1.0/cstddef \
-  /usr/include/c++/11.1.0/cstdint \
   /usr/include/assert.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qconfig.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qtcore-config.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qsystemdetection.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qprocessordetection.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcompilerdetection.h \
+  /usr/include/qt/QtCore/qconfig.h \
+  /usr/include/qt/QtCore/qtcore-config.h \
+  /usr/include/qt/QtCore/qsystemdetection.h \
+  /usr/include/qt/QtCore/qprocessordetection.h \
+  /usr/include/qt/QtCore/qcompilerdetection.h \
   /usr/include/c++/11.1.0/algorithm \
   /usr/include/c++/11.1.0/bits/stl_algo.h \
   /usr/include/c++/11.1.0/cstdlib \
@@ -1062,87 +896,37 @@ CMakeFiles/projekt.dir/projekt_autogen/mocs_compilation.cpp.o: projekt_autogen/m
   /usr/include/c++/11.1.0/bits/algorithmfwd.h \
   /usr/include/c++/11.1.0/bits/stl_heap.h \
   /usr/include/c++/11.1.0/bits/uniform_int_dist.h \
-  /usr/include/c++/11.1.0/pstl/glue_algorithm_defs.h \
-  /usr/include/c++/11.1.0/functional \
-  /usr/include/c++/11.1.0/bits/std_function.h \
-  /usr/include/c++/11.1.0/unordered_map \
-  /usr/include/c++/11.1.0/bits/hashtable.h \
-  /usr/include/c++/11.1.0/bits/hashtable_policy.h \
-  /usr/include/c++/11.1.0/bits/node_handle.h \
-  /usr/include/c++/11.1.0/bits/unordered_map.h \
-  /usr/include/c++/11.1.0/bits/erase_if.h \
-  /usr/include/c++/11.1.0/vector \
-  /usr/include/c++/11.1.0/bits/stl_vector.h \
-  /usr/include/c++/11.1.0/bits/stl_bvector.h \
-  /usr/include/c++/11.1.0/bits/vector.tcc \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qtypeinfo.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcontainerfwd.h \
-  /usr/include/c++/11.1.0/variant \
-  /usr/include/c++/11.1.0/bits/enable_special_members.h \
-  /usr/include/c++/11.1.0/bits/parse_numbers.h \
-  /usr/include/c++/11.1.0/optional \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qsysinfo.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qlogging.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qflags.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qatomic.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qbasicatomic.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qatomic_cxx11.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qgenericatomic.h \
+  /usr/include/qt/QtCore/qtypeinfo.h \
+  /usr/include/qt/QtCore/qsysinfo.h \
+  /usr/include/qt/QtCore/qlogging.h \
+  /usr/include/qt/QtCore/qflags.h \
+  /usr/include/qt/QtCore/qatomic.h \
+  /usr/include/qt/QtCore/qbasicatomic.h \
+  /usr/include/qt/QtCore/qatomic_cxx11.h \
+  /usr/include/qt/QtCore/qgenericatomic.h \
   /usr/include/c++/11.1.0/atomic \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qglobalstatic.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qnumeric.h \
-  /usr/include/c++/11.1.0/cmath \
-  /usr/include/math.h \
-  /usr/include/bits/math-vector.h \
-  /usr/include/bits/libm-simd-decl-stubs.h \
-  /usr/include/bits/flt-eval-method.h \
-  /usr/include/bits/fp-logb.h \
-  /usr/include/bits/fp-fast.h \
-  /usr/include/bits/mathcalls-helper-functions.h \
-  /usr/include/bits/mathcalls.h \
-  /usr/include/bits/mathcalls-narrow.h \
-  /usr/include/bits/iscanonical.h \
-  /usr/include/c++/11.1.0/bits/specfun.h \
-  /usr/include/c++/11.1.0/limits \
-  /usr/include/c++/11.1.0/tr1/gamma.tcc \
-  /usr/include/c++/11.1.0/tr1/special_function_util.h \
-  /usr/include/c++/11.1.0/tr1/bessel_function.tcc \
-  /usr/include/c++/11.1.0/tr1/beta_function.tcc \
-  /usr/include/c++/11.1.0/tr1/ell_integral.tcc \
-  /usr/include/c++/11.1.0/tr1/exp_integral.tcc \
-  /usr/include/c++/11.1.0/tr1/hypergeometric.tcc \
-  /usr/include/c++/11.1.0/tr1/legendre_function.tcc \
-  /usr/include/c++/11.1.0/tr1/modified_bessel_func.tcc \
-  /usr/include/c++/11.1.0/tr1/poly_hermite.tcc \
-  /usr/include/c++/11.1.0/tr1/poly_laguerre.tcc \
-  /usr/include/c++/11.1.0/tr1/riemann_zeta.tcc \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qversiontagging.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qtgui-config.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qtwidgets-config.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qwidget.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qwindowdefs.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qobjectdefs.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qnamespace.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qtmetamacros.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qobjectdefs_impl.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qobject.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qstring.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qchar.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qstringview.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qbytearray.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qrefcount.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qarraydata.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qpair.h \
+  /usr/include/qt/QtCore/qglobalstatic.h \
+  /usr/include/qt/QtCore/qnumeric.h \
+  /usr/include/qt/QtCore/qversiontagging.h \
+  /usr/include/qt/QtGui/qtgui-config.h \
+  /usr/include/qt/QtWidgets/qtwidgets-config.h \
+  /usr/include/qt/QtWidgets/qwidget.h \
+  /usr/include/qt/QtGui/qwindowdefs.h \
+  /usr/include/qt/QtCore/qobjectdefs.h \
+  /usr/include/qt/QtCore/qnamespace.h \
+  /usr/include/qt/QtCore/qobjectdefs_impl.h \
+  /usr/include/qt/QtCore/qobject.h \
+  /usr/include/qt/QtCore/qstring.h \
+  /usr/include/qt/QtCore/qchar.h \
+  /usr/include/qt/QtCore/qbytearray.h \
+  /usr/include/qt/QtCore/qrefcount.h \
+  /usr/include/qt/QtCore/qarraydata.h \
   /usr/include/string.h \
   /usr/include/strings.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qarraydatapointer.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qarraydataops.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcontainertools_impl.h \
-  /usr/include/c++/11.1.0/cstring \
-  /usr/include/c++/11.1.0/iterator \
-  /usr/include/c++/11.1.0/bits/stream_iterator.h \
-  /usr/include/c++/11.1.0/bits/streambuf_iterator.h \
-  /usr/include/c++/11.1.0/streambuf \
+  /usr/include/c++/11.1.0/stdlib.h \
+  /usr/include/c++/11.1.0/string \
+  /usr/include/c++/11.1.0/bits/char_traits.h \
+  /usr/include/c++/11.1.0/cstdint \
   /usr/include/c++/11.1.0/bits/localefwd.h \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/c++locale.h \
   /usr/include/c++/11.1.0/clocale \
@@ -1150,16 +934,9 @@ CMakeFiles/projekt.dir/projekt_autogen/mocs_compilation.cpp.o: projekt_autogen/m
   /usr/include/bits/locale.h \
   /usr/include/c++/11.1.0/cctype \
   /usr/include/ctype.h \
-  /usr/include/c++/11.1.0/bits/ios_base.h \
-  /usr/include/c++/11.1.0/bits/locale_classes.h \
-  /usr/include/c++/11.1.0/string \
-  /usr/include/c++/11.1.0/bits/char_traits.h \
   /usr/include/c++/11.1.0/bits/ostream_insert.h \
   /usr/include/c++/11.1.0/bits/cxxabi_forced.h \
   /usr/include/c++/11.1.0/bits/basic_string.h \
-  /usr/include/c++/11.1.0/string_view \
-  /usr/include/c++/11.1.0/bits/ranges_base.h \
-  /usr/include/c++/11.1.0/bits/string_view.tcc \
   /usr/include/c++/11.1.0/ext/string_conversions.h \
   /usr/include/c++/11.1.0/cstdio \
   /usr/include/stdio.h \
@@ -1178,66 +955,38 @@ CMakeFiles/projekt.dir/projekt_autogen/mocs_compilation.cpp.o: projekt_autogen/m
   /usr/include/bits/types/error_t.h \
   /usr/include/c++/11.1.0/bits/charconv.h \
   /usr/include/c++/11.1.0/bits/basic_string.tcc \
+  /usr/include/c++/11.1.0/iterator \
+  /usr/include/c++/11.1.0/bits/stream_iterator.h \
+  /usr/include/c++/11.1.0/bits/streambuf_iterator.h \
+  /usr/include/c++/11.1.0/streambuf \
+  /usr/include/c++/11.1.0/bits/ios_base.h \
+  /usr/include/c++/11.1.0/bits/locale_classes.h \
   /usr/include/c++/11.1.0/bits/locale_classes.tcc \
   /usr/include/c++/11.1.0/system_error \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/error_constants.h \
   /usr/include/c++/11.1.0/stdexcept \
   /usr/include/c++/11.1.0/bits/streambuf.tcc \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qbytearrayalgorithms.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qbytearrayview.h \
-  /usr/include/c++/11.1.0/stdlib.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qstringliteral.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qstringalgorithms.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qanystringview.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qutf8stringview.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qstringtokenizer.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qlist.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qhashfunctions.h \
+  /usr/include/qt/QtCore/qstringliteral.h \
+  /usr/include/qt/QtCore/qstringalgorithms.h \
+  /usr/include/qt/QtCore/qstringview.h \
+  /usr/include/qt/QtCore/qlist.h \
+  /usr/include/qt/QtCore/qalgorithms.h \
+  /usr/include/qt/QtCore/qiterator.h \
+  /usr/include/qt/QtCore/qhashfunctions.h \
+  /usr/include/qt/QtCore/qpair.h \
   /usr/include/c++/11.1.0/numeric \
   /usr/include/c++/11.1.0/bits/stl_numeric.h \
-  /usr/include/c++/11.1.0/pstl/glue_numeric_defs.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qiterator.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qbytearraylist.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qstringlist.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qalgorithms.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qstringmatcher.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qscopedpointer.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qmetatype.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcompare.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qvarlengtharray.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qscopeguard.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qdatastream.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qiodevicebase.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qiterable.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qmetacontainer.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcontainerinfo.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qtaggedpointer.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qmath.h \
+  /usr/include/c++/11.1.0/functional \
+  /usr/include/c++/11.1.0/bits/std_function.h \
+  /usr/include/qt/QtCore/qvector.h \
+  /usr/include/qt/QtCore/qcontainertools_impl.h \
+  /usr/include/c++/11.1.0/vector \
+  /usr/include/c++/11.1.0/bits/stl_vector.h \
+  /usr/include/c++/11.1.0/bits/stl_bvector.h \
+  /usr/include/c++/11.1.0/bits/vector.tcc \
   /usr/include/c++/11.1.0/list \
   /usr/include/c++/11.1.0/bits/stl_list.h \
   /usr/include/c++/11.1.0/bits/list.tcc \
-  /usr/include/c++/11.1.0/map \
-  /usr/include/c++/11.1.0/bits/stl_tree.h \
-  /usr/include/c++/11.1.0/bits/stl_map.h \
-  /usr/include/c++/11.1.0/bits/stl_multimap.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qobject_impl.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qproperty.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qshareddata.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qbindingstorage.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qpropertyprivate.h \
-  /usr/include/c++/11.1.0/experimental/source_location \
-  /usr/include/c++/11.1.0/chrono \
-  /usr/include/c++/11.1.0/ratio \
-  /usr/include/c++/11.1.0/ctime \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qmargins.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qpaintdevice.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qrect.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qsize.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qpoint.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qpalette.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qcolor.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qrgb.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qrgba64.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include-fixed/limits.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include-fixed/syslimits.h \
   /usr/include/limits.h \
@@ -1247,25 +996,57 @@ CMakeFiles/projekt.dir/projekt_autogen/mocs_compilation.cpp.o: projekt_autogen/m
   /usr/include/bits/posix2_lim.h \
   /usr/include/bits/xopen_lim.h \
   /usr/include/bits/uio_lim.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qbrush.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qimage.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qpixelformat.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qtransform.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qpolygon.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qregion.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qline.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qpixmap.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qsharedpointer.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qsharedpointer_impl.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qfont.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qfontmetrics.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qfontinfo.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qsizepolicy.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qcursor.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qbitmap.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qkeysequence.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qtabwidget.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qicon.h \
+  /usr/include/qt/QtCore/qbytearraylist.h \
+  /usr/include/qt/QtCore/qstringlist.h \
+  /usr/include/qt/QtCore/qregexp.h \
+  /usr/include/qt/QtCore/qstringmatcher.h \
+  /usr/include/qt/QtCore/qscopedpointer.h \
+  /usr/include/qt/QtCore/qmetatype.h \
+  /usr/include/qt/QtCore/qvarlengtharray.h \
+  /usr/include/qt/QtCore/qcontainerfwd.h \
+  /usr/include/c++/11.1.0/map \
+  /usr/include/c++/11.1.0/bits/stl_tree.h \
+  /usr/include/c++/11.1.0/bits/stl_map.h \
+  /usr/include/c++/11.1.0/bits/stl_multimap.h \
+  /usr/include/c++/11.1.0/bits/erase_if.h \
+  /usr/include/qt/QtCore/qobject_impl.h \
+  /usr/include/c++/11.1.0/chrono \
+  /usr/include/c++/11.1.0/ratio \
+  /usr/include/c++/11.1.0/limits \
+  /usr/include/c++/11.1.0/ctime \
+  /usr/include/c++/11.1.0/bits/parse_numbers.h \
+  /usr/include/qt/QtCore/qmargins.h \
+  /usr/include/qt/QtGui/qpaintdevice.h \
+  /usr/include/qt/QtCore/qrect.h \
+  /usr/include/qt/QtCore/qsize.h \
+  /usr/include/qt/QtCore/qpoint.h \
+  /usr/include/qt/QtGui/qpalette.h \
+  /usr/include/qt/QtGui/qcolor.h \
+  /usr/include/qt/QtGui/qrgb.h \
+  /usr/include/qt/QtGui/qrgba64.h \
+  /usr/include/qt/QtGui/qbrush.h \
+  /usr/include/qt/QtGui/qmatrix.h \
+  /usr/include/qt/QtGui/qpolygon.h \
+  /usr/include/qt/QtGui/qregion.h \
+  /usr/include/qt/QtCore/qdatastream.h \
+  /usr/include/qt/QtCore/qiodevice.h \
+  /usr/include/qt/QtCore/qline.h \
+  /usr/include/qt/QtGui/qtransform.h \
+  /usr/include/qt/QtGui/qimage.h \
+  /usr/include/qt/QtGui/qpixelformat.h \
+  /usr/include/qt/QtGui/qpixmap.h \
+  /usr/include/qt/QtCore/qsharedpointer.h \
+  /usr/include/qt/QtCore/qshareddata.h \
+  /usr/include/qt/QtCore/qhash.h \
+  /usr/include/qt/QtCore/qsharedpointer_impl.h \
+  /usr/include/qt/QtGui/qfont.h \
+  /usr/include/qt/QtGui/qfontmetrics.h \
+  /usr/include/qt/QtGui/qfontinfo.h \
+  /usr/include/qt/QtWidgets/qsizepolicy.h \
+  /usr/include/qt/QtGui/qcursor.h \
+  /usr/include/qt/QtGui/qkeysequence.h \
+  /usr/include/qt/QtWidgets/qtabwidget.h \
+  /usr/include/qt/QtGui/qicon.h \
   src/logic.h \
   src/dataStructures.h \
   /usr/include/c++/11.1.0/iostream \
@@ -1283,27 +1064,10 @@ CMakeFiles/projekt.dir/projekt_autogen/mocs_compilation.cpp.o: projekt_autogen/m
   /usr/include/c++/11.1.0/bits/ostream.tcc \
   /usr/include/c++/11.1.0/istream \
   /usr/include/c++/11.1.0/bits/istream.tcc \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/QLabel \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qlabel.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qframe.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qpicture.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qiodevice.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qtextdocument.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qvariant.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qmap.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qshareddata_impl.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qhash.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qdebug.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qtextstream.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qstringconverter.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qset.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcontiguouscache.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qurl.h \
-  src/dataStructures.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qtextcursor.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qtextformat.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qpen.h \
-  /home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qtextoption.h
+  /usr/include/qt/QtWidgets/QLabel \
+  /usr/include/qt/QtWidgets/qlabel.h \
+  /usr/include/qt/QtWidgets/qframe.h \
+  src/dataStructures.h
 
 CMakeFiles/projekt.dir/src/logic.cpp.o: src/logic.cpp \
   /usr/include/stdc-predef.h \
@@ -1343,7 +1107,6 @@ CMakeFiles/projekt.dir/src/logic.cpp.o: src/logic.cpp \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/c++config.h \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/os_defines.h \
   /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/cpu_defines.h \
-  /usr/include/c++/11.1.0/pstl/pstl_config.h \
   /usr/include/c++/11.1.0/bits/cpp_type_traits.h \
   /usr/include/c++/11.1.0/ext/type_traits.h \
   /usr/include/math.h \
@@ -1385,35 +1148,6 @@ CMakeFiles/projekt.dir/src/logic.cpp.o: src/logic.cpp \
   /usr/include/bits/struct_rwlock.h \
   /usr/include/alloca.h \
   /usr/include/bits/stdlib-float.h \
-  /usr/include/c++/11.1.0/bits/specfun.h \
-  /usr/include/c++/11.1.0/bits/stl_algobase.h \
-  /usr/include/c++/11.1.0/bits/functexcept.h \
-  /usr/include/c++/11.1.0/bits/exception_defines.h \
-  /usr/include/c++/11.1.0/ext/numeric_traits.h \
-  /usr/include/c++/11.1.0/bits/stl_pair.h \
-  /usr/include/c++/11.1.0/bits/move.h \
-  /usr/include/c++/11.1.0/type_traits \
-  /usr/include/c++/11.1.0/bits/stl_iterator_base_types.h \
-  /usr/include/c++/11.1.0/bits/stl_iterator_base_funcs.h \
-  /usr/include/c++/11.1.0/bits/concept_check.h \
-  /usr/include/c++/11.1.0/debug/assertions.h \
-  /usr/include/c++/11.1.0/bits/stl_iterator.h \
-  /usr/include/c++/11.1.0/bits/ptr_traits.h \
-  /usr/include/c++/11.1.0/debug/debug.h \
-  /usr/include/c++/11.1.0/bits/predefined_ops.h \
-  /usr/include/c++/11.1.0/limits \
-  /usr/include/c++/11.1.0/tr1/gamma.tcc \
-  /usr/include/c++/11.1.0/tr1/special_function_util.h \
-  /usr/include/c++/11.1.0/tr1/bessel_function.tcc \
-  /usr/include/c++/11.1.0/tr1/beta_function.tcc \
-  /usr/include/c++/11.1.0/tr1/ell_integral.tcc \
-  /usr/include/c++/11.1.0/tr1/exp_integral.tcc \
-  /usr/include/c++/11.1.0/tr1/hypergeometric.tcc \
-  /usr/include/c++/11.1.0/tr1/legendre_function.tcc \
-  /usr/include/c++/11.1.0/tr1/modified_bessel_func.tcc \
-  /usr/include/c++/11.1.0/tr1/poly_hermite.tcc \
-  /usr/include/c++/11.1.0/tr1/poly_laguerre.tcc \
-  /usr/include/c++/11.1.0/tr1/riemann_zeta.tcc \
   /usr/include/c++/11.1.0/stdlib.h \
   /usr/include/c++/11.1.0/cstdlib \
   /usr/include/string.h \
@@ -1423,11 +1157,14 @@ CMakeFiles/projekt.dir/src/logic.cpp.o: src/logic.cpp \
   /usr/include/c++/11.1.0/exception \
   /usr/include/c++/11.1.0/bits/exception.h \
   /usr/include/c++/11.1.0/bits/exception_ptr.h \
+  /usr/include/c++/11.1.0/bits/exception_defines.h \
   /usr/include/c++/11.1.0/bits/cxxabi_init_exception.h \
   /usr/include/c++/11.1.0/typeinfo \
   /usr/include/c++/11.1.0/bits/hash_bytes.h \
   /usr/include/c++/11.1.0/new \
   /usr/include/c++/11.1.0/bits/nested_exception.h \
+  /usr/include/c++/11.1.0/bits/move.h \
+  /usr/include/c++/11.1.0/type_traits \
   /usr/include/c++/11.1.0/iosfwd \
   /usr/include/c++/11.1.0/bits/stringfwd.h \
   /usr/include/c++/11.1.0/bits/memoryfwd.h \
@@ -1439,8 +1176,20 @@ CMakeFiles/projekt.dir/src/logic.cpp.o: src/logic.cpp \
   /usr/include/c++/11.1.0/tuple \
   /usr/include/c++/11.1.0/utility \
   /usr/include/c++/11.1.0/bits/stl_relops.h \
+  /usr/include/c++/11.1.0/bits/stl_pair.h \
   /usr/include/c++/11.1.0/initializer_list \
   /usr/include/c++/11.1.0/array \
+  /usr/include/c++/11.1.0/bits/functexcept.h \
+  /usr/include/c++/11.1.0/bits/stl_algobase.h \
+  /usr/include/c++/11.1.0/ext/numeric_traits.h \
+  /usr/include/c++/11.1.0/bits/stl_iterator_base_types.h \
+  /usr/include/c++/11.1.0/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/11.1.0/bits/concept_check.h \
+  /usr/include/c++/11.1.0/debug/assertions.h \
+  /usr/include/c++/11.1.0/bits/stl_iterator.h \
+  /usr/include/c++/11.1.0/bits/ptr_traits.h \
+  /usr/include/c++/11.1.0/debug/debug.h \
+  /usr/include/c++/11.1.0/bits/predefined_ops.h \
   /usr/include/c++/11.1.0/bits/range_access.h \
   /usr/include/c++/11.1.0/bits/uses_allocator.h \
   /usr/include/c++/11.1.0/bits/invoke.h \
@@ -1467,6 +1216,7 @@ CMakeFiles/projekt.dir/src/logic.cpp.o: src/logic.cpp \
   /usr/include/c++/11.1.0/chrono \
   /usr/include/c++/11.1.0/ratio \
   /usr/include/c++/11.1.0/cstdint \
+  /usr/include/c++/11.1.0/limits \
   /usr/include/c++/11.1.0/ctime \
   /usr/include/c++/11.1.0/bits/parse_numbers.h \
   /usr/include/c++/11.1.0/cerrno \
@@ -1508,9 +1258,6 @@ CMakeFiles/projekt.dir/src/logic.cpp.o: src/logic.cpp \
   /usr/include/c++/11.1.0/bits/ostream_insert.h \
   /usr/include/c++/11.1.0/bits/cxxabi_forced.h \
   /usr/include/c++/11.1.0/bits/basic_string.h \
-  /usr/include/c++/11.1.0/string_view \
-  /usr/include/c++/11.1.0/bits/ranges_base.h \
-  /usr/include/c++/11.1.0/bits/string_view.tcc \
   /usr/include/c++/11.1.0/ext/string_conversions.h \
   /usr/include/c++/11.1.0/cstdio \
   /usr/include/c++/11.1.0/bits/charconv.h \
@@ -1538,81 +1285,95 @@ CMakeFiles/projekt.dir/src/logic.cpp.o: src/logic.cpp \
   /usr/include/bits/dlfcn.h
 
 
-/usr/include/c++/11.1.0/math.h:
+/usr/include/bits/iscanonical.h:
+
+/usr/include/bits/mathcalls-narrow.h:
+
+/usr/include/bits/mathcalls.h:
+
+/usr/include/bits/mathcalls-helper-functions.h:
+
+/usr/include/bits/fp-logb.h:
+
+/usr/include/bits/libm-simd-decl-stubs.h:
+
+/usr/include/math.h:
+
+/usr/include/c++/11.1.0/cmath:
 
 src/logic.cpp:
 
-/usr/include/c++/11.1.0/bits/this_thread_sleep.h:
+projekt_autogen/mocs_compilation.cpp:
 
-/usr/include/c++/11.1.0/thread:
+/usr/include/c++/11.1.0/bits/std_thread.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qmessagebox.h:
+/usr/include/qt/QtCore/QDir:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/QMessageBox:
+/usr/include/c++/11.1.0/math.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qdatetime.h:
+/usr/include/qt/QtWidgets/QMessageBox:
 
-/usr/include/c++/11.1.0/bits/fs_ops.h:
+/usr/include/qt/QtCore/qfile.h:
 
-/usr/include/c++/11.1.0/codecvt:
+/usr/include/qt/QtCore/qfileinfo.h:
 
-/usr/include/c++/11.1.0/bits/locale_facets_nonio.h:
+/usr/include/qt/QtWidgets/qfiledialog.h:
 
-/usr/include/c++/11.1.0/bits/fs_fwd.h:
+/usr/include/qt/QtWidgets/qdialog.h:
 
-/usr/include/c++/11.1.0/filesystem:
+/usr/include/qt/QtGui/qtextoption.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qfiledevice.h:
+/usr/include/qt/QtGui/qtextformat.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/QFileDialog:
+/usr/include/qt/QtGui/qtextcursor.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qtextformat.h:
+/usr/include/qt/QtWidgets/qinputdialog.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qtextcursor.h:
+/usr/include/qt/QtWidgets/QInputDialog:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qlineedit.h:
+/usr/include/qt/QtWidgets/QWidget:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qinputdialog.h:
+/usr/include/qt/QtWidgets/QStatusBar:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qstatusbar.h:
+/usr/include/qt/QtWidgets/qabstractslider.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/QStatusBar:
+/usr/include/qt/QtWidgets/qradiobutton.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/QSlider:
+/usr/include/qt/QtWidgets/QRadioButton:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qaction.h:
+/usr/include/qt/QtWidgets/qpushbutton.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/QCheckBox:
+/usr/include/qt/QtWidgets/QPushButton:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/QVariant:
+/usr/include/qt/QtWidgets/qactiongroup.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qinputmethod.h:
+/usr/include/qt/QtWidgets/qmenu.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qfiledialog.h:
+/usr/include/qt/QtWidgets/QMenuBar:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qloggingcategory.h:
+/usr/include/qt/QtWidgets/qabstractbutton.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/QApplication:
+/usr/include/qt/QtCore/QVariant:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcontiguouscache.h:
+/usr/include/qt/QtCore/qmap.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qset.h:
+/usr/include/qt/QtGui/qinputmethod.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qmap.h:
+/usr/include/qt/QtCore/qeventloop.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qvariant.h:
+/usr/include/qt/QtCore/qcoreevent.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qtextdocument.h:
+/usr/include/qt/QtWidgets/qapplication.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qpicture.h:
+/usr/include/qt/QtWidgets/QApplication:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qframe.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/QLabel:
+/usr/include/c++/11.1.0/bits/istream.tcc:
 
 /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/ctype_base.h:
 
 /usr/include/c++/11.1.0/cwctype:
+
+/usr/include/c++/11.1.0/bits/locale_facets.h:
 
 /usr/include/c++/11.1.0/bits/basic_ios.h:
 
@@ -1620,65 +1381,77 @@ src/logic.cpp:
 
 /usr/include/c++/11.1.0/ostream:
 
-src/dataStructures.h:
-
-/usr/include/c++/11.1.0/bits/sstream.tcc:
-
 src/logic.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qicon.h:
+/usr/include/qt/QtGui/qicon.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qtabwidget.h:
+/usr/include/qt/QtWidgets/qtabwidget.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qcursor.h:
+/usr/include/qt/QtGui/qkeysequence.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qsizepolicy.h:
+/usr/include/qt/QtGui/qfont.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qstringconverter.h:
+/usr/include/c++/11.1.0/backward/auto_ptr.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qsharedpointer.h:
+/usr/include/c++/11.1.0/ext/concurrence.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qpixmap.h:
+/usr/include/c++/11.1.0/bits/shared_ptr_base.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qpolygon.h:
+/usr/include/c++/11.1.0/bits/align.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qtransform.h:
+/usr/include/c++/11.1.0/bits/stl_raw_storage_iter.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qimage.h:
+/usr/include/c++/11.1.0/memory:
 
-/usr/include/bits/posix2_lim.h:
+/usr/include/qt/QtCore/qhash.h:
 
-/usr/include/linux/limits.h:
+/usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/ctype_inline.h:
 
-/usr/include/bits/local_lim.h:
+/usr/include/qt/QtCore/qshareddata.h:
 
-/usr/include/limits.h:
+/usr/include/qt/QtGui/qpixmap.h:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include-fixed/syslimits.h:
+/usr/include/qt/QtGui/qpixelformat.h:
 
-/usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/messages_members.h:
+/usr/include/qt/QtWidgets/qmenubar.h:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include-fixed/limits.h:
+/usr/include/qt/QtGui/qimage.h:
 
-/usr/include/bits/xopen_lim.h:
+/usr/include/qt/QtGui/qtransform.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qrgba64.h:
+/usr/include/qt/QtCore/qiodevice.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qcolor.h:
+/usr/include/qt/QtCore/qdatastream.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qpalette.h:
+/usr/include/qt/QtGui/qregion.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qpoint.h:
+/usr/include/qt/QtGui/qcursor.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qsize.h:
+/usr/include/qt/QtGui/qpolygon.h:
+
+/usr/include/qt/QtWidgets/qframe.h:
+
+/usr/include/qt/QtGui/qmatrix.h:
+
+/usr/include/qt/QtGui/qrgba64.h:
+
+mainwindow.cpp:
+
+/usr/include/qt/QtGui/qrgb.h:
+
+/usr/include/qt/QtCore/qsize.h:
+
+/usr/include/c++/11.1.0/bits/this_thread_sleep.h:
+
+/usr/include/qt/QtGui/qpaintdevice.h:
+
+/usr/include/qt/QtCore/qmargins.h:
+
+/usr/include/c++/11.1.0/bits/parse_numbers.h:
+
+/usr/include/c++/11.1.0/limits:
 
 /usr/include/c++/11.1.0/ratio:
-
-/usr/include/c++/11.1.0/experimental/source_location:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qpropertyprivate.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qshareddata.h:
 
 /usr/include/bits/wctype-wchar.h:
 
@@ -1686,259 +1459,173 @@ src/logic.h:
 
 /usr/include/c++/11.1.0/chrono:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qobject_impl.h:
+/usr/include/c++/11.1.0/bits/stl_map.h:
+
+/usr/include/qt/QtCore/qcoreapplication.h:
 
 /usr/include/c++/11.1.0/bits/stl_tree.h:
 
 /usr/include/c++/11.1.0/map:
 
-/usr/include/c++/11.1.0/bits/basic_ios.tcc:
+/usr/include/qt/QtCore/qcontainerfwd.h:
 
-/usr/include/c++/11.1.0/bits/list.tcc:
+/usr/include/strings.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qguiapplication_platform.h:
+/usr/include/qt/QtCore/qrefcount.h:
 
-/usr/include/c++/11.1.0/bits/stl_list.h:
+/usr/include/qt/QtCore/qchar.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcoreevent.h:
-
-/usr/include/c++/11.1.0/list:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qtaggedpointer.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qiterable.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qregion.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qiodevicebase.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qscopeguard.h:
-
-/usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/time_members.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qscopedpointer.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qalgorithms.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qfileinfo.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qiterator.h:
-
-/usr/include/c++/11.1.0/bits/locale_facets_nonio.tcc:
-
-/usr/include/c++/11.1.0/pstl/glue_numeric_defs.h:
-
-/usr/include/c++/11.1.0/bits/stl_multimap.h:
-
-/usr/include/c++/11.1.0/bits/stl_numeric.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/QInputDialog:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qhashfunctions.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qanystringview.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qstringalgorithms.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qstringmatcher.h:
-
-/usr/include/c++/11.1.0/stdlib.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qbytearrayview.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qbytearrayalgorithms.h:
-
-/usr/include/c++/11.1.0/pstl/glue_memory_defs.h:
-
-/usr/include/c++/11.1.0/backward/auto_ptr.h:
-
-/usr/include/c++/11.1.0/ext/concurrence.h:
-
-/usr/include/c++/11.1.0/bits/allocated_ptr.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qmetacontainer.h:
-
-/usr/include/c++/11.1.0/bits/shared_ptr_base.h:
-
-/usr/include/c++/11.1.0/bits/align.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qmath.h:
-
-/usr/include/c++/11.1.0/bits/stl_raw_storage_iter.h:
-
-/usr/include/c++/11.1.0/bits/fs_dir.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qdatastream.h:
-
-/usr/include/c++/11.1.0/memory:
-
-/usr/include/c++/11.1.0/bits/streambuf.tcc:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qfontmetrics.h:
-
-/usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/error_constants.h:
-
-/usr/include/c++/11.1.0/iostream:
-
-/usr/include/c++/11.1.0/bits/locale_classes.tcc:
-
-/usr/include/bits/types/error_t.h:
+/usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/gthr.h:
 
 /usr/include/asm-generic/errno.h:
 
-/usr/include/linux/errno.h:
+/usr/include/qt/QtCore/qobjectdefs_impl.h:
 
-/usr/include/bits/errno.h:
+/usr/include/c++/11.1.0/bits/stl_relops.h:
 
-/usr/include/c++/11.1.0/cerrno:
+/usr/include/qt/QtWidgets/qtwidgets-config.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qfont.h:
+/usr/include/linux/limits.h:
 
-/usr/include/bits/stdio_lim.h:
+/usr/include/c++/11.1.0/exception:
 
-/usr/include/c++/11.1.0/vector:
+/usr/include/c++/11.1.0/bits/atomic_base.h:
 
-/usr/include/c++/11.1.0/iomanip:
+/usr/include/c++/11.1.0/algorithm:
 
-/usr/include/bits/uintn-identity.h:
+/usr/include/qt/QtCore/qbasicatomic.h:
 
-/usr/include/c++/11.1.0/tr1/ell_integral.tcc:
+/usr/include/qt/QtCore/qatomic.h:
 
-/usr/include/c++/11.1.0/ext/aligned_buffer.h:
+/usr/include/bits/types/struct_timeval.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qguiapplication.h:
+/usr/include/qt/QtCore/qflags.h:
 
-/usr/include/gnu/stubs-64.h:
-
-/usr/include/locale.h:
+/usr/include/qt/QtCore/qfiledevice.h:
 
 /usr/include/c++/11.1.0/bits/refwrap.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qmenu.h:
+/usr/include/qt/QtGui/qcolor.h:
 
-/usr/include/c++/11.1.0/bits/invoke.h:
+/usr/include/qt/QtCore/qcontainertools_impl.h:
 
-/usr/include/c++/11.1.0/bits/range_access.h:
+/usr/include/qt/QtCore/qlogging.h:
+
+/usr/include/qt/QtCore/qsysinfo.h:
+
+/usr/include/qt/QtGui/qfontinfo.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include/stdint.h:
+
+/usr/include/qt/QtCore/qvariant.h:
 
 /usr/include/c++/11.1.0/bits/exception.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qapplication.h:
+/usr/include/qt/QtCore/qtypeinfo.h:
+
+/usr/include/c++/11.1.0/bits/range_access.h:
+
+/usr/include/bits/local_lim.h:
 
 /usr/include/c++/11.1.0/new:
 
-/usr/include/c++/11.1.0/bits/alloc_traits.h:
+/usr/include/c++/11.1.0/atomic:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcontainerinfo.h:
+/usr/include/qt/QtWidgets/qmainwindow.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qnumeric.h:
+/usr/include/qt/QtCore/qstring.h:
 
-/usr/include/c++/11.1.0/bits/functional_hash.h:
-
-/usr/include/bits/time64.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcalendar.h:
+/usr/include/c++/11.1.0/bits/nested_exception.h:
 
 /usr/include/bits/thread-shared-types.h:
 
 /usr/include/bits/pthreadtypes.h:
 
-/usr/include/dlfcn.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qbrush.h:
-
-/usr/include/c++/11.1.0/bits/hash_bytes.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qshareddata_impl.h:
+/usr/include/c++/11.1.0/list:
 
 /usr/include/bits/types/struct_timespec.h:
 
-/usr/include/bits/types/struct_timeval.h:
+/usr/include/qt/QtCore/qsharedpointer_impl.h:
 
 /usr/include/bits/types/sigset_t.h:
+
+/usr/include/qt/QtCore/qlist.h:
+
+/usr/include/qt/QtWidgets/qlabel.h:
+
+src/dataStructures.h:
+
+/usr/include/qt/QtCore/qgenericatomic.h:
+
+/usr/include/c++/11.1.0/istream:
+
+/usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/os_defines.h:
 
 /usr/include/c++/11.1.0/bits/algorithmfwd.h:
 
 /usr/include/sys/select.h:
 
+projekt_autogen/EWIEGA46WW/moc_mainwindow.cpp:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include/stdarg.h:
+
+/usr/include/assert.h:
+
 /usr/include/c++/11.1.0/bits/shared_ptr_atomic.h:
 
 /usr/include/bits/byteswap.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcontainerfwd.h:
+/usr/include/bits/endianness.h:
+
+/usr/include/qt/QtCore/qnamespace.h:
 
 /usr/include/c++/11.1.0/bits/ostream_insert.h:
 
+/usr/include/c++/11.1.0/cerrno:
+
+/usr/include/stdint.h:
+
+/usr/include/endian.h:
+
 /usr/include/bits/types/timer_t.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qhash.h:
-
 /usr/include/bits/struct_rwlock.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qabstractbutton.h:
 
 /usr/include/bits/types/struct_itimerspec.h:
 
 /usr/include/bits/types/time_t.h:
 
-projekt_autogen/mocs_compilation.cpp:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qlogging.h:
-
 /usr/include/bits/types/clock_t.h:
-
-/usr/include/bits/mathcalls.h:
 
 /usr/include/bits/types/__fpos_t.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qtcore-config.h:
+/usr/include/qt/QtWidgets/qcheckbox.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qrect.h:
+/usr/include/qt/QtWidgets/QCheckBox:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qproperty.h:
+/usr/include/qt/QtCore/qvector.h:
 
-/usr/include/c++/11.1.0/bits/stl_heap.h:
+/usr/include/limits.h:
 
-/usr/include/bits/types/__locale_t.h:
+/usr/include/bits/uintn-identity.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qprocessordetection.h:
+/usr/include/c++/11.1.0/vector:
 
-/usr/include/c++/11.1.0/bits/locale_classes.h:
+/usr/include/qt/QtWidgets/qaction.h:
 
-/usr/include/c++/11.1.0/typeinfo:
+/usr/include/c++/11.1.0/bits/stl_vector.h:
 
-/usr/include/c++/11.1.0/backward/binders.h:
+/usr/include/bits/typesizes.h:
 
-/usr/include/bits/floatn-common.h:
+/usr/include/c++/11.1.0/bits/stl_pair.h:
 
-/usr/include/bits/floatn.h:
+/usr/include/sys/types.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcoreapplication.h:
+mainwindow.h:
 
-/usr/include/c++/11.1.0/bits/erase_if.h:
+/usr/include/qt/QtGui/qwindowdefs.h:
 
-/usr/include/bits/timesize.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qfile.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qwidget.h:
-
-/usr/include/ctype.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qtextstream.h:
-
-/usr/include/bits/types/locale_t.h:
-
-/usr/include/c++/11.1.0/cstdlib:
-
-/usr/include/c++/11.1.0/initializer_list:
-
-/usr/include/bits/timex.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/QRadioButton:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qstringliteral.h:
-
-/usr/include/c++/11.1.0/bits/stl_relops.h:
+/usr/include/bits/types/__sigset_t.h:
 
 /usr/include/c++/11.1.0/debug/debug.h:
 
@@ -1946,117 +1633,105 @@ projekt_autogen/mocs_compilation.cpp:
 
 /usr/include/c++/11.1.0/utility:
 
-/usr/include/c++/11.1.0/bits/uses_allocator.h:
-
-projekt_autogen/include/ui_mainwindow.h:
-
-/usr/include/c++/11.1.0/bits/stl_construct.h:
+/usr/include/gnu/stubs-64.h:
 
 /usr/include/bits/long-double.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcompilerdetection.h:
+/usr/include/qt/QtWidgets/qwidget.h:
 
-/usr/include/c++/11.1.0/bits/istream.tcc:
+/usr/include/qt/QtCore/qbytearray.h:
 
-/usr/include/c++/11.1.0/bits/unordered_map.h:
+/usr/include/bits/stdint-uintn.h:
 
-/usr/include/errno.h:
-
-/usr/include/c++/11.1.0/functional:
-
-/usr/include/c++/11.1.0/bits/ptr_traits.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qmargins.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qbasicatomic.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qpen.h:
-
-/usr/include/bits/uio_lim.h:
-
-/usr/include/bits/math-vector.h:
-
-/usr/include/c++/11.1.0/tr1/modified_bessel_func.tcc:
-
-/usr/include/c++/11.1.0/istream:
-
-/usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/os_defines.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcoreapplication_platform.h:
-
-/usr/include/bits/types/__sigset_t.h:
-
-/usr/include/sys/types.h:
-
-mainwindow.h:
-
-/usr/include/c++/11.1.0/system_error:
-
-/usr/include/bits/waitflags.h:
-
-/usr/include/c++/11.1.0/bits/stl_iterator_base_funcs.h:
-
-/usr/include/c++/11.1.0/bits/specfun.h:
-
-/usr/include/c++/11.1.0/bits/hashtable_policy.h:
+/usr/include/asm/errno.h:
 
 /usr/include/gnu/stubs.h:
 
-/usr/include/c++/11.1.0/bits/string_view.tcc:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qglobal.h:
-
-/usr/include/c++/11.1.0/cstdint:
-
-/usr/include/bits/types.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qslider.h:
-
-/usr/include/stdc-predef.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qarraydataops.h:
-
-/usr/include/sys/cdefs.h:
-
-/usr/include/c++/11.1.0/tr1/poly_hermite.tcc:
-
-/usr/include/pthread.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcompare.h:
-
-/usr/include/c++/11.1.0/tr1/legendre_function.tcc:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qarraydatapointer.h:
-
-/usr/include/c++/11.1.0/bits/stl_pair.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qcheckbox.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qbytearraylist.h:
-
-/usr/include/c++/11.1.0/bits/functexcept.h:
-
-/usr/include/bits/pthreadtypes-arch.h:
+/usr/include/qt/QtCore/qrect.h:
 
 /usr/include/c++/11.1.0/bits/uniform_int_dist.h:
 
-/usr/include/c++/11.1.0/bits/locale_facets.h:
+/usr/include/bits/pthreadtypes-arch.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qtwidgetsglobal.h:
+/usr/include/ctype.h:
 
-/usr/include/c++/11.1.0/iterator:
+/usr/include/qt/QtWidgets/qtwidgetsglobal.h:
 
-/usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/ctype_inline.h:
+/usr/include/bits/types.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qatomic_cxx11.h:
+/usr/include/stdc-predef.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/QWidget:
+/usr/include/sys/cdefs.h:
+
+/usr/include/qt/QtCore/qstringliteral.h:
+
+/usr/include/pthread.h:
+
+/usr/include/c++/11.1.0/bits/cxxabi_init_exception.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/qt/QtCore/qline.h:
+
+/usr/include/c++/11.1.0/bits/erase_if.h:
+
+/usr/include/bits/timesize.h:
+
+/usr/include/qt/QtGui/qguiapplication.h:
+
+/usr/include/c++/11.1.0/bits/stl_multimap.h:
+
+/usr/include/c++/11.1.0/bits/stl_numeric.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include-fixed/syslimits.h:
+
+/usr/include/c++/11.1.0/bits/stl_heap.h:
+
+/usr/include/bits/types/__locale_t.h:
+
+/usr/include/c++/11.1.0/bits/locale_classes.h:
+
+/usr/include/qt/QtCore/qversiontagging.h:
+
+/usr/include/qt/QtWidgets/QMainWindow:
+
+/usr/include/c++/11.1.0/bits/ptr_traits.h:
+
+/usr/include/qt/QtCore/qregexp.h:
+
+/usr/include/c++/11.1.0/numeric:
+
+/usr/include/qt/QtCore/qprocessordetection.h:
+
+/usr/include/c++/11.1.0/initializer_list:
+
+/usr/include/c++/11.1.0/cstdlib:
+
+/usr/include/qt/QtGui/qpalette.h:
+
+/usr/include/bits/timex.h:
+
+/usr/include/qt/QtCore/qobject_impl.h:
+
+/usr/include/bits/errno.h:
 
 /usr/include/bits/wordsize.h:
 
 /usr/include/stdio.h:
 
-/usr/include/c++/11.1.0/tuple:
+/usr/include/c++/11.1.0/thread:
+
+/usr/include/qt/QtGui/qtguiglobal.h:
+
+/usr/include/qt/QtCore/qstringlist.h:
+
+/usr/include/c++/11.1.0/type_traits:
+
+/usr/include/qt/QtCore/qtcore-config.h:
+
+/usr/include/qt/QtCore/qstringview.h:
+
+/usr/include/c++/11.1.0/ext/aligned_buffer.h:
 
 /usr/include/c++/11.1.0/bits/stl_tempbuf.h:
 
@@ -2064,125 +1739,27 @@ mainwindow.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include/stddef.h:
 
-/usr/include/c++/11.1.0/bits/std_thread.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qmainwindow.h:
-
-/usr/include/c++/11.1.0/exception:
-
-/usr/include/c++/11.1.0/tr1/riemann_zeta.tcc:
-
-/usr/include/c++/11.1.0/type_traits:
-
-/usr/include/c++/11.1.0/bits/locale_conv.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qflags.h:
-
-/usr/include/c++/11.1.0/bits/memoryfwd.h:
-
-/usr/include/c++/11.1.0/bits/std_function.h:
-
-/usr/include/c++/11.1.0/limits:
-
-/usr/include/bits/types/wint_t.h:
-
-/usr/include/c++/11.1.0/bits/stl_uninitialized.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qline.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qstringtokenizer.h:
-
-/usr/include/c++/11.1.0/array:
-
-/usr/include/c++/11.1.0/pstl/glue_algorithm_defs.h:
-
-/usr/include/c++/11.1.0/bits/exception_defines.h:
-
-/usr/include/c++/11.1.0/bits/basic_string.tcc:
-
-/usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/cpu_defines.h:
-
-/usr/include/stdint.h:
-
-/usr/include/endian.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qvarlengtharray.h:
-
-/usr/include/asm/errno.h:
-
-/usr/include/bits/stdint-uintn.h:
-
-/usr/include/c++/11.1.0/bits/codecvt.h:
-
-/usr/include/bits/libc-header-start.h:
-
-/usr/include/c++/11.1.0/bits/stl_vector.h:
-
-/usr/include/bits/typesizes.h:
-
-/usr/include/libintl.h:
-
-/usr/include/bits/endianness.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/QMainWindow:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include/stdint.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qutf8stringview.h:
-
-/usr/include/assert.h:
-
-projekt_autogen/EWIEGA46WW/moc_mainwindow.cpp:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include/stdarg.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qmenubar.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qconfig.h:
-
-/usr/include/c++/11.1.0/bits/fs_path.h:
-
-/usr/include/bits/iscanonical.h:
-
-/usr/include/c++/11.1.0/string:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qpaintdevice.h:
-
-/usr/include/c++/11.1.0/bits/stl_function.h:
-
-/usr/include/alloca.h:
-
-/usr/include/c++/11.1.0/tr1/beta_function.tcc:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qlocale.h:
-
-/usr/include/c++/11.1.0/atomic:
-
 /usr/include/c++/11.1.0/bits/stl_algobase.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qiodevice.h:
+/usr/include/c++/11.1.0/bits/functexcept.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qsystemdetection.h:
+/usr/include/qt/QtCore/qglobalstatic.h:
+
+/usr/include/c++/11.1.0/bits/alloc_traits.h:
+
+/usr/include/c++/11.1.0/cstddef:
 
 /usr/include/c++/11.1.0/ext/type_traits.h:
 
-/usr/include/c++/11.1.0/optional:
-
-/usr/include/c++/11.1.0/bits/node_handle.h:
+/usr/include/c++/11.1.0/stdlib.h:
 
 /usr/include/bits/struct_mutex.h:
 
-/usr/include/asm-generic/errno-base.h:
-
-/usr/include/c++/11.1.0/bits/concept_check.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qrgb.h:
-
 /usr/include/c++/11.1.0/streambuf:
 
-/usr/include/bits/mathcalls-narrow.h:
+/usr/include/qt/QtCore/qarraydata.h:
 
-/usr/include/c++/11.1.0/bits/cpp_type_traits.h:
+/usr/include/c++/11.1.0/bits/atomic_lockfree_defines.h:
 
 /usr/include/bits/select.h:
 
@@ -2192,235 +1769,119 @@ projekt_autogen/EWIEGA46WW/moc_mainwindow.cpp:
 
 /usr/include/c++/11.1.0/bits/stl_iterator_base_types.h:
 
+/usr/include/qt/QtWidgets/QLabel:
+
 /usr/include/c++/11.1.0/debug/assertions.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qbindingstorage.h:
+/usr/include/qt/QtCore/qconfig.h:
+
+/usr/include/bits/types/struct_tm.h:
 
 /usr/include/c++/11.1.0/ext/numeric_traits.h:
 
-/usr/include/c++/11.1.0/pstl/pstl_config.h:
-
 /usr/include/c++/11.1.0/bits/predefined_ops.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qtwidgets-config.h:
-
-/usr/include/c++/11.1.0/bits/quoted_string.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/QPushButton:
-
-/usr/include/c++/11.1.0/unordered_map:
-
 /usr/include/bits/locale.h:
+
+/usr/include/c++/11.1.0/bits/exception_defines.h:
 
 /usr/include/c++/11.1.0/bits/ostream.tcc:
 
 /usr/include/c++/11.1.0/bits/stl_algo.h:
 
-/usr/include/c++/11.1.0/cstddef:
+projekt_autogen/include/ui_mainwindow.h:
 
-/usr/include/c++/11.1.0/bits/enable_special_members.h:
+/usr/include/c++/11.1.0/bits/stl_construct.h:
 
-/usr/include/c++/11.1.0/bits/stl_bvector.h:
+/usr/include/c++/11.1.0/bits/uses_allocator.h:
 
-/usr/include/c++/11.1.0/bits/vector.tcc:
+/usr/include/qt/QtGui/qbrush.h:
 
-/usr/include/c++/11.1.0/ext/alloc_traits.h:
+/usr/include/bits/libc-header-start.h:
 
-/usr/include/c++/11.1.0/pstl/execution_defs.h:
+/usr/include/c++/11.1.0/iostream:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qradiobutton.h:
+/usr/include/c++/11.1.0/bits/locale_classes.tcc:
 
-/usr/include/c++/11.1.0/variant:
+/usr/include/bits/floatn.h:
 
-/usr/include/c++/11.1.0/bits/parse_numbers.h:
+/usr/include/qt/QtWidgets/QFileDialog:
 
-/usr/include/c++/11.1.0/tr1/hypergeometric.tcc:
+/usr/include/qt/QtCore/qstringalgorithms.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/QMenuBar:
+/usr/include/qt/QtGui/qpen.h:
 
-/usr/include/c++/11.1.0/bits/exception_ptr.h:
+/usr/include/bits/types/locale_t.h:
 
-/usr/include/c++/11.1.0/bits/nested_exception.h:
+/usr/include/qt/QtWidgets/qslider.h:
 
-mainwindow.cpp:
+/usr/include/qt/QtWidgets/qsizepolicy.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qsysinfo.h:
+/usr/include/c++/11.1.0/string:
 
-/usr/include/bits/types/cookie_io_functions_t.h:
+/usr/include/c++/11.1.0/bits/stringfwd.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qatomic.h:
+/usr/include/qt/QtCore/qobject.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qpixelformat.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qgenericatomic.h:
-
-/usr/include/c++/11.1.0/algorithm:
-
-/usr/include/c++/11.1.0/bits/atomic_base.h:
-
-/usr/include/c++/11.1.0/bits/atomic_lockfree_defines.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qnativeinterface.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qglobalstatic.h:
-
-/usr/include/c++/11.1.0/cmath:
-
-/usr/include/math.h:
-
-/usr/include/bits/libm-simd-decl-stubs.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qlabel.h:
-
-/usr/include/c++/11.1.0/bits/allocator.h:
-
-/usr/include/bits/types/FILE.h:
-
-/usr/include/bits/fp-logb.h:
-
-/usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/gthr.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qobject.h:
-
-/usr/include/bits/mathcalls-helper-functions.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qtextoption.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qeventloop.h:
-
-/usr/include/c++/11.1.0/tr1/gamma.tcc:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qkeysequence.h:
-
-/usr/include/c++/11.1.0/numeric:
-
-/usr/include/c++/11.1.0/tr1/special_function_util.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qdir.h:
-
-/usr/include/c++/11.1.0/ext/new_allocator.h:
-
-/usr/include/c++/11.1.0/tr1/bessel_function.tcc:
-
-/usr/include/c++/11.1.0/tr1/exp_integral.tcc:
-
-/usr/include/c++/11.1.0/bits/cxxabi_init_exception.h:
-
-/usr/include/bits/endian.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qtypeinfo.h:
-
-/usr/include/c++/11.1.0/tr1/poly_laguerre.tcc:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qdialog.h:
-
-/usr/include/c++/11.1.0/bits/charconv.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qversiontagging.h:
+/usr/include/c++/11.1.0/bits/memoryfwd.h:
 
 /usr/include/c++/11.1.0/bits/char_traits.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qtgui-config.h:
+/usr/include/c++/11.1.0/bits/postypes.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qwindowdefs.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qobjectdefs.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qnamespace.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qtmetamacros.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qpushbutton.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qurl.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qobjectdefs_impl.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qstring.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qdebug.h:
-
-/usr/include/c++/11.1.0/bits/hashtable.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qchar.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qbytearray.h:
-
-/usr/include/c++/11.1.0/locale:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qrefcount.h:
-
-/usr/include/c++/11.1.0/sstream:
+/usr/include/c++/11.1.0/ext/alloc_traits.h:
 
 /usr/include/stdlib.h:
 
 /usr/include/c++/11.1.0/cwchar:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qarraydata.h:
+/usr/include/bits/types/wint_t.h:
 
-/usr/include/c++/11.1.0/bits/postypes.h:
+/usr/include/c++/11.1.0/bits/streambuf.tcc:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qpair.h:
-
-/usr/include/strings.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qcontainertools_impl.h:
-
-/usr/include/c++/11.1.0/cstring:
-
-/usr/include/string.h:
-
-/usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/c++locale.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qsharedpointer_impl.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qlist.h:
-
-/usr/include/c++/11.1.0/bits/stringfwd.h:
-
-/usr/include/bits/posix1_lim.h:
-
-/usr/include/wchar.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/QDir:
+/usr/include/c++/11.1.0/bits/std_function.h:
 
 /usr/include/c++/11.1.0/bits/locale_facets.tcc:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qfontinfo.h:
 
 /usr/include/bits/types/mbstate_t.h:
 
 /usr/include/bits/types/__mbstate_t.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qmetatype.h:
-
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qstringview.h:
-
 main.cpp:
 
 /usr/include/bits/time.h:
 
-/usr/include/c++/11.1.0/bits/std_abs.h:
+/usr/include/qt/QtCore/qdir.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qtguiglobal.h:
+/usr/include/bits/stdio_lim.h:
 
-/usr/include/c++/11.1.0/bits/stream_iterator.h:
+/usr/include/qt/QtGui/qtgui-config.h:
 
-/usr/include/c++/11.1.0/bits/streambuf_iterator.h:
+/usr/include/c++/11.1.0/cstdint:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtWidgets/qabstractslider.h:
+/usr/include/bits/types/FILE.h:
 
-/usr/include/c++/11.1.0/bits/stl_iterator.h:
+/usr/include/c++/11.1.0/bits/allocator.h:
 
-/usr/include/c++/11.1.0/cstdio:
+/usr/include/c++/11.1.0/ext/new_allocator.h:
 
 /usr/include/c++/11.1.0/bits/move.h:
 
 /usr/include/c++/11.1.0/bits/localefwd.h:
 
+/usr/include/string.h:
+
+/usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/c++locale.h:
+
 /usr/include/c++/11.1.0/clocale:
 
+/usr/include/locale.h:
+
+/usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/error_constants.h:
+
 /usr/include/c++/11.1.0/cctype:
+
+/usr/include/c++/11.1.0/bits/cxxabi_forced.h:
 
 /usr/include/c++/11.1.0/bit:
 
@@ -2428,11 +1889,33 @@ main.cpp:
 
 /usr/include/c++/11.1.0/bits/ios_base.h:
 
-/usr/include/c++/11.1.0/bits/cxxabi_forced.h:
+/usr/include/alloca.h:
 
-/usr/include/bits/types/clockid_t.h:
+/usr/include/c++/11.1.0/bits/stl_function.h:
+
+/usr/include/bits/floatn-common.h:
+
+/usr/include/c++/11.1.0/typeinfo:
+
+/usr/include/c++/11.1.0/backward/binders.h:
+
+/usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/atomic_word.h:
+
+/usr/include/c++/11.1.0/bits/basic_string.h:
+
+/usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/cpu_defines.h:
+
+/usr/include/c++/11.1.0/bits/basic_string.tcc:
+
+/usr/include/wchar.h:
+
+/usr/include/bits/posix1_lim.h:
 
 /usr/include/bits/stdint-intn.h:
+
+/usr/include/qt/QtCore/qsystemdetection.h:
+
+/usr/include/bits/types/clockid_t.h:
 
 /usr/include/c++/11.1.0/ext/atomicity.h:
 
@@ -2440,13 +1923,15 @@ main.cpp:
 
 /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/gthr-default.h:
 
-/usr/include/wctype.h:
+/usr/include/c++/11.1.0/bits/basic_ios.tcc:
+
+/usr/include/c++/11.1.0/bits/list.tcc:
 
 /usr/include/bits/fp-fast.h:
 
-/usr/include/sched.h:
+/usr/include/wctype.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtCore/qstringlist.h:
+/usr/include/sched.h:
 
 /usr/include/features.h:
 
@@ -2462,36 +1947,140 @@ main.cpp:
 
 /usr/include/time.h:
 
-/usr/include/bits/types/struct_tm.h:
-
 /usr/include/bits/setjmp.h:
 
-/usr/include/bits/waitstatus.h:
+/usr/include/qt/QtWidgets/QSlider:
 
 /usr/include/bits/wchar.h:
 
+/usr/include/bits/waitstatus.h:
+
 /usr/include/bits/types/struct___jmp_buf_tag.h:
+
+/usr/include/qt/QtCore/qobjectdefs.h:
+
+/usr/include/qt/QtCore/qstringmatcher.h:
+
+/usr/include/qt/QtCore/qurl.h:
+
+/usr/include/qt/QtCore/qlocale.h:
 
 /usr/include/sys/single_threaded.h:
 
-/home/nixen/.conan/data/qt/6.2.2/_/_/package/9e6348ab0196caef0759ca4990e0576f81738117/include/QtGui/qbitmap.h:
+/usr/include/c++/11.1.0/bits/stl_iterator.h:
 
-/usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/atomic_word.h:
+/usr/include/c++/11.1.0/cstdio:
 
-/usr/include/c++/11.1.0/bits/basic_string.h:
+/usr/include/qt/QtCore/qscopedpointer.h:
 
-/usr/include/c++/11.1.0/string_view:
+/usr/include/c++/11.1.0/bits/streambuf_iterator.h:
 
-/usr/include/c++/11.1.0/bits/stl_map.h:
-
-/usr/include/c++/11.1.0/bits/ranges_base.h:
-
-/usr/include/c++/11.1.0/stdexcept:
-
-/usr/include/bits/flt-eval-method.h:
-
-/usr/include/c++/11.1.0/ext/string_conversions.h:
+/usr/include/qt/QtCore/qalgorithms.h:
 
 /usr/include/bits/types/__fpos64_t.h:
 
+/usr/include/qt/QtWidgets/qlineedit.h:
+
 /usr/include/bits/types/struct_FILE.h:
+
+/usr/include/bits/types/cookie_io_functions_t.h:
+
+/usr/include/bits/flt-eval-method.h:
+
+/usr/include/c++/11.1.0/stdexcept:
+
+/usr/include/c++/11.1.0/ext/string_conversions.h:
+
+/usr/include/qt/QtCore/qvarlengtharray.h:
+
+/usr/include/qt/QtCore/qglobal.h:
+
+/usr/include/c++/11.1.0/array:
+
+/usr/include/linux/errno.h:
+
+/usr/include/c++/11.1.0/bits/concept_check.h:
+
+/usr/include/asm-generic/errno-base.h:
+
+/usr/include/bits/types/error_t.h:
+
+/usr/include/c++/11.1.0/bits/charconv.h:
+
+/usr/include/c++/11.1.0/bits/stl_iterator_base_funcs.h:
+
+/usr/include/bits/waitflags.h:
+
+/usr/include/c++/11.1.0/system_error:
+
+/usr/include/qt/QtCore/qnumeric.h:
+
+/usr/include/bits/time64.h:
+
+/usr/include/c++/11.1.0/bits/functional_hash.h:
+
+/usr/include/dlfcn.h:
+
+/usr/include/c++/11.1.0/bits/hash_bytes.h:
+
+/usr/include/qt/QtCore/qatomic_cxx11.h:
+
+/usr/include/c++/11.1.0/iterator:
+
+/usr/include/qt/QtWidgets/qmessagebox.h:
+
+/usr/include/c++/11.1.0/bits/std_abs.h:
+
+/usr/include/c++/11.1.0/bits/stream_iterator.h:
+
+/usr/include/c++/11.1.0/bits/exception_ptr.h:
+
+/usr/include/qt/QtCore/qiterator.h:
+
+/usr/include/c++/11.1.0/bits/cpp_type_traits.h:
+
+/usr/include/qt/QtCore/qhashfunctions.h:
+
+/usr/include/qt/QtCore/qpair.h:
+
+/usr/include/errno.h:
+
+/usr/include/c++/11.1.0/functional:
+
+/usr/include/c++/11.1.0/tuple:
+
+/usr/include/bits/math-vector.h:
+
+/usr/include/qt/QtWidgets/qstatusbar.h:
+
+/usr/include/qt/QtGui/qfontmetrics.h:
+
+/usr/include/bits/uio_lim.h:
+
+/usr/include/c++/11.1.0/bits/invoke.h:
+
+/usr/include/c++/11.1.0/bits/stl_uninitialized.h:
+
+/usr/include/qt/QtCore/qpoint.h:
+
+/usr/include/c++/11.1.0/bits/stl_bvector.h:
+
+/usr/include/c++/11.1.0/bits/vector.tcc:
+
+/usr/include/c++/11.1.0/bits/stl_list.h:
+
+/usr/include/c++/11.1.0/bits/allocated_ptr.h:
+
+/usr/include/qt/QtCore/qcompilerdetection.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include-fixed/limits.h:
+
+/usr/include/bits/posix2_lim.h:
+
+/usr/include/qt/QtCore/qsharedpointer.h:
+
+/usr/include/bits/xopen_lim.h:
+
+/usr/include/qt/QtCore/qbytearraylist.h:
+
+/usr/include/qt/QtCore/qmetatype.h:
