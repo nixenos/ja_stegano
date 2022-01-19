@@ -19,8 +19,8 @@ echo "Your Linux distro is: $DISTRO"
 echo "Currently supported distros: Ubuntu, Arch"
 echo "Installing dependencies: qt5base-dev, nasm, make, cmake, gcc, build-essential"
 
-if [[ $DISTRO == *"ubuntu"* ]]; then
-	sudo apt install -y nasm cmake make gcc build-essential qt5base-devel
+if [[ $DISTRO == *"buntu"* ]]; then
+	sudo apt install -y nasm cmake make gcc build-essential qtbase5-dev
 fi
 
 if [[ $DISTRO == *"arch"* ]]; then 
