@@ -333,14 +333,6 @@ int write_headers(BMPHEADER bmpHeader, DIBHEADER dibHeader,
      * maski kolorów dla 32-bitowych obrazów
      */
     if (dibHeader.BITSPERPIXEL == 32) {
-        /*uint32_t greenMask = 65280;
-        uint32_t redMask = 16711680;
-        uint32_t xMask = 0;
-        uint32_t blueMask = 255;
-        fwrite(&redMask, sizeof(uint32_t), 1, filePointer);
-        fwrite(&greenMask, sizeof(uint32_t), 1, filePointer);
-        fwrite(&blueMask, sizeof(uint32_t), 1, filePointer);
-        fwrite(&xMask, sizeof(uint32_t), 1, filePointer);*/
         fwrite(&bitFields.redMask, sizeof(uint32_t), 1, filePointer);
         fwrite(&bitFields.greenMask, sizeof(uint32_t), 1, filePointer);
         fwrite(&bitFields.blueMask, sizeof(uint32_t), 1, filePointer);
@@ -719,7 +711,7 @@ int write_data_16bit(uint8_t *dataTab, uint8_t *pixelArray,
                      FILE *filePointer, int pixels,
                      int arrSize, BITFIELDS bitFields, int threadsCount, int algoSelection) {
     /*
-     * sprawdzenie, czy plik zmieści się w obrqzie, jest podzielony na paczki, więc jest to poprawne sprawdzenie
+     * sprawdzenie, czy plik zmieści się w obrazie, jest podzielony na paczki, więc jest to poprawne sprawdzenie
      */
     if (arrSize > 2 * pixels) {
         printf(
@@ -981,19 +973,6 @@ uint8_t *read_data_from_steganofile_24_32bit(uint8_t *pixelArray,
     int i, j;
     uint8_t mask = (1 << bitsPerPixel) - 1;
     temp = 0;
-    /*for (i = 0; i < bmpheader.RESERVED2 * (8 / bitsPerPixel); i++) {
-        temp = pixelArray[i] & mask;
-        dataArray[i] = temp;
-    }
-    for (i = 0; i < bmpheader.RESERVED2; i++) {
-        temp = 0;
-        for (j = 0; j < 8 / bitsPerPixel; j++) {
-            temp = temp +
-                   (dataArray[i * 8 / bitsPerPixel + j] << (j * bitsPerPixel));
-        }
-        finalDataArray[i] = temp;
-        }*/
-
 
     /* obliczenie wielkości paczek oraz alokacja i przepisanie danych dla paczek (do przetworzenia przy pomocy wątków) */
     int chunkArrSize = bmpheader.RESERVED2 * (8 / bitsPerPixel);
